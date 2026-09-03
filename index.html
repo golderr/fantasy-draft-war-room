@@ -1731,7 +1731,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         return [
           `${market.marketName || marketShort[key]} ${formatStat(market.consensusLine)} · ${market.bookCount} book${market.bookCount===1?&#x27;&#x27;:&#x27;s&#x27;}`,
           `Range ${formatStat(market.lowLine)}–${formatStat(market.highLine)} · IQR ${formatStat(market.lineIqr)} · ${market.dispersionStatus?`${market.dispersionStatus} agreement`:&#x27;agreement unknown&#x27;}`,
-          `Median O/U ${priceLabel(market.medianOverPrice)} / ${priceLabel(market.medianUnderPrice)} · ${pressure}`,
+          `No-vig price signal · ${pressure}`,
           market.lineChange24h==null?&#x27;24h movement not yet available&#x27;:`24h ${marketMovement(market)} ${signed(market.lineChange24h)}`,
           impact==null?&#x27;Projection comparison unavailable&#x27;:`vs ESPN ${signed(market.consensusLine-projection)} ${market.unit} · ${signed(impact)} fantasy pts`,
           market.sportsbooks.length?`Books: ${market.sportsbooks.slice(0,6).join(&#x27;, &#x27;)}${market.sportsbooks.length&gt;6?` +${market.sportsbooks.length-6}`:&#x27;&#x27;}`:&#x27;Book names unavailable&#x27;,
