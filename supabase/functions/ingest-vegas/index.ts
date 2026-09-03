@@ -22,6 +22,8 @@ async function fetchAllSeasonRows(apiKey: string) {
   let cursor = "";
   let pageCount = 0;
   let creditsRemaining: string | null = null;
+  let creditsCost = 0;
+  let creditsCostReported = false;
   const seen = new Set<string>();
   const maxPages = Math.max(1, Math.min(100, Number(Deno.env.get("VEGAS_MAX_PAGES") || 50)));
   const pageDelayMs = Math.max(0, Math.min(5000, Number(Deno.env.get("VEGAS_PAGE_DELAY_MS") || 0)));
@@ -55,8 +57,13 @@ async function fetchAllSeasonRows(apiKey: string) {
     rows.push(...payload.data);
     pageCount += 1;
     creditsRemaining = response.headers.get("x-credits-remaining") || creditsRemaining;
+    const pageCreditsCost = Number(response.headers.get("x-credits-cost"));
+    if (Number.isFinite(pageCreditsCost)) {
+      creditsCost += pageCreditsCost;
+      creditsCostReported = true;
+    }
     const next = String(payload?.nextCursor || payload?.meta?.nextCursor || payload?.meta?.next_cursor || "");
-    if (!next) return { rows, pageCount, creditsRemaining };
+    if (!next) return { rows, pageCount, creditsRemaining, creditsCost: creditsCostReported ? creditsCost : null };
     if (seen.has(next)) throw new Error("SportWizzard pagination cursor repeated; snapshot rejected as incomplete");
     seen.add(next);
     cursor = next;
@@ -102,10 +109,19 @@ Deno.serve(async request => {
     const source = await fetchAllSeasonRows(apiKey);
     const quotes = normalizeSportWizzard(source.rows, season, retrievedAt);
     const activeQuotes = quotes.filter(quote => !quote.is_suspended);
+    const sourceSubtypeCounts = Object.entries(source.rows.reduce<Record<string, number>>((counts, row) => {
+      const subtype = String(row.marketSubtype || "(missing)").trim() || "(missing)";
+      counts[subtype] = (counts[subtype] || 0) + 1;
+      return counts;
+    }, {})).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 40);
     if (!activeQuotes.length) throw new Error("The provider returned no active supported NFL regular-season player totals");
     const observedBooks = new Set(activeQuotes.map(q => q.sportsbook_key)).size;
     const observedMarkets = new Set(activeQuotes.map(q => q.market_key)).size;
     const observedPlayers = new Set(activeQuotes.map(q => q.player_key)).size;
+    const normalizedMarketCounts = Object.entries(activeQuotes.reduce<Record<string, number>>((counts, quote) => {
+      counts[quote.market_key] = (counts[quote.market_key] || 0) + 1;
+      return counts;
+    }, {})).sort((a, b) => a[0].localeCompare(b[0]));
     const minimumBooks = Number(Deno.env.get("VEGAS_MIN_BOOKS") || 2);
     const minimumQuotes = Number(Deno.env.get("VEGAS_MIN_QUOTES") || 10);
     const minimumMarkets = Number(Deno.env.get("VEGAS_MIN_MARKETS") || 2);
@@ -169,7 +185,10 @@ Deno.serve(async request => {
         normalizedQuoteCount: quotes.length,
         suspendedQuoteCount: quotes.length - activeQuotes.length,
         ignoredRowCount: Math.max(0, source.rows.length - quotes.length),
+        providerCreditsCost: source.creditsCost,
         providerCreditsRemaining: source.creditsRemaining,
+        sourceSubtypeCounts,
+        normalizedMarketCounts,
       },
       error_message: null,
     };

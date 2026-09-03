@@ -37,7 +37,7 @@ end $$;
 
 select cron.schedule(
   'refresh-nfl-season-props',
-  '*/15 * * * *',
+  '7 * * * *',
   $$
   select net.http_post(
     url := (select decrypted_secret from vault.decrypted_secrets where name = 'vegas_project_url')

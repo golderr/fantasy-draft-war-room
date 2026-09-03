@@ -8,6 +8,7 @@ test("normalizes the supported NFL season markets", () => {
   assert.equal(normalizeMarket("PLAYER_TOTAL_RUSHING_YARDS"), "rush_yds");
   assert.equal(normalizeMarket("PLAYER_TOTAL_RUSHING_TDS"), "rush_td");
   assert.equal(normalizeMarket("PLAYER_TOTAL_RECEIVING_YARDS"), "rec_yds");
+  assert.equal(normalizeMarket("PLAYER_TOTAL_REC_YARDS"), "rec_yds");
   assert.equal(normalizeMarket("PLAYER_TOTAL_RECEIVING_TOUCHDOWNS"), "rec_td");
   assert.equal(normalizeMarket("PLAYER_TOTAL_RECEPTIONS"), "receptions");
   assert.equal(normalizeMarket("PLAYER_TOTAL_PASSING_ATTEMPTS"), null);

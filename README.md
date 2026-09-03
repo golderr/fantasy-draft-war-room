@@ -50,7 +50,7 @@ Live markets may influence the draft recommendation only when at least two suppo
 - `supabase/migrations/202609020001_multi_book_vegas.sql` — tables, RLS, history/current consensus, evidence scoring, health, and retention.
 - `supabase/functions/ingest-vegas` — authenticated scheduled ingestion and snapshot coverage gates.
 - `supabase/functions/vegas-consensus` — CORS-restricted, cached, paginated public consensus API.
-- `supabase/setup-vegas-schedule.sql` — 15-minute refresh and daily retention schedules using `pg_cron`, `pg_net`, and Vault.
+- `supabase/setup-vegas-schedule.sql` — hourly refresh and daily retention schedules using `pg_cron`, `pg_net`, and Vault. A full SportWizzard season pull currently spans six billable pages, so hourly polling stays within the 5,000-credit free tier with room for controlled manual refreshes.
 - `tests/vegas_parser.test.ts` — market classification, event/season separation, O/U pairing, malformed-data rejection, suspension handling, and name normalization.
 
 ## Deployment checklist

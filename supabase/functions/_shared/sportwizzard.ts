@@ -63,7 +63,7 @@ export const normalizeMarket = (subtypeValue: unknown) => {
   if (/PASS(ING)?_(TOUCHDOWNS?|TDS?)$/.test(subtype)) return "pass_td";
   if (/RUSH(ING)?_YARDS?/.test(subtype)) return "rush_yds";
   if (/RUSH(ING)?_(TOUCHDOWNS?|TDS?)$/.test(subtype)) return "rush_td";
-  if (/(RECEPTION|RECEIVING)_YARDS?/.test(subtype)) return "rec_yds";
+  if (/(REC|RECEPTION|RECEIVING)_YARDS?/.test(subtype)) return "rec_yds";
   if (/(RECEPTION|RECEIVING)_(TOUCHDOWNS?|TDS?)$/.test(subtype)) return "rec_td";
   if (/(TOTAL_)?RECEPTIONS?$/.test(subtype)) return "receptions";
   return null;
