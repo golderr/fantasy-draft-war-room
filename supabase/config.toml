@@ -1,0 +1,7 @@
+project_id = "lodxwbklcvfwkgqyvuha"
+
+[functions.ingest-vegas]
+verify_jwt = false
+
+[functions.vegas-consensus]
+verify_jwt = false

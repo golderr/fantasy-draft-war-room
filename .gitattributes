@@ -1,0 +1,5 @@
+*.html text eol=lf
+*.md text eol=lf
+*.sql text eol=lf
+*.ts text eol=lf
+*.toml text eol=lf
