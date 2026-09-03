@@ -1434,7 +1434,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;button type=&quot;button&quot; data-view-button=&quot;live&quot; aria-pressed=&quot;true&quot;&gt;Live draft&lt;/button&gt;
         &lt;button type=&quot;button&quot; data-view-button=&quot;rankings&quot; aria-pressed=&quot;false&quot;&gt;Rankings&lt;/button&gt;
         &lt;button type=&quot;button&quot; data-sources-button aria-expanded=&quot;false&quot;&gt;Data 5/8&lt;/button&gt;
-        &lt;button type=&quot;button&quot; data-cag aria-pressed=&quot;false&quot; title=&quot;Privacy-safe joke rankings&quot;&gt;CAG mode&lt;/button&gt;
+        &lt;button type=&quot;button&quot; data-cag aria-pressed=&quot;false&quot; title=&quot;Buffalo superfan rankings&quot;&gt;CAG mode&lt;/button&gt;
       &lt;/div&gt;
     &lt;/header&gt;
 
@@ -1451,11 +1451,11 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;/div&gt;
       &lt;div class=&quot;dft-methodgrid&quot;&gt;
         &lt;div class=&quot;dft-method dft-normal-only&quot;&gt;&lt;strong&gt;Projected points + Risk:&lt;/strong&gt; Proj pts is the ESPN stat line scored for the active room. Risk uses IFF uncertainty = (P95 − P05) ÷ (2 × P50): Low ≤25%; Medium 25–40%; High &amp;gt;40%. Without IFF, it falls back to LR/ESPN/Yahoo rank spread: Low ≤8; Medium 9–20; High &amp;gt;20.&lt;/div&gt;
-        &lt;div class=&quot;dft-method dft-cag-only&quot;&gt;&lt;strong&gt;CAG Risk:&lt;/strong&gt; deliberately scrambled for privacy. The labels in this mode are entertainment, not an analyst signal.&lt;/div&gt;
+        &lt;div class=&quot;dft-method dft-cag-only&quot;&gt;&lt;strong&gt;CAG Risk:&lt;/strong&gt; high conviction, zero chill. The labels in this mode are entertainment, not an analyst signal.&lt;/div&gt;
         &lt;div class=&quot;dft-method&quot;&gt;&lt;strong&gt;Vegas:&lt;/strong&gt; orange is a current multi-book consensus; an orange underline means the displayed total mixes verified consensus components with projection fills. Blue A is the older aggregate snapshot; gray ~ is projection-only. Tooltips show books, prices, range, movement, freshness, and projection impact. Vegas-adjusted points start with the full ESPN projection, then replace only stats supported by live consensus, avoiding the false low totals caused by missing props.&lt;/div&gt;
       &lt;/div&gt;
       &lt;div class=&quot;dft-method dft-private-source&quot;&gt;&lt;strong&gt;Model rank:&lt;/strong&gt; 70% Late-Round rank + 30% average Yahoo/ESPN room rank, then reranked from 1 down. If platform data is missing, it falls back to Late-Round. Live recommendations add draft-room value, roster need, tier scarcity, next-pick survival, qualified Vegas agreement, and a 3-point High Risk penalty.&lt;/div&gt;
-      &lt;div class=&quot;dft-method dft-cag-only&quot;&gt;&lt;strong&gt;CAG method:&lt;/strong&gt; stable nonsense order, an enormous Buffalo bonus, and Josh Allen locked to 1. Public room ranks, projections, and Vegas fields stay visible; private ranking signals do not.&lt;/div&gt;
+      &lt;div class=&quot;dft-method dft-cag-only&quot;&gt;&lt;strong&gt;CAG method:&lt;/strong&gt; Josh Allen locked to 1, an enormous Buffalo bonus, and pure vibes deciding the rest. Public room ranks, projections, and Vegas fields stay visible.&lt;/div&gt;
     &lt;/section&gt;
 
     &lt;section class=&quot;dft-settings&quot; aria-label=&quot;League settings&quot;&gt;
@@ -1569,7 +1569,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;/section&gt;
     &lt;/main&gt;
     &lt;div class=&quot;dft-footnote dft-normal-only&quot;&gt;Every remaining horizontal line marks one of your snake-draft picks through the platform’s full roster size (15 rounds for Yahoo Public; 16 for ESPN). Lines move as players are checked off and hide while filtering. Late-Round is the trusted-rank anchor; Model rank is the explicit 70/30 LR-platform blend. Proj pts comes from ESPN’s projected stat line scored for the active platform. In Vegas columns, orange means the number includes a sportsbook-supported input; gray ~ is projection-only and ~V pts is not a betting line. RB/WR/TE rushing + receiving yards and TDs are combined; QB passing/rushing stay separate; K/DST show n/a where offensive props do not apply. Undo last can be repeated to the start; Taken restores any specific player; Restart clears Taken/Mine but keeps stars. State persists on this device.&lt;/div&gt;
-    &lt;div class=&quot;dft-footnote dft-cag-only&quot;&gt;CAG mode is a privacy-safe joke board: Josh Allen is 1, Buffalo is absurdly boosted, and everything else is deliberately scrambled. Public room ranks, projections, and Vegas fields remain real. The CAG rank, tier, edge, risk, recommendations, and fast reads are fake. State persists on this device.&lt;/div&gt;
+    &lt;div class=&quot;dft-footnote dft-cag-only&quot;&gt;CAG mode is the Bills Mafia board: Josh Allen is 1 and Buffalo gets every benefit of the doubt. Public room ranks, projections, and Vegas fields remain unchanged. State persists on this device.&lt;/div&gt;
     &lt;div class=&quot;dft-tooltip&quot; data-tooltip-layer role=&quot;tooltip&quot; hidden&gt;&lt;/div&gt;
     &lt;div class=&quot;dft-live&quot; aria-live=&quot;polite&quot; data-announcer&gt;&lt;/div&gt;
   &lt;/div&gt;
@@ -1904,7 +1904,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         if(state.cag){
           if(p.name===&#x27;Josh Allen&#x27;) return {reasons:[&#x27;Buffalo coefficient: maximum&#x27;,&#x27;QB gravity has been legislated&#x27;],risk:&#x27;No known downside in western New York&#x27;,call:&#x27;TAKE&#x27;};
           if(p.team===&#x27;BUF&#x27;) return {reasons:[&#x27;Buffalo coefficient engaged&#x27;,&#x27;Snow-game aura fully priced in&#x27;],risk:&#x27;Only one football per play&#x27;,call:&#x27;VALUE&#x27;};
-          const reasons=[&#x27;Vibes-adjusted board chaos&#x27;,&#x27;Spreadsheet science says absolutely&#x27;,&#x27;CAG confidence: irrational&#x27;,&#x27;Friend-safe ranking camouflage&#x27;];
+          const reasons=[&#x27;Vibes-adjusted board chaos&#x27;,&#x27;Spreadsheet science says absolutely&#x27;,&#x27;CAG confidence: irrational&#x27;,&#x27;Bills Mafia approved&#x27;];
           const risks=[&#x27;May be suspiciously sensible&#x27;,&#x27;Insufficient Buffalo exposure&#x27;,&#x27;Rank produced by controlled nonsense&#x27;];
           const hash=stableHash(`explain:${p.id}`);
           return {reasons:[reasons[hash%reasons.length],reasons[(hash+1)%reasons.length]],risk:risks[hash%risks.length],call:p.cagRank&lt;=24?&#x27;TAKE&#x27;:&#x27;WAIT&#x27;};
@@ -1948,7 +1948,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       function renderSettings(){
         root.classList.toggle(&#x27;dft-cag&#x27;,state.cag);
         root.querySelector(&#x27;[data-cag]&#x27;).setAttribute(&#x27;aria-pressed&#x27;,String(state.cag));
-        root.querySelector(&#x27;.dft-version&#x27;).textContent=state.cag?&#x27;privacy-safe Buffalo chaos · 2026&#x27;:&#x27;decision-first snake drafts · 2026&#x27;;
+        root.querySelector(&#x27;.dft-version&#x27;).textContent=state.cag?&#x27;2026&#x27;:&#x27;decision-first snake drafts · 2026&#x27;;
         root.querySelector(&#x27;[data-sources-button]&#x27;).textContent=state.cag?&#x27;Public data&#x27;:state.liveVegasStatus===&#x27;loaded&#x27;?&#x27;Data 6/8&#x27;:&#x27;Data 5/8&#x27;;
         root.querySelectorAll(&#x27;[data-private-rank-head]&#x27;).forEach(b=&gt;b.dataset.label=state.cag?&#x27;CAG rank&#x27;:&#x27;Late-Round&#x27;);
         root.querySelectorAll(&#x27;[data-edge-head]&#x27;).forEach(b=&gt;b.dataset.label=state.cag?&#x27;CAG edge&#x27;:&#x27;LR edge&#x27;);
@@ -2162,7 +2162,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           state.sort.rankings={key,dir:&#x27;asc&#x27;};
           state.liveLimit=200;
           saveState();
-          root.querySelector(&#x27;[data-announcer]&#x27;).textContent=state.cag?&#x27;CAG mode on. Private rankings are hidden and the board is intentionally scrambled.&#x27;:&#x27;CAG mode off. Real draft rankings restored.&#x27;;
+          root.querySelector(&#x27;[data-announcer]&#x27;).textContent=state.cag?&#x27;CAG mode on. Buffalo superfan board activated.&#x27;:&#x27;CAG mode off. Standard draft board restored.&#x27;;
           renderAll();
         }
         if(b.dataset.sortTable){
