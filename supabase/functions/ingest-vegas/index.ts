@@ -1,5 +1,6 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { normalizeSportWizzard, type SourceRow } from "../_shared/sportwizzard.ts";
+import { buildConsensusSnapshots } from "../_shared/vegas-consensus.ts";
 
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), {
   status,
@@ -172,6 +173,17 @@ Deno.serve(async request => {
       if (insert.error) throw insert.error;
     }
 
+    const consensusSnapshots = buildConsensusSnapshots(quotes, retrievedAt);
+    if (!consensusSnapshots.length) throw new Error("No consensus snapshots could be derived from the normalized quotes");
+    for (let start = 0; start < consensusSnapshots.length; start += 500) {
+      const batch = consensusSnapshots.slice(start, start + 500).map(snapshot => ({
+        run_id: run.id,
+        ...snapshot,
+      }));
+      const insert = await supabase.from("vegas_consensus_snapshots").insert(batch);
+      if (insert.error) throw insert.error;
+    }
+
     const summary = {
       status: "succeeded",
       finished_at: new Date().toISOString(),
@@ -185,6 +197,8 @@ Deno.serve(async request => {
         normalizedQuoteCount: quotes.length,
         suspendedQuoteCount: quotes.length - activeQuotes.length,
         ignoredRowCount: Math.max(0, source.rows.length - quotes.length),
+        consensusRowCount: consensusSnapshots.length,
+        screenedOutlierQuoteCount: consensusSnapshots.reduce((sum, snapshot) => sum + snapshot.outlier_book_count, 0),
         providerCreditsCost: source.creditsCost,
         providerCreditsRemaining: source.creditsRemaining,
         sourceSubtypeCounts,

@@ -34,7 +34,7 @@ async function consensusRows(client: ReturnType<typeof adminClient>, season: num
   const output: Record<string, unknown>[] = [];
   const pageSize = 1000;
   for (let page = 0; page < 6; page += 1) {
-    let query = client.from("vegas_consensus_current").select("*").eq("season", season)
+    let query = client.from("vegas_consensus_materialized_current").select("*").eq("season", season)
       .order("player_name").order("market_key").range(page * pageSize, (page + 1) * pageSize - 1);
     if (player) query = query.eq("player_key", player);
     if (market) query = query.eq("market_key", market);
@@ -76,6 +76,11 @@ Deno.serve(async request => {
       },
     }, 200, { etag });
   } catch (error) {
-    return respond(request, { error: error instanceof Error ? error.message : String(error) }, 500);
+    const detail = error instanceof Error
+      ? error.message
+      : typeof error === "object" && error !== null
+        ? JSON.stringify(error)
+        : String(error);
+    return respond(request, { error: detail }, 500);
   }
 });

@@ -1729,15 +1729,16 @@ html&gt;body{padding:0}&lt;/style&gt;
         const projection=projectionMarketValue(p,key), impact=projection==null?null:(market.consensusLine-projection)*marketWeight(market);
         const pressure=market.noVigOverProbability==null?&#x27;Price lean unavailable&#x27;:market.noVigOverProbability&gt;=.53?`${Math.round(market.noVigOverProbability*100)}% no-vig Over pressure`:market.noVigOverProbability&lt;=.47?`${Math.round((1-market.noVigOverProbability)*100)}% no-vig Under pressure`:&#x27;Balanced over/under prices&#x27;;
         return [
-          `${market.marketName || marketShort[key]} ${formatStat(market.consensusLine)} · ${market.bookCount} book${market.bookCount===1?&#x27;&#x27;:&#x27;s&#x27;}`,
+          `${market.marketName || marketShort[key]} ${formatStat(market.consensusLine)} · ${market.bookCount} consensus book${market.bookCount===1?&#x27;&#x27;:&#x27;s&#x27;}${market.reportedBookCount&gt;market.bookCount?` · ${market.reportedBookCount} reporting`:&#x27;&#x27;}`,
           `Range ${formatStat(market.lowLine)}–${formatStat(market.highLine)} · IQR ${formatStat(market.lineIqr)} · ${market.dispersionStatus?`${market.dispersionStatus} agreement`:&#x27;agreement unknown&#x27;}`,
+          market.outlierBookCount?`Outlier screen: ${market.outlierBookCount} isolated line${market.outlierBookCount===1?&#x27;&#x27;:&#x27;s&#x27;} (${market.excludedSportsbooks.join(&#x27;, &#x27;)||&#x27;book names unavailable&#x27;})`:null,
           `No-vig price signal · ${pressure}`,
           market.lineChange24h==null?&#x27;24h movement not yet available&#x27;:`24h ${marketMovement(market)} ${signed(market.lineChange24h)}`,
           impact==null?&#x27;Projection comparison unavailable&#x27;:`vs ESPN ${signed(market.consensusLine-projection)} ${market.unit} · ${signed(impact)} fantasy pts`,
           market.sportsbooks.length?`Books: ${market.sportsbooks.slice(0,6).join(&#x27;, &#x27;)}${market.sportsbooks.length&gt;6?` +${market.sportsbooks.length-6}`:&#x27;&#x27;}`:&#x27;Book names unavailable&#x27;,
           `Evidence ${market.confidenceLabel || &#x27;unrated&#x27;} · ${market.freshnessStatus || &#x27;age unknown&#x27;} · Quality ${market.quality}/100`,
           `Fetched ${ageLabel(market.retrievedAt)} ago · book ages ${ageLabel(market.freshestBookAt)}–${ageLabel(market.stalestBookAt)}`,
-        ].join(&#x27;\n&#x27;);
+        ].filter(Boolean).join(&#x27;\n&#x27;);
       };
       const liveMarketPart = (p,key,prefix=&#x27;&#x27;) =&gt; {
         const market=liveMarket(p,key); if(!market) return &#x27;&#x27;;
@@ -1766,8 +1767,14 @@ html&gt;body{padding:0}&lt;/style&gt;
       };
       const liveCombinedCell = (p,keys,label) =&gt; {
         const combo=liveAdjustedStat(p,keys); if(!combo) return &#x27;&#x27;;
+        const componentLines=combo.parts.flatMap(part=&gt;{
+          if(!part.market) return [`${marketShort[part.key]} ${formatStat(part.value)} · ESPN fill`];
+          const market=part.market, breadth=market.reportedBookCount&gt;market.bookCount?`${market.bookCount} consensus / ${market.reportedBookCount} reporting`:`${market.bookCount} books`;
+          return [`${marketShort[part.key]} ${formatStat(part.value)} · ${breadth}, Q${market.quality}`,
+            market.outlierBookCount?`↳ Outlier screen: ${market.outlierBookCount} isolated line${market.outlierBookCount===1?&#x27;&#x27;:&#x27;s&#x27;} (${market.excludedSportsbooks.join(&#x27;, &#x27;)||&#x27;book names unavailable&#x27;})`:null].filter(Boolean);
+        });
         const detail=[`${label} ${formatStat(combo.value)} · ${combo.complete?&#x27;all components live&#x27;:&#x27;live consensus + projection fills&#x27;}`,
-          ...combo.parts.map(part=&gt;`${marketShort[part.key]} ${formatStat(part.value)} · ${part.market?`${part.market.bookCount} books, Q${part.market.quality}`:&#x27;ESPN fill&#x27;}`),
+          ...componentLines,
           `Coverage floor ${combo.books} books · fetched ${ageLabel(combo.retrievedAt)} ago`].join(&#x27;\n&#x27;);
         const cls=combo.complete&amp;&amp;combo.parts.every(part=&gt;verifiedMarket(part.market))?&#x27;dft-vlive&#x27;:&#x27;dft-vmixed&#x27;;
         return `&lt;span class=&quot;dft-vstat ${cls} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(detail)}&quot;&gt;${combo.complete?&#x27;&#x27;:&#x27;◐&#x27;}${formatStat(combo.value)}&lt;span class=&quot;dft-vcue&quot;&gt;${combo.books}b·${ageLabel(combo.retrievedAt)}&lt;/span&gt;&lt;/span&gt;`;
@@ -2022,11 +2029,14 @@ html&gt;body{padding:0}&lt;/style&gt;
       function renderLiveTable(){
         const list=filteredAvailable();
         const q=root.querySelector(&#x27;[data-search]&#x27;).value.trim(), pos=root.querySelector(&#x27;[data-position]&#x27;).value;
-        const filtersActive=Boolean(q || pos!==&#x27;ALL&#x27; || state.starOnly), shown=list.slice(0,state.liveLimit), markers=new Map();
+        const filtersActive=Boolean(q || pos!==&#x27;ALL&#x27; || state.starOnly), current=state.drafted.length+1;
+        const remainingOwnPicks=filtersActive?[]:allOwnPicks().filter(pick=&gt;pick&gt;=current);
+        const lastPickOffset=remainingOwnPicks.length?remainingOwnPicks[remainingOwnPicks.length-1]-current+1:0;
+        const visibleLimit=filtersActive?state.liveLimit:Math.max(state.liveLimit,lastPickOffset);
+        const shown=list.slice(0,visibleLimit), markers=new Map();
         root.querySelector(&#x27;[data-pick-lines-note]&#x27;).textContent=filtersActive?&#x27;Pick lines hidden while filtering&#x27;:`All ${draftRounds()} round pick lines follow board order`;
         if(!filtersActive){
-          const w=pickWindow(), current=state.drafted.length+1;
-          allOwnPicks().filter(pick=&gt;pick&gt;=current).forEach((pick,i)=&gt;{
+          remainingOwnPicks.forEach((pick,i)=&gt;{
             const index=pick-current, label=i===0?&#x27;YOUR NEXT PICK&#x27;:&#x27;YOUR PICK&#x27;;
             if(index&gt;=0 &amp;&amp; index&lt;shown.length) markers.set(index,`&lt;tr class=&quot;dft-pickmarker ${i===0?&#x27;current&#x27;:&#x27;future&#x27;}&quot; data-pick-marker=&quot;${pick}&quot;&gt;&lt;td colspan=&quot;15&quot;&gt;&lt;div class=&quot;dft-pickmarkerline&quot;&gt;${label} #${pick} · R${roundOf(pick)}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`);
           });
@@ -2035,7 +2045,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           const ar=activeRank(p), or=otherRank(p), edge=edgeMeta(p), risk=riskMeta(p), vegas=vegasMeta(p);
           return `${markers.get(index)||&#x27;&#x27;}&lt;tr class=&quot;${tierTone(p)}&quot;&gt;&lt;td class=&quot;num dft-lr-cell&quot;&gt;${rankCell(analystRank(p))}&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;${starButton(p)}&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-tierchip&quot;&gt;T${displayTier(p)??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-model-col&quot;&gt;${state.cag?&#x27;&#x27;:rankCell(p.decision)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(ar)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(or)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(edge.label)}&quot;&gt;${edge.text}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${projectionCell(p)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level===&#x27;Medium&#x27;?&#x27;Med&#x27;:risk.level}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;rec&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;yds&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;td&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasPointsCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-fastread&quot;&gt;${escapeHtml(quickRead(p))}&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;dft-rowactions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-taken=&quot;${p.id}&quot;&gt;Taken&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn&quot; data-mine=&quot;${p.id}&quot;&gt;Mine&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`;
         }).join(&#x27;&#x27;) || `&lt;tr&gt;&lt;td colspan=&quot;15&quot; class=&quot;dft-muted&quot;&gt;No available players match this filter.&lt;/td&gt;&lt;/tr&gt;`;
-        root.querySelector(&#x27;[data-show-more-live]&#x27;).hidden=list.length&lt;=state.liveLimit;
+        root.querySelector(&#x27;[data-show-more-live]&#x27;).hidden=list.length&lt;=visibleLimit;
         renderSortIndicators();
       }
       function filteredRankings(){
@@ -2097,7 +2107,10 @@ html&gt;body{padding:0}&lt;/style&gt;
             marketName:row.market_name||marketShort[marketKey], unit:row.unit||&#x27;&#x27;, consensusLine,
             lowLine:numberOrNull(row.low_line)??consensusLine, highLine:numberOrNull(row.high_line)??consensusLine,
             lineRange:numberOrNull(row.line_range)??0, lineIqr:numberOrNull(row.line_iqr)??0,
-            bookCount:Number(row.book_count)||0, pairedPriceCount:Number(row.paired_price_count)||0,
+            bookCount:Number(row.book_count)||0, reportedBookCount:Number(row.reported_book_count)||Number(row.book_count)||0,
+            outlierBookCount:Number(row.outlier_book_count)||0,
+            excludedSportsbooks:Array.isArray(row.excluded_sportsbooks)?row.excluded_sportsbooks:[],
+            lineMad:numberOrNull(row.line_mad), pairedPriceCount:Number(row.paired_price_count)||0,
             sportsbooks:Array.isArray(row.sportsbooks)?row.sportsbooks:[],
             medianOverPrice:numberOrNull(row.median_over_price), medianUnderPrice:numberOrNull(row.median_under_price),
             noVigOverProbability:numberOrNull(row.median_no_vig_over_probability),
