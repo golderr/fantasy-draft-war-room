@@ -70,7 +70,6 @@ Deno.serve(async request => {
   const expectedSecret = Deno.env.get("VEGAS_INGEST_SECRET");
   if (!expectedSecret || request.headers.get("x-ingest-secret") !== expectedSecret) return json({ error: "Unauthorized" }, 401);
   const apiKey = Deno.env.get("SPORTWIZZARD_API_KEY");
-  if (!apiKey) return json({ error: "SPORTWIZZARD_API_KEY is not configured" }, 503);
 
   const requested = await request.json().catch(() => ({}));
   const season = Number(requested?.season || new Date().getUTCFullYear());
@@ -88,6 +87,16 @@ Deno.serve(async request => {
     .insert({ provider: "sportwizzard", season, retrieved_at: retrievedAt })
     .select("id").single();
   if (runError) return json({ error: runError.code === "23505" ? "An ingestion run is already active" : runError.message }, runError.code === "23505" ? 409 : 500);
+
+  if (!apiKey) {
+    const message = "SPORTWIZZARD_API_KEY is not configured";
+    await supabase.from("vegas_ingest_runs").update({
+      status: "failed",
+      finished_at: new Date().toISOString(),
+      error_message: message,
+    }).eq("id", run.id);
+    return json({ runId: run.id, error: message }, 503);
+  }
 
   try {
     const source = await fetchAllSeasonRows(apiKey);
