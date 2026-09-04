@@ -44,6 +44,19 @@ test("Late-Round is the default sort in both views", () => {
   assert.match(appScript, /sort: \{ live:\{key:'lr',dir:'asc'\}, rankings:\{key:'lr',dir:'asc'\} \}/);
 });
 
+test("Late-Round board uses the September 4 page 294 release", () => {
+  const dataLiteral = appScript.match(/const late = (\[[^\n]+\]);/)?.[1];
+  assert.ok(dataLiteral, "Late-Round data should be extractable");
+  const rows = Function(`return ${dataLiteral}`)();
+  assert.equal(rows.length, 250);
+  assert.deepEqual(rows.map((row) => row[0]), Array.from({ length: 250 }, (_, index) => index + 1));
+  const byName = new Map(rows.map((row) => [row[1], row]));
+  assert.deepEqual(byName.get("Alec Pierce"), [81, "Alec Pierce", "WR", 14]);
+  assert.deepEqual(byName.get("Joe Burrow"), [76, "Joe Burrow", "QB", 13]);
+  assert.deepEqual(byName.get("Isiah Pacheco"), [234, "Isiah Pacheco", "RB", 28]);
+  assert.match(app, /page 294 of the September 4 guide/);
+});
+
 test("official room ranks cover the deep board without a false Late-Round fallback", () => {
   const dataLiteral = appScript.match(/const adp = (\[[^\n]+\]);/)?.[1];
   assert.ok(dataLiteral, "room-rank data should be extractable");

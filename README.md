@@ -4,6 +4,8 @@ A fast, phone-friendly 2026 snake-draft board for Yahoo Public half-PPR and ESPN
 
 The September 4 room snapshot covers 249 of the Late-Round Top 250 from the official Yahoo and ESPN public feeds. `LR edge` is always the selected platform’s default room rank minus Late-Round rank. Positive means Late-Round is earlier—and therefore potentially cheaper than the room makes the player look. Actual public ADP remains a separate timing signal; Yahoo has meaningful ADP for 183 of these players, and the app never substitutes Late-Round for a missing platform value.
 
+The trusted analyst anchor is the Late-Round Draft Guide’s September 4 Top 250 and tier table on page 294. The full change log from the previous September 1 board is in `outputs/late_round_rank_changes_september4.csv`.
+
 ## Multi-book Vegas intelligence
 
 The live layer is deliberately not a single sportsbook line and not a disguised projection:
