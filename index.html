@@ -1467,7 +1467,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;div class=&quot;dft-methodgrid&quot;&gt;
         &lt;div class=&quot;dft-method dft-normal-only&quot;&gt;&lt;strong&gt;Projected points + Risk:&lt;/strong&gt; Proj pts is the ESPN stat line scored for the active room. Risk uses IFF uncertainty = (P95 − P05) ÷ (2 × P50): Low ≤25%; Medium 25–40%; High &amp;gt;40%. Without IFF, it falls back to LR/ESPN/Yahoo rank spread: Low ≤8; Medium 9–20; High &amp;gt;20.&lt;/div&gt;
         &lt;div class=&quot;dft-method dft-cag-only&quot;&gt;&lt;strong&gt;CAG Risk:&lt;/strong&gt; high conviction, zero chill. The labels in this mode are entertainment, not an analyst signal.&lt;/div&gt;
-        &lt;div class=&quot;dft-method&quot;&gt;&lt;strong&gt;Vegas:&lt;/strong&gt; orange is a current multi-book consensus; an orange underline means the displayed total mixes verified consensus components with projection fills. V median replaces supported ESPN stats with sportsbook season thresholds. It is normally lower because a prop threshold approximates a median outcome while a fantasy projection is an expected mean. V rank removes the typical QB/FLEX market-by-market median haircut, then ranks qualified players as QB# or F#. Its signed arrow compares that rank with the selected Yahoo/ESPN room inside the same QB or FLEX pool: positive green means Vegas is more bullish than the room.&lt;/div&gt;
+        &lt;div class=&quot;dft-method&quot;&gt;&lt;strong&gt;Vegas:&lt;/strong&gt; orange is a current multi-book consensus; an orange underline means the displayed total mixes verified consensus components with projection fills. V median replaces supported ESPN stats with sportsbook season thresholds. It is normally lower because a prop threshold approximates a median outcome while a fantasy projection is an expected mean. V rank removes the typical QB/FLEX market-by-market median haircut, then ranks qualified players as QB# or F#. Its signed arrow compares that rank with the selected Yahoo/ESPN room among the same Vegas-qualified QB or FLEX players: positive green means Vegas is more bullish than the room.&lt;/div&gt;
       &lt;/div&gt;
       &lt;div class=&quot;dft-method dft-private-source&quot;&gt;&lt;strong&gt;Model rank:&lt;/strong&gt; 70% Late-Round rank + 30% average Yahoo/ESPN room rank, then reranked from 1 down. If platform data is missing, it falls back to Late-Round. Live recommendations add draft-room value, roster need, tier scarcity, next-pick survival, qualified Vegas agreement, and a 3-point High Risk penalty.&lt;/div&gt;
       &lt;div class=&quot;dft-method dft-cag-only&quot;&gt;&lt;strong&gt;CAG method:&lt;/strong&gt; Josh Allen locked to 1, an enormous Buffalo bonus, and pure vibes deciding the rest. Public room ranks, projections, and Vegas fields stay visible.&lt;/div&gt;
@@ -1834,7 +1834,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
       const median = values =&gt; { const sorted=values.filter(Number.isFinite).sort((a,b)=&gt;a-b); if(!sorted.length) return null; const middle=Math.floor(sorted.length/2); return sorted.length%2?sorted[middle]:(sorted[middle-1]+sorted[middle])/2; };
       const vegasCohort = p =&gt; p.pos===&#x27;QB&#x27;?&#x27;QB&#x27;:[&#x27;RB&#x27;,&#x27;WR&#x27;,&#x27;TE&#x27;].includes(p.pos)?&#x27;FLEX&#x27;:null;
       let vegasInsightMemo=null;
-      const cohortOrdinalMap = (cohort,selector) =&gt; new Map(players.filter(p=&gt;vegasCohort(p)===cohort&amp;&amp;Number.isFinite(selector(p))).sort((a,b)=&gt;selector(a)-selector(b)||a.decision-b.decision).map((p,index)=&gt;[p.id,index+1]));
+      const cohortOrdinalMap = (items,selector) =&gt; new Map(items.filter(p=&gt;Number.isFinite(selector(p))).sort((a,b)=&gt;selector(a)-selector(b)||a.decision-b.decision).map((p,index)=&gt;[p.id,index+1]));
       function buildVegasInsights(){
         const token=`${state.platform}|${state.cag}|${state.liveVegasRetrievedAt}|${state.liveVegasPlayers}`;
         if(vegasInsightMemo?.token===token) return vegasInsightMemo.map;
@@ -1863,7 +1863,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         });
         const map=new Map();
         Object.entries(grouped).forEach(([cohort,items])=&gt;{
-          const analystOrdinals=cohortOrdinalMap(cohort,analystRank), roomOrdinals=cohortOrdinalMap(cohort,activeRank);
+          const qualifiedPlayers=items.map(item=&gt;item.p), analystOrdinals=cohortOrdinalMap(qualifiedPlayers,analystRank), roomOrdinals=cohortOrdinalMap(qualifiedPlayers,activeRank);
           items.sort((a,b)=&gt;b.score-a.score||a.p.decision-b.p.decision).forEach((item,index)=&gt;{
             const rank=index+1, roomRank=roomOrdinals.get(item.p.id)||null;
             map.set(item.p.id,{...item,rank,count:items.length,analystRank:analystOrdinals.get(item.p.id)||null,roomRank,roomEdge:roomRank==null?null:roomRank-rank});
@@ -1883,7 +1883,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         const cls=insight.roomEdge&gt;0?&#x27;good&#x27;:insight.roomEdge&lt;0?&#x27;bad&#x27;:&#x27;&#x27;, arrow=insight.roomEdge==null?&#x27;&#x27;:insight.roomEdge&gt;0?`▲+${insight.roomEdge}`:insight.roomEdge&lt;0?`▼${insight.roomEdge}`:&#x27;•0&#x27;, prefix=insight.cohort===&#x27;QB&#x27;?&#x27;QB&#x27;:&#x27;F&#x27;;
         const analystLabel=state.cag?&#x27;CAG&#x27;:&#x27;Late-Round&#x27;, roomLabel=state.platform===&#x27;yahoo&#x27;?&#x27;Yahoo&#x27;:&#x27;ESPN&#x27;;
         const detail=[`Vegas-relative ${insight.cohort} #${insight.rank} of ${insight.count} qualified`,
-          rankComparison(`${roomLabel} room`,insight.roomRank,insight.rank)||`${roomLabel} room comparison unavailable`,
+          rankComparison(`${roomLabel} room (same qualified pool)`,insight.roomRank,insight.rank)||`${roomLabel} room comparison unavailable`,
           rankComparison(analystLabel,insight.analystRank,insight.rank),
           `Underlying signal ${signed(insight.relativeAdjustment)} pts vs the typical sportsbook median haircut`,
           `${insight.components.length} markets · ${insight.live.bookFloor}+ books · updated ${ageLabel(insight.live.retrievedAt)} ago`].filter(Boolean).join(&#x27;\n&#x27;);

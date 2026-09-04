@@ -81,4 +81,5 @@ test("Vegas rank uses qualified evidence and peer-median normalization", () => {
   assert.match(appScript, /Vegas-relative/);
   assert.match(appScript, /roomEdge:roomRank==null\?null:roomRank-rank/);
   assert.match(appScript, /insight\.roomEdge>0\?'good':insight\.roomEdge<0\?'bad'/);
+  assert.match(appScript, /cohortOrdinalMap\(qualifiedPlayers,activeRank\)/);
 });
