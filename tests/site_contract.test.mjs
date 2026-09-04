@@ -44,6 +44,23 @@ test("Late-Round is the default sort in both views", () => {
   assert.match(appScript, /sort: \{ live:\{key:'lr',dir:'asc'\}, rankings:\{key:'lr',dir:'asc'\} \}/);
 });
 
+test("official room ranks cover the deep board without a false Late-Round fallback", () => {
+  const dataLiteral = appScript.match(/const adp = (\[[^\n]+\]);/)?.[1];
+  assert.ok(dataLiteral, "room-rank data should be extractable");
+  const rows = Function(`return ${dataLiteral}`)();
+  assert.equal(rows.length, 250);
+  assert.equal(rows.filter((row) => Number.isFinite(row[4])).length, 249);
+  assert.equal(rows.filter((row) => Number.isFinite(row[5])).length, 249);
+  assert.equal(rows.filter((row) => Number.isFinite(row[7])).length, 183);
+  const pick105 = rows.find((row) => row[0] === 105);
+  assert.ok(Number.isFinite(pick105[4]));
+  assert.ok(Number.isFinite(pick105[5]));
+  assert.equal(pick105[4] - pick105[0], 42, "ESPN LR edge should use ESPN room rank");
+  assert.equal(pick105[5] - pick105[0], -14, "Yahoo LR edge should use Yahoo room rank");
+  assert.match(appScript, /const activeRank = p => Number\.isFinite\(p\[state\.platform\]\) \? p\[state\.platform\] : null/);
+  assert.doesNotMatch(appScript, /p\[state\.platform\] == null \? p\.consensus/);
+});
+
 test("skill-player totals are half-PPR, not full-PPR", () => {
   const dataLiteral = appScript.match(/const espnProjectionData = (\[[^\n]+\]);/)?.[1];
   assert.ok(dataLiteral, "projection data should be extractable");
@@ -62,4 +79,6 @@ test("Vegas rank uses qualified evidence and peer-median normalization", () => {
   assert.match(appScript, /item\.points-baseline/);
   assert.match(appScript, /components\.length<2/);
   assert.match(appScript, /Vegas-relative/);
+  assert.match(appScript, /roomEdge:roomRank==null\?null:roomRank-rank/);
+  assert.match(appScript, /insight\.roomEdge>0\?'good':insight\.roomEdge<0\?'bad'/);
 });
