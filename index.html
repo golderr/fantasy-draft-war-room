@@ -1191,7 +1191,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool .dft-tablewrap::-webkit-scrollbar { width: 10px; height: 10px; }
     #draft-room-tool .dft-tablewrap::-webkit-scrollbar-thumb { background: var(--dft-muted); border: 2px solid var(--dft-panel); border-radius: 999px; }
     #draft-room-tool .dft-tablewrap::-webkit-scrollbar-track { background: var(--dft-panel-2); }
-    #draft-room-tool table { width: 100%; min-width: 1460px; border-collapse: collapse; background: transparent; }
+    #draft-room-tool table { width: 100%; min-width: 1600px; border-collapse: collapse; background: transparent; }
     #draft-room-tool th {
       position: sticky;
       top: 0;
@@ -1238,26 +1238,29 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool .dft-rankcell { white-space: nowrap; }
     #draft-room-tool .dft-ranknum { font-weight: 500; }
     #draft-room-tool .dft-round { display: inline-block; margin-left: 3px; color: var(--dft-muted); font-size: 9px; letter-spacing: .02em; }
-    #draft-room-tool .dft-lr-head {
+    #draft-room-tool .dft-round-head {
       left: 0;
       z-index: 6;
-      min-width: 92px;
-      color: var(--dft-accent);
+      width: 62px;
+      min-width: 62px;
       background: var(--dft-panel);
       box-shadow: 2px 0 0 var(--dft-line), 7px 0 12px color-mix(in srgb, var(--dft-text) 7%, transparent);
     }
-    #draft-room-tool .dft-lr-head .dft-sort { color: inherit; font-weight: 700; }
-    #draft-room-tool .dft-lr-cell {
+    #draft-room-tool .dft-round-cell {
       position: sticky;
       left: 0;
       z-index: 2;
-      min-width: 92px;
+      width: 62px;
+      min-width: 62px;
       border-left: 5px solid var(--dft-accent);
-      color: var(--dft-accent);
       box-shadow: 2px 0 0 var(--dft-line), 7px 0 12px color-mix(in srgb, var(--dft-text) 7%, transparent);
     }
+    #draft-room-tool .dft-roundwrap { display: flex; align-items: center; justify-content: space-between; gap: 3px; }
+    #draft-room-tool .dft-roundlabel { color: var(--dft-muted); font-size: 10px; font-weight: 650; white-space: nowrap; }
+    #draft-room-tool .dft-lr-head { min-width: 74px; color: var(--dft-accent); }
+    #draft-room-tool .dft-lr-head .dft-sort { color: inherit; font-weight: 750; }
+    #draft-room-tool .dft-lr-cell { min-width: 74px; color: var(--dft-accent); font-size: 13px; font-weight: 800; }
     #draft-room-tool .dft-lr-cell .dft-ranknum { font-size: 13px; font-weight: 750; }
-    #draft-room-tool .dft-lr-cell .dft-round { font-weight: 650; }
     #draft-room-tool .dft-tierchip,
     #draft-room-tool .dft-riskbadge,
     #draft-room-tool .dft-coverage span { display: inline-flex; align-items: center; gap: 3px; border-radius: 999px; padding: 1px 5px; white-space: nowrap; font-size: 10px; font-weight: 500; }
@@ -1270,14 +1273,14 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool tr.dft-tier-tone-6 td { background: var(--dft-tier-6); }
     #draft-room-tool tr.dft-tier-tone-7 td { background: var(--dft-tier-7); }
     #draft-room-tool tr.dft-tier-tone-8 td { background: var(--dft-tier-8); }
-    #draft-room-tool tr.dft-tier-tone-1 .dft-lr-cell { border-left-color: var(--dft-tier-accent-1); }
-    #draft-room-tool tr.dft-tier-tone-2 .dft-lr-cell { border-left-color: var(--dft-tier-accent-2); }
-    #draft-room-tool tr.dft-tier-tone-3 .dft-lr-cell { border-left-color: var(--dft-tier-accent-3); }
-    #draft-room-tool tr.dft-tier-tone-4 .dft-lr-cell { border-left-color: var(--dft-tier-accent-4); }
-    #draft-room-tool tr.dft-tier-tone-5 .dft-lr-cell { border-left-color: var(--dft-tier-accent-5); }
-    #draft-room-tool tr.dft-tier-tone-6 .dft-lr-cell { border-left-color: var(--dft-tier-accent-6); }
-    #draft-room-tool tr.dft-tier-tone-7 .dft-lr-cell { border-left-color: var(--dft-tier-accent-7); }
-    #draft-room-tool tr.dft-tier-tone-8 .dft-lr-cell { border-left-color: var(--dft-tier-accent-8); }
+    #draft-room-tool tr.dft-tier-tone-1 .dft-round-cell { border-left-color: var(--dft-tier-accent-1); }
+    #draft-room-tool tr.dft-tier-tone-2 .dft-round-cell { border-left-color: var(--dft-tier-accent-2); }
+    #draft-room-tool tr.dft-tier-tone-3 .dft-round-cell { border-left-color: var(--dft-tier-accent-3); }
+    #draft-room-tool tr.dft-tier-tone-4 .dft-round-cell { border-left-color: var(--dft-tier-accent-4); }
+    #draft-room-tool tr.dft-tier-tone-5 .dft-round-cell { border-left-color: var(--dft-tier-accent-5); }
+    #draft-room-tool tr.dft-tier-tone-6 .dft-round-cell { border-left-color: var(--dft-tier-accent-6); }
+    #draft-room-tool tr.dft-tier-tone-7 .dft-round-cell { border-left-color: var(--dft-tier-accent-7); }
+    #draft-room-tool tr.dft-tier-tone-8 .dft-round-cell { border-left-color: var(--dft-tier-accent-8); }
     #draft-room-tool tr.dft-tier-tone-1 .dft-tierchip { color: var(--dft-tier-accent-1); }
     #draft-room-tool tr.dft-tier-tone-2 .dft-tierchip { color: var(--dft-tier-accent-2); }
     #draft-room-tool tr.dft-tier-tone-3 .dft-tierchip { color: var(--dft-tier-accent-3); }
@@ -1294,6 +1297,14 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool .dft-edge.good { color: var(--dft-good); }
     #draft-room-tool .dft-edge.bad { color: var(--dft-risk); }
     #draft-room-tool .dft-edge.neutral { color: var(--dft-muted); }
+    #draft-room-tool .dft-edgecell { --dft-edge-alpha: 0%; --dft-edge-color: var(--dft-muted); }
+    #draft-room-tool .dft-edgecell.good,
+    #draft-room-tool .dft-edgecell.bad {
+      background-image: linear-gradient(color-mix(in srgb, var(--dft-edge-color) var(--dft-edge-alpha), transparent), color-mix(in srgb, var(--dft-edge-color) var(--dft-edge-alpha), transparent));
+      box-shadow: inset 3px 0 color-mix(in srgb, var(--dft-edge-color) calc(var(--dft-edge-alpha) + 18%), transparent);
+    }
+    #draft-room-tool .dft-edgecell.good { --dft-edge-color: var(--dft-good); }
+    #draft-room-tool .dft-edgecell.bad { --dft-edge-color: var(--dft-risk); }
     #draft-room-tool .dft-riskbadge.low { color: var(--dft-good); background: color-mix(in srgb, var(--dft-good) 12%, transparent); }
     #draft-room-tool .dft-riskbadge.medium { color: var(--dft-warn); background: color-mix(in srgb, var(--dft-warn) 12%, transparent); }
     #draft-room-tool .dft-riskbadge.high { color: var(--dft-risk); background: color-mix(in srgb, var(--dft-risk) 12%, transparent); }
@@ -1316,6 +1327,10 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool .dft-vegaspts.good { color: var(--dft-good); }
     #draft-room-tool .dft-vegaspts.bad { color: var(--dft-risk); }
     #draft-room-tool .dft-vegaspts.estimate { color: var(--dft-muted); font-weight: 500; }
+    #draft-room-tool .dft-vdelta { margin-left: 3px; font-size: 9px; font-weight: 750; }
+    #draft-room-tool .dft-vegasrank { white-space: nowrap; color: var(--dft-info); font-size: 11px; font-weight: 750; font-variant-numeric: tabular-nums; }
+    #draft-room-tool .dft-vegasrank.good { color: var(--dft-good); }
+    #draft-room-tool .dft-vegasrank.bad { color: var(--dft-risk); }
     #draft-room-tool .dft-statlegend { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:2px; font-size:10px; line-height:1.15; }
     #draft-room-tool .dft-statlegend span { white-space:nowrap; }
     #draft-room-tool .dft-fastread { min-width: 190px; max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -1372,7 +1387,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       position: fixed;
       z-index: 9999;
       width: max-content;
-      max-width: min(290px, calc(100vw - 20px));
+      max-width: min(250px, calc(100vw - 20px));
       padding: 7px 9px;
       border: 1px solid var(--dft-line);
       border-radius: 7px;
@@ -1380,7 +1395,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       background: var(--dft-panel);
       box-shadow: var(--dft-shadow);
       font-size: 10px;
-      line-height: 1.38;
+      line-height: 1.32;
       white-space: pre-line;
       pointer-events: none;
     }
@@ -1452,7 +1467,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;div class=&quot;dft-methodgrid&quot;&gt;
         &lt;div class=&quot;dft-method dft-normal-only&quot;&gt;&lt;strong&gt;Projected points + Risk:&lt;/strong&gt; Proj pts is the ESPN stat line scored for the active room. Risk uses IFF uncertainty = (P95 − P05) ÷ (2 × P50): Low ≤25%; Medium 25–40%; High &amp;gt;40%. Without IFF, it falls back to LR/ESPN/Yahoo rank spread: Low ≤8; Medium 9–20; High &amp;gt;20.&lt;/div&gt;
         &lt;div class=&quot;dft-method dft-cag-only&quot;&gt;&lt;strong&gt;CAG Risk:&lt;/strong&gt; high conviction, zero chill. The labels in this mode are entertainment, not an analyst signal.&lt;/div&gt;
-        &lt;div class=&quot;dft-method&quot;&gt;&lt;strong&gt;Vegas:&lt;/strong&gt; orange is a current multi-book consensus; an orange underline means the displayed total mixes verified consensus components with projection fills. Blue A is the older aggregate snapshot; gray ~ is projection-only. Tooltips show books, prices, range, movement, freshness, and projection impact. Vegas-adjusted points start with the full ESPN projection, then replace only stats supported by live consensus, avoiding the false low totals caused by missing props.&lt;/div&gt;
+        &lt;div class=&quot;dft-method&quot;&gt;&lt;strong&gt;Vegas:&lt;/strong&gt; orange is a current multi-book consensus; an orange underline means the displayed total mixes verified consensus components with projection fills. V median replaces supported ESPN stats with sportsbook season thresholds. It is normally lower because a prop threshold approximates a median outcome while a fantasy projection is an expected mean. V rank removes the typical QB/FLEX market-by-market median haircut, then ranks qualified players as QB# or F#. Only cells with genuinely useful context have tooltips.&lt;/div&gt;
       &lt;/div&gt;
       &lt;div class=&quot;dft-method dft-private-source&quot;&gt;&lt;strong&gt;Model rank:&lt;/strong&gt; 70% Late-Round rank + 30% average Yahoo/ESPN room rank, then reranked from 1 down. If platform data is missing, it falls back to Late-Round. Live recommendations add draft-room value, roster need, tier scarcity, next-pick survival, qualified Vegas agreement, and a 3-point High Risk penalty.&lt;/div&gt;
       &lt;div class=&quot;dft-method dft-cag-only&quot;&gt;&lt;strong&gt;CAG method:&lt;/strong&gt; Josh Allen locked to 1, an enormous Buffalo bonus, and pure vibes deciding the rest. Public room ranks, projections, and Vegas fields stay visible.&lt;/div&gt;
@@ -1500,7 +1515,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;div class=&quot;dft-roster&quot; data-roster aria-label=&quot;Your roster&quot;&gt;&lt;/div&gt;
 
         &lt;div class=&quot;dft-boardhead&quot;&gt;
-          &lt;div&gt;&lt;h2&gt;Available board&lt;/h2&gt;&lt;div class=&quot;dft-statlegend&quot;&gt;&lt;span class=&quot;dft-vlive&quot;&gt;Orange = live consensus&lt;/span&gt;&lt;span class=&quot;dft-vactual&quot;&gt;A Blue = aggregate&lt;/span&gt;&lt;span class=&quot;dft-vestimate&quot;&gt;~ Gray = projection-only&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;RB/WR/TE Yds + TD are combined&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot; data-pick-lines-note&gt;Pick lines follow current board order&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;h2&gt;Available board&lt;/h2&gt;&lt;div class=&quot;dft-statlegend&quot;&gt;&lt;span class=&quot;dft-vlive&quot;&gt;Orange = live consensus&lt;/span&gt;&lt;span class=&quot;dft-vactual&quot;&gt;A Blue = aggregate&lt;/span&gt;&lt;span class=&quot;dft-vestimate&quot;&gt;~ Gray = projection-only&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;V median = sportsbook threshold · V rank = relative QB/FLEX rank&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;RB/WR/TE Yds + TD are combined&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot; data-pick-lines-note&gt;Pick lines follow current board order&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;div class=&quot;dft-controls&quot;&gt;
             &lt;input type=&quot;search&quot; data-search placeholder=&quot;Find a player&quot; aria-label=&quot;Find a player&quot;&gt;
             &lt;button type=&quot;button&quot; class=&quot;dft-quiet&quot; data-star-only aria-pressed=&quot;false&quot;&gt;☆ Starred&lt;/button&gt;
@@ -1512,8 +1527,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;div class=&quot;dft-tablewrap&quot;&gt;
           &lt;table aria-label=&quot;Available player board&quot;&gt;
             &lt;thead&gt;&lt;tr&gt;
-              &lt;th class=&quot;num dft-lr-head&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;lr&quot; data-label=&quot;Late-Round&quot; data-private-rank-head&gt;Late-Round &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;dft-round-head&quot; aria-label=&quot;Star and Late-Round round&quot;&gt;★ R&lt;/th&gt;
               &lt;th&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;name&quot; data-label=&quot;Player&quot;&gt;Player &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-lr-head&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;lr&quot; data-label=&quot;Late-Round&quot; data-private-rank-head&gt;Late-Round &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;tier&quot; data-label=&quot;Tier&quot;&gt;Tier &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num dft-model-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;decision&quot; data-label=&quot;Model rank&quot;&gt;Model rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;active&quot; data-label=&quot;Room&quot; data-active-head&gt;Yahoo &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
@@ -1524,7 +1540,8 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_rec&quot; data-label=&quot;V Rec&quot;&gt;V Rec &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_yds&quot; data-label=&quot;V Yds&quot;&gt;V Yds &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_td&quot; data-label=&quot;V TD&quot;&gt;V TD &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_pts&quot; data-label=&quot;V pts&quot;&gt;V pts &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_pts&quot; data-label=&quot;V median&quot;&gt;V median &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_rank&quot; data-label=&quot;V rank&quot;&gt;V rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th&gt;Fast read&lt;/th&gt;&lt;th aria-label=&quot;Actions&quot;&gt;&lt;/th&gt;
             &lt;/tr&gt;&lt;/thead&gt;
             &lt;tbody data-live-table&gt;&lt;/tbody&gt;
@@ -1535,7 +1552,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       &lt;section class=&quot;dft-view&quot; data-view=&quot;rankings&quot; hidden&gt;
         &lt;div class=&quot;dft-boardhead&quot;&gt;
-          &lt;div&gt;&lt;h2&gt;Player rankings&lt;/h2&gt;&lt;div class=&quot;dft-statlegend&quot;&gt;&lt;span class=&quot;dft-vlive&quot;&gt;Orange = live consensus&lt;/span&gt;&lt;span class=&quot;dft-vactual&quot;&gt;A Blue = aggregate&lt;/span&gt;&lt;span class=&quot;dft-vestimate&quot;&gt;~ Gray = projection-only&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;RB/WR/TE Yds + TD are combined&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;h2&gt;Player rankings&lt;/h2&gt;&lt;div class=&quot;dft-statlegend&quot;&gt;&lt;span class=&quot;dft-vlive&quot;&gt;Orange = live consensus&lt;/span&gt;&lt;span class=&quot;dft-vactual&quot;&gt;A Blue = aggregate&lt;/span&gt;&lt;span class=&quot;dft-vestimate&quot;&gt;~ Gray = projection-only&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;V median = sportsbook threshold · V rank = relative QB/FLEX rank&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;RB/WR/TE Yds + TD are combined&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;div class=&quot;dft-controls&quot;&gt;
             &lt;input type=&quot;search&quot; data-rank-search placeholder=&quot;Find a player&quot; aria-label=&quot;Find a ranked player&quot;&gt;
             &lt;button type=&quot;button&quot; class=&quot;dft-quiet&quot; data-star-only aria-pressed=&quot;false&quot;&gt;☆ Starred&lt;/button&gt;
@@ -1547,8 +1564,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;div class=&quot;dft-tablewrap&quot;&gt;
           &lt;table aria-label=&quot;Player rankings&quot;&gt;
             &lt;thead&gt;&lt;tr&gt;
-              &lt;th class=&quot;num dft-lr-head&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;lr&quot; data-label=&quot;Late-Round&quot; data-private-rank-head&gt;Late-Round &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;dft-round-head&quot; aria-label=&quot;Star and Late-Round round&quot;&gt;★ R&lt;/th&gt;
               &lt;th&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;name&quot; data-label=&quot;Player&quot;&gt;Player &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-lr-head&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;lr&quot; data-label=&quot;Late-Round&quot; data-private-rank-head&gt;Late-Round &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;tier&quot; data-label=&quot;Tier&quot;&gt;Tier &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num dft-model-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;decision&quot; data-label=&quot;Model rank&quot;&gt;Model rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;espn&quot; data-label=&quot;ESPN&quot;&gt;ESPN &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
@@ -1559,7 +1577,8 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_rec&quot; data-label=&quot;V Rec&quot;&gt;V Rec &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_yds&quot; data-label=&quot;V Yds&quot;&gt;V Yds &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_td&quot; data-label=&quot;V TD&quot;&gt;V TD &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_pts&quot; data-label=&quot;V pts&quot;&gt;V pts &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_pts&quot; data-label=&quot;V median&quot;&gt;V median &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_rank&quot; data-label=&quot;V rank&quot;&gt;V rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th&gt;Cross-platform read&lt;/th&gt;
             &lt;/tr&gt;&lt;/thead&gt;
             &lt;tbody data-rank-table&gt;&lt;/tbody&gt;
@@ -1568,9 +1587,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;div class=&quot;dft-more&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-quiet&quot; data-show-more-rank&gt;Show more&lt;/button&gt;&lt;/div&gt;
       &lt;/section&gt;
     &lt;/main&gt;
-    &lt;div class=&quot;dft-footnote dft-normal-only&quot;&gt;Every remaining horizontal line marks one of your snake-draft picks through the platform’s full roster size (15 rounds for Yahoo Public; 16 for ESPN). Lines move as players are checked off and hide while filtering. Late-Round is the trusted-rank anchor; Model rank is the explicit 70/30 LR-platform blend. Proj pts comes from ESPN’s projected stat line scored for the active platform. In Vegas columns, orange means the number includes a sportsbook-supported input; gray ~ is projection-only and ~V pts is not a betting line. RB/WR/TE rushing + receiving yards and TDs are combined; QB passing/rushing stay separate; K/DST show n/a where offensive props do not apply. Undo last can be repeated to the start; Taken restores any specific player; Restart clears Taken/Mine but keeps stars. State persists on this device.&lt;/div&gt;
+    &lt;div class=&quot;dft-footnote dft-normal-only&quot;&gt;Every remaining horizontal line marks one of your snake-draft picks through the platform’s full roster size (15 rounds for Yahoo Public; 16 for ESPN). Lines move as players are checked off and hide while filtering. Late-Round is the trusted-rank anchor and default sort; Model rank is the explicit 70/30 LR-platform blend. Proj pts comes from ESPN’s projected stat line scored for the active platform. V median is a sportsbook threshold, not a second mean projection; its adjacent difference is versus Proj pts. V rank normalizes the usual market median haircut and ranks qualified evidence within QB or FLEX. RB/WR/TE rushing + receiving yards and TDs are combined; QB passing/rushing stay separate; K/DST show n/a. Undo last can be repeated; Taken restores any player; Restart keeps stars. State persists on this device.&lt;/div&gt;
     &lt;div class=&quot;dft-footnote dft-cag-only&quot;&gt;CAG mode is the Bills Mafia board: Josh Allen is 1 and Buffalo gets every benefit of the doubt. Public room ranks, projections, and Vegas fields remain unchanged. State persists on this device.&lt;/div&gt;
-    &lt;div class=&quot;dft-tooltip&quot; data-tooltip-layer role=&quot;tooltip&quot; hidden&gt;&lt;/div&gt;
+    &lt;div class=&quot;dft-tooltip&quot; data-dft-tooltip-layer role=&quot;tooltip&quot; hidden&gt;&lt;/div&gt;
     &lt;div class=&quot;dft-live&quot; aria-live=&quot;polite&quot; data-announcer&gt;&lt;/div&gt;
   &lt;/div&gt;
 
@@ -1615,7 +1634,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       const state = {
         platform: &#x27;yahoo&#x27;, teams: 10, slot: 5, drafted: [], mine: new Set(), starred: new Set(), liveLimit: 200, rankLimit: 250, view: &#x27;live&#x27;, starOnly: false, recsCollapsed: false, historyOpen: false, cag: false,
         liveVegasStatus: &#x27;idle&#x27;, liveVegasPlayers: 0, liveVegasBooks: 0, liveVegasRetrievedAt: null, liveVegasHealth: null,
-        sort: { live:{key:&#x27;decision&#x27;,dir:&#x27;asc&#x27;}, rankings:{key:&#x27;decision&#x27;,dir:&#x27;asc&#x27;} }
+        sort: { live:{key:&#x27;lr&#x27;,dir:&#x27;asc&#x27;}, rankings:{key:&#x27;lr&#x27;,dir:&#x27;asc&#x27;} }
       };
       const normalize = (name) =&gt; name.toLowerCase().replace(/\b(jr|sr|ii|iii|iv)\b/g,&#x27;&#x27;).replace(/[^a-z0-9]/g,&#x27;&#x27;);
       const aliases = new Map([
@@ -1687,14 +1706,18 @@ html&gt;body{padding:0}&lt;/style&gt;
         try { localStorage.setItem(storageKey, JSON.stringify({platform:state.platform,teams:state.teams,slot:state.slot,drafted:state.drafted,mine:[...state.mine],starred:[...state.starred],recsCollapsed:state.recsCollapsed,cag:state.cag})); } catch (_) {}
       };
       const rankCell = rank =&gt; rank == null ? &#x27;&lt;span class=&quot;dft-muted&quot;&gt;—&lt;/span&gt;&#x27; : `&lt;span class=&quot;dft-rankcell&quot;&gt;&lt;span class=&quot;dft-ranknum&quot;&gt;${Math.round(rank)}&lt;/span&gt;&lt;span class=&quot;dft-round&quot;&gt;R${roundOf(rank)}&lt;/span&gt;&lt;/span&gt;`;
+      const rankNumberCell = rank =&gt; rank == null ? &#x27;&lt;span class=&quot;dft-muted&quot;&gt;—&lt;/span&gt;&#x27; : `&lt;span class=&quot;dft-ranknum&quot;&gt;${Math.round(rank)}&lt;/span&gt;`;
+      const starRoundCell = p =&gt; `&lt;span class=&quot;dft-roundwrap&quot;&gt;${starButton(p)}&lt;span class=&quot;dft-roundlabel&quot;&gt;R${roundOf(analystRank(p))??&#x27;—&#x27;}&lt;/span&gt;&lt;/span&gt;`;
       const edgeMeta = p =&gt; {
         const n=analystEdge(p);
         const source=state.cag?&#x27;CAG&#x27;:&#x27;Late-Round&#x27;;
-        if(n==null) return {value:null, cls:&#x27;neutral&#x27;, text:&#x27;—&#x27;, label:`${source} comparison unavailable`};
+        if(n==null) return {value:null, cls:&#x27;neutral&#x27;, text:&#x27;—&#x27;, label:`${source} comparison unavailable`,style:&#x27;--dft-edge-alpha:0%&#x27;};
         const rounded=Math.round(n);
-        if(rounded&gt;=4) return {value:n, cls:&#x27;good&#x27;, text:`▲ +${rounded}`, label:`${source} ranks ${p.name} ${rounded} picks earlier than this room`};
-        if(rounded&lt;=-4) return {value:n, cls:&#x27;bad&#x27;, text:`▼ ${rounded}`, label:`This room ranks ${p.name} ${Math.abs(rounded)} picks earlier than ${source}`};
-        return {value:n, cls:&#x27;neutral&#x27;, text:`• ${rounded&gt;0?&#x27;+&#x27;:&#x27;&#x27;}${rounded}`, label:`${source} and this room broadly agree`};
+        const alpha=Math.round(6+Math.min(1,Math.abs(n)/40)*30);
+        const style=`--dft-edge-alpha:${alpha}%`;
+        if(rounded&gt;=4) return {value:n, cls:&#x27;good&#x27;, text:`▲ +${rounded}`, label:`${source} ranks ${p.name} ${rounded} picks earlier than this room`,style};
+        if(rounded&lt;=-4) return {value:n, cls:&#x27;bad&#x27;, text:`▼ ${rounded}`, label:`This room ranks ${p.name} ${Math.abs(rounded)} picks earlier than ${source}`,style};
+        return {value:n, cls:&#x27;neutral&#x27;, text:`• ${rounded&gt;0?&#x27;+&#x27;:&#x27;&#x27;}${rounded}`, label:`${source} and this room broadly agree`,style};
       };
       const riskMeta = p =&gt; {
         if(state.cag){
@@ -1713,7 +1736,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         return {level,rank:level===&#x27;Low&#x27;?1:level===&#x27;Medium&#x27;?2:3,detail:`Ranking spread ${spread} picks (${Math.min(...ranks)}–${Math.max(...ranks)})`};
       };
       const projectedPoints = p =&gt; p.projection ? p.projection[state.platform===&#x27;yahoo&#x27;?&#x27;yahooPoints&#x27;:&#x27;espnPoints&#x27;] : null;
-      const projectionCell = p =&gt; projectedPoints(p)==null ? &#x27;&lt;span class=&quot;dft-muted&quot;&gt;—&lt;/span&gt;&#x27; : `&lt;span class=&quot;dft-proj dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;ESPN Mike Clay projection&amp;#10;${state.platform===&#x27;yahoo&#x27;?&#x27;Yahoo Public&#x27;:&#x27;ESPN standard&#x27;} half-PPR scoring&quot;&gt;&lt;strong&gt;${projectedPoints(p)}&lt;/strong&gt;&lt;/span&gt;`;
+      const projectionCell = p =&gt; projectedPoints(p)==null ? &#x27;&lt;span class=&quot;dft-muted&quot;&gt;—&lt;/span&gt;&#x27; : `&lt;span class=&quot;dft-proj&quot;&gt;&lt;strong&gt;${projectedPoints(p)}&lt;/strong&gt;&lt;/span&gt;`;
       const marketFields={pass_yds:&#x27;passYards&#x27;,pass_td:&#x27;passTds&#x27;,rush_yds:&#x27;rushYards&#x27;,rush_td:&#x27;rushTds&#x27;,receptions:&#x27;receptions&#x27;,rec_yds:&#x27;recYards&#x27;,rec_td:&#x27;recTds&#x27;};
       const marketShort={pass_yds:&#x27;Pass yds&#x27;,pass_td:&#x27;Pass TD&#x27;,rush_yds:&#x27;Rush yds&#x27;,rush_td:&#x27;Rush TD&#x27;,receptions:&#x27;Rec&#x27;,rec_yds:&#x27;Rec yds&#x27;,rec_td:&#x27;Rec TD&#x27;};
       const liveMarket = (p,key) =&gt; p.liveVegas?.[key] || null;
@@ -1729,21 +1752,18 @@ html&gt;body{padding:0}&lt;/style&gt;
         const projection=projectionMarketValue(p,key), impact=projection==null?null:(market.consensusLine-projection)*marketWeight(market);
         const pressure=market.noVigOverProbability==null?&#x27;Price lean unavailable&#x27;:market.noVigOverProbability&gt;=.53?`${Math.round(market.noVigOverProbability*100)}% no-vig Over pressure`:market.noVigOverProbability&lt;=.47?`${Math.round((1-market.noVigOverProbability)*100)}% no-vig Under pressure`:&#x27;Balanced over/under prices&#x27;;
         return [
-          `${market.marketName || marketShort[key]} ${formatStat(market.consensusLine)} · ${market.bookCount} consensus book${market.bookCount===1?&#x27;&#x27;:&#x27;s&#x27;}${market.reportedBookCount&gt;market.bookCount?` · ${market.reportedBookCount} reporting`:&#x27;&#x27;}`,
-          `Range ${formatStat(market.lowLine)}–${formatStat(market.highLine)} · IQR ${formatStat(market.lineIqr)} · ${market.dispersionStatus?`${market.dispersionStatus} agreement`:&#x27;agreement unknown&#x27;}`,
-          market.outlierBookCount?`Outlier screen: ${market.outlierBookCount} isolated line${market.outlierBookCount===1?&#x27;&#x27;:&#x27;s&#x27;} (${market.excludedSportsbooks.join(&#x27;, &#x27;)||&#x27;book names unavailable&#x27;})`:null,
-          `No-vig price signal · ${pressure}`,
-          market.lineChange24h==null?&#x27;24h movement not yet available&#x27;:`24h ${marketMovement(market)} ${signed(market.lineChange24h)}`,
-          impact==null?&#x27;Projection comparison unavailable&#x27;:`vs ESPN ${signed(market.consensusLine-projection)} ${market.unit} · ${signed(impact)} fantasy pts`,
-          market.sportsbooks.length?`Books: ${market.sportsbooks.slice(0,6).join(&#x27;, &#x27;)}${market.sportsbooks.length&gt;6?` +${market.sportsbooks.length-6}`:&#x27;&#x27;}`:&#x27;Book names unavailable&#x27;,
-          `Evidence ${market.confidenceLabel || &#x27;unrated&#x27;} · ${market.freshnessStatus || &#x27;age unknown&#x27;} · Quality ${market.quality}/100`,
-          `Fetched ${ageLabel(market.retrievedAt)} ago · book ages ${ageLabel(market.freshestBookAt)}–${ageLabel(market.stalestBookAt)}`,
+          `${market.marketName || marketShort[key]} ${formatStat(market.consensusLine)} · ${market.bookCount} book${market.bookCount===1?&#x27;&#x27;:&#x27;s&#x27;}`,
+          impact==null?null:`vs ESPN stat ${signed(market.consensusLine-projection)} ${market.unit} · ${signed(impact)} pts`,
+          pressure,
+          `Book range ${formatStat(market.lowLine)}–${formatStat(market.highLine)} · updated ${ageLabel(market.retrievedAt)} ago`,
+          Number.isFinite(market.lineChange24h)&amp;&amp;market.lineChange24h!==0?`24h move ${marketMovement(market)} ${signed(market.lineChange24h)}`:null,
+          market.outlierBookCount?`${market.outlierBookCount} outlier line${market.outlierBookCount===1?&#x27;&#x27;:&#x27;s&#x27;} excluded`:null,
         ].filter(Boolean).join(&#x27;\n&#x27;);
       };
       const liveMarketPart = (p,key,prefix=&#x27;&#x27;) =&gt; {
         const market=liveMarket(p,key); if(!market) return &#x27;&#x27;;
         const verified=verifiedMarket(market);
-        return `&lt;span class=&quot;dft-vstat ${verified?&#x27;dft-vlive&#x27;:&#x27;dft-vstale&#x27;} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(marketTooltip(p,key,market))}&quot;&gt;${prefix}${formatStat(market.consensusLine)}${marketMovement(market)}&lt;span class=&quot;dft-vcue&quot;&gt;${market.bookCount}b·${ageLabel(market.retrievedAt)}&lt;/span&gt;&lt;/span&gt;`;
+        return `&lt;span class=&quot;dft-vstat ${verified?&#x27;dft-vlive&#x27;:&#x27;dft-vstale&#x27;} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(marketTooltip(p,key,market))}&quot;&gt;${prefix}${formatStat(market.consensusLine)}${marketMovement(market)}&lt;span class=&quot;dft-vcue&quot;&gt;${market.bookCount}b·${ageLabel(market.retrievedAt)}&lt;/span&gt;&lt;/span&gt;`;
       };
       const liveAdjustedStat = (p,keys) =&gt; {
         const live=keys.map(key=&gt;[key,liveMarket(p,key)]).filter(([,market])=&gt;market);
@@ -1770,14 +1790,14 @@ html&gt;body{padding:0}&lt;/style&gt;
         const componentLines=combo.parts.flatMap(part=&gt;{
           if(!part.market) return [`${marketShort[part.key]} ${formatStat(part.value)} · ESPN fill`];
           const market=part.market, breadth=market.reportedBookCount&gt;market.bookCount?`${market.bookCount} consensus / ${market.reportedBookCount} reporting`:`${market.bookCount} books`;
-          return [`${marketShort[part.key]} ${formatStat(part.value)} · ${breadth}, Q${market.quality}`,
-            market.outlierBookCount?`↳ Outlier screen: ${market.outlierBookCount} isolated line${market.outlierBookCount===1?&#x27;&#x27;:&#x27;s&#x27;} (${market.excludedSportsbooks.join(&#x27;, &#x27;)||&#x27;book names unavailable&#x27;})`:null].filter(Boolean);
+          const impact=part.projection==null?null:(part.value-part.projection)*marketWeight(market);
+          return [`${marketShort[part.key]} ${formatStat(part.value)} · ${breadth}${impact==null?&#x27;&#x27;:` · ${signed(impact)} pts`}`];
         });
         const detail=[`${label} ${formatStat(combo.value)} · ${combo.complete?&#x27;all components live&#x27;:&#x27;live consensus + projection fills&#x27;}`,
           ...componentLines,
-          `Coverage floor ${combo.books} books · fetched ${ageLabel(combo.retrievedAt)} ago`].join(&#x27;\n&#x27;);
+          `${combo.books}+ books · updated ${ageLabel(combo.retrievedAt)} ago`].join(&#x27;\n&#x27;);
         const cls=combo.complete&amp;&amp;combo.parts.every(part=&gt;verifiedMarket(part.market))?&#x27;dft-vlive&#x27;:&#x27;dft-vmixed&#x27;;
-        return `&lt;span class=&quot;dft-vstat ${cls} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(detail)}&quot;&gt;${combo.complete?&#x27;&#x27;:&#x27;◐&#x27;}${formatStat(combo.value)}&lt;span class=&quot;dft-vcue&quot;&gt;${combo.books}b·${ageLabel(combo.retrievedAt)}&lt;/span&gt;&lt;/span&gt;`;
+        return `&lt;span class=&quot;dft-vstat ${cls} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(detail)}&quot;&gt;${combo.complete?&#x27;&#x27;:&#x27;◐&#x27;}${formatStat(combo.value)}&lt;span class=&quot;dft-vcue&quot;&gt;${combo.books}b·${ageLabel(combo.retrievedAt)}&lt;/span&gt;&lt;/span&gt;`;
       };
       const liveVegasSignal = p =&gt; {
         const base=projectedPoints(p); if(base==null||!p.liveVegas) return null;
@@ -1792,20 +1812,75 @@ html&gt;body{padding:0}&lt;/style&gt;
         const quality=Math.round(adjustments.reduce((sum,item)=&gt;sum+item.market.quality,0)/adjustments.length);
         const retrievedAt=adjustments.reduce((oldest,item)=&gt;!oldest||item.market.retrievedAt&lt;oldest?item.market.retrievedAt:oldest,null);
         const qualified=adjustments.length&gt;=2&amp;&amp;bookFloor&gt;=2&amp;&amp;quality&gt;=55&amp;&amp;ageMinutes(retrievedAt)&lt;=360&amp;&amp;adjustments.every(item=&gt;verifiedMarket(item.market));
-        const label=[`Vegas-adjusted ${state.platform===&#x27;yahoo&#x27;?&#x27;Yahoo&#x27;:&#x27;ESPN&#x27;} projection ${Math.round(value)} (${signed(adjustment,0)} pts)`,
-          `${adjustments.length} live markets · ${bookFloor}+ books · quality ${quality}/100`,
-          ...adjustments.sort((a,b)=&gt;Math.abs(b.points)-Math.abs(a.points)).slice(0,4).map(item=&gt;`${marketShort[item.key]} ${formatStat(item.market.consensusLine)} vs ${formatStat(item.projection)} · ${signed(item.points)} pts`),
-          `Fetched ${ageLabel(retrievedAt)} ago · missing stats retain ESPN projection`].join(&#x27;\n&#x27;);
-        return {value,adjustment,bookFloor,quality,retrievedAt,qualified,label,componentCount:adjustments.length};
+        const label=[`Sportsbook median total ${Math.round(value)} · ${signed(adjustment,0)} vs Proj pts`,
+          `Season props are median-like thresholds; Proj pts is an expected mean`,
+          ...adjustments.sort((a,b)=&gt;Math.abs(b.points)-Math.abs(a.points)).slice(0,2).map(item=&gt;`${marketShort[item.key]} ${formatStat(item.market.consensusLine)} vs ${formatStat(item.projection)} · ${signed(item.points)} pts`),
+          `${qualified?&#x27;Qualified for V rank&#x27;:&#x27;Not enough verified evidence for V rank&#x27;} · ${adjustments.length} markets · ${bookFloor}+ books · ${ageLabel(retrievedAt)} old`].join(&#x27;\n&#x27;);
+        return {value,adjustment,adjustments,bookFloor,quality,retrievedAt,qualified,label,componentCount:adjustments.length};
       };
       const aggregateVegasPoints = p =&gt; !p.vegas ? null : p.vegas.modelOnly &amp;&amp; p.vegas.halfPpr==null ? projectedPoints(p) : p.vegas.halfPpr;
       const vegasPoints = p =&gt; liveVegasSignal(p)?.value ?? aggregateVegasPoints(p);
+      const median = values =&gt; { const sorted=values.filter(Number.isFinite).sort((a,b)=&gt;a-b); if(!sorted.length) return null; const middle=Math.floor(sorted.length/2); return sorted.length%2?sorted[middle]:(sorted[middle-1]+sorted[middle])/2; };
+      const vegasCohort = p =&gt; p.pos===&#x27;QB&#x27;?&#x27;QB&#x27;:[&#x27;RB&#x27;,&#x27;WR&#x27;,&#x27;TE&#x27;].includes(p.pos)?&#x27;FLEX&#x27;:null;
+      let vegasInsightMemo=null;
+      const cohortOrdinalMap = (cohort,selector) =&gt; new Map(players.filter(p=&gt;vegasCohort(p)===cohort&amp;&amp;Number.isFinite(selector(p))).sort((a,b)=&gt;selector(a)-selector(b)||a.decision-b.decision).map((p,index)=&gt;[p.id,index+1]));
+      function buildVegasInsights(){
+        const token=`${state.platform}|${state.cag}|${state.liveVegasRetrievedAt}|${state.liveVegasPlayers}`;
+        if(vegasInsightMemo?.token===token) return vegasInsightMemo.map;
+        const samples=new Map();
+        players.forEach(p=&gt;{
+          const cohort=vegasCohort(p); if(!cohort||!p.liveVegas) return;
+          Object.entries(p.liveVegas).forEach(([key,market])=&gt;{
+            const projection=projectionMarketValue(p,key);
+            if(!verifiedMarket(market)||projection==null||!Number.isFinite(market.consensusLine)) return;
+            const sampleKey=`${cohort}|${key}`, points=(market.consensusLine-projection)*marketWeight(market);
+            if(!samples.has(sampleKey)) samples.set(sampleKey,[]);
+            samples.get(sampleKey).push(points);
+          });
+        });
+        const baselines=new Map([...samples].filter(([,values])=&gt;values.length&gt;=5).map(([key,values])=&gt;[key,median(values)]));
+        const grouped={QB:[],FLEX:[]};
+        players.forEach(p=&gt;{
+          const cohort=vegasCohort(p), live=liveVegasSignal(p); if(!cohort||!live?.qualified) return;
+          const components=live.adjustments.map(item=&gt;{
+            const baseline=baselines.get(`${cohort}|${item.key}`);
+            return baseline==null?null:{...item,baseline,relative:item.points-baseline};
+          }).filter(Boolean);
+          if(components.length&lt;2) return;
+          const relativeAdjustment=components.reduce((sum,item)=&gt;sum+item.relative,0);
+          grouped[cohort].push({p,cohort,live,components,relativeAdjustment,score:projectedPoints(p)+relativeAdjustment});
+        });
+        const map=new Map();
+        Object.entries(grouped).forEach(([cohort,items])=&gt;{
+          const analystOrdinals=cohortOrdinalMap(cohort,analystRank), roomOrdinals=cohortOrdinalMap(cohort,activeRank);
+          items.sort((a,b)=&gt;b.score-a.score||a.p.decision-b.p.decision).forEach((item,index)=&gt;map.set(item.p.id,{...item,rank:index+1,count:items.length,analystRank:analystOrdinals.get(item.p.id)||null,roomRank:roomOrdinals.get(item.p.id)||null}));
+        });
+        vegasInsightMemo={token,map};
+        return map;
+      }
+      const vegasInsight = p =&gt; buildVegasInsights().get(p.id)||null;
+      const rankComparison = (label,sourceRank,vegasRank) =&gt; {
+        if(!Number.isFinite(sourceRank)) return null;
+        const gap=sourceRank-vegasRank;
+        return gap===0?`${label} also #${sourceRank}`:`${label} #${sourceRank} · Vegas ${Math.abs(gap)} ${gap&gt;0?&#x27;higher&#x27;:&#x27;lower&#x27;}`;
+      };
+      const vegasRankCell = p =&gt; {
+        const insight=vegasInsight(p); if(!insight) return &#x27;&lt;span class=&quot;dft-muted&quot;&gt;—&lt;/span&gt;&#x27;;
+        const cls=insight.relativeAdjustment&gt;=4?&#x27;good&#x27;:insight.relativeAdjustment&lt;=-4?&#x27;bad&#x27;:&#x27;&#x27;, arrow=cls===&#x27;good&#x27;?&#x27;▲&#x27;:cls===&#x27;bad&#x27;?&#x27;▼&#x27;:&#x27;•&#x27;, prefix=insight.cohort===&#x27;QB&#x27;?&#x27;QB&#x27;:&#x27;F&#x27;;
+        const analystLabel=state.cag?&#x27;CAG&#x27;:&#x27;Late-Round&#x27;, roomLabel=state.platform===&#x27;yahoo&#x27;?&#x27;Yahoo&#x27;:&#x27;ESPN&#x27;;
+        const detail=[`Vegas-relative ${insight.cohort} #${insight.rank} of ${insight.count} qualified`,
+          `Relative signal ${signed(insight.relativeAdjustment)} pts vs the typical sportsbook median haircut`,
+          rankComparison(analystLabel,insight.analystRank,insight.rank),
+          rankComparison(roomLabel,insight.roomRank,insight.rank),
+          `${insight.components.length} markets · ${insight.live.bookFloor}+ books · updated ${ageLabel(insight.live.retrievedAt)} ago`].filter(Boolean).join(&#x27;\n&#x27;);
+        return `&lt;span class=&quot;dft-vegasrank ${cls} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(detail)}&quot;&gt;${prefix}${insight.rank} ${arrow}&lt;/span&gt;`;
+      };
       const vegasMeta = p =&gt; {
         const live=liveVegasSignal(p);
         if(live){
-          const cls=live.qualified&amp;&amp;live.adjustment&gt;=8?&#x27;good&#x27;:live.qualified&amp;&amp;live.adjustment&lt;=-8?&#x27;bad&#x27;:&#x27;neutral&#x27;;
-          const arrow=cls===&#x27;good&#x27;?&#x27;▲&#x27;:cls===&#x27;bad&#x27;?&#x27;▼&#x27;:&#x27;•&#x27;;
-          return {value:live.value,cls,kind:&#x27;live&#x27;,qualified:live.qualified,text:`${Math.round(live.value)} ${arrow} ${live.bookFloor}b·${ageLabel(live.retrievedAt)}`,label:live.label};
+          const insight=vegasInsight(p), cls=insight?.relativeAdjustment&gt;=4?&#x27;good&#x27;:insight?.relativeAdjustment&lt;=-4?&#x27;bad&#x27;:&#x27;neutral&#x27;;
+          const label=insight?`${live.label}\nRelative signal ${signed(insight.relativeAdjustment)} pts after peer-median normalization`:live.label;
+          return {value:live.value,adjustment:live.adjustment,relativeAdjustment:insight?.relativeAdjustment??null,cls,kind:&#x27;live&#x27;,qualified:Boolean(insight),text:insight?`rel ${signed(insight.relativeAdjustment)}`:`${Math.round(live.value)} raw`,label,bookFloor:live.bookFloor,retrievedAt:live.retrievedAt};
         }
         if(!p.vegas) return {value:null,cls:&#x27;&#x27;,text:&#x27;—&#x27;,label:&#x27;No sportsbook-supported season props loaded&#x27;};
         const value=aggregateVegasPoints(p), projection=projectedPoints(p), delta=projection==null||value==null?null:value-projection, qualified=p.vegas.actualCount&gt;=2 &amp;&amp; delta!=null;
@@ -1819,7 +1894,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       const vegasPart = (p,field,prefix) =&gt; {
         const value=p.vegas?.[field]; if(!Number.isFinite(value)) return &#x27;&#x27;;
         const actual=p.vegas.sources?.[field]===&#x27;vegas&#x27;;
-        return `&lt;span class=&quot;dft-vstat ${actual?&#x27;dft-vactual&#x27;:&#x27;dft-vestimate&#x27;} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${prefix}${formatStat(value)} · ${actual?&#x27;aggregate snapshot classified as Vegas-supported; sportsbook and price unavailable&#x27;:&#x27;projection-only fill&#x27;}&quot;&gt;${actual?&#x27;A&#x27;:&#x27;~&#x27;}${prefix}${formatStat(value)}&lt;/span&gt;`;
+        return `&lt;span class=&quot;dft-vstat ${actual?&#x27;dft-vactual&#x27;:&#x27;dft-vestimate&#x27;}&quot;&gt;${actual?&#x27;A&#x27;:&#x27;~&#x27;}${prefix}${formatStat(value)}&lt;/span&gt;`;
       };
       const vegasCombined = (p,fields,label) =&gt; {
         const available=fields.filter(field=&gt;Number.isFinite(p.vegas?.[field]));
@@ -1827,7 +1902,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         const value=available.reduce((sum,field)=&gt;sum+p.vegas[field],0);
         const actualCount=available.filter(field=&gt;p.vegas.sources?.[field]===&#x27;vegas&#x27;).length;
         const includesVegas=actualCount&gt;0;
-        return `&lt;span class=&quot;dft-vstat ${includesVegas?&#x27;dft-vactual&#x27;:&#x27;dft-vestimate&#x27;} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${label} ${formatStat(value)} · ${includesVegas?`aggregate snapshot with ${actualCount} field${actualCount===1?&#x27;&#x27;:&#x27;s&#x27;} classified as Vegas-supported; book-level evidence unavailable`:&#x27;projection only&#x27;}&quot;&gt;${includesVegas?&#x27;A&#x27;:&#x27;~&#x27;}${formatStat(value)}&lt;/span&gt;`;
+        return `&lt;span class=&quot;dft-vstat ${includesVegas?&#x27;dft-vactual&#x27;:&#x27;dft-vestimate&#x27;}&quot;&gt;${includesVegas?&#x27;A&#x27;:&#x27;~&#x27;}${formatStat(value)}&lt;/span&gt;`;
       };
       const vegasStatCell = (p,group) =&gt; {
         if([&#x27;K&#x27;,&#x27;DST&#x27;].includes(p.pos)) return &#x27;&lt;span class=&quot;dft-muted&quot; aria-label=&quot;Not applicable for kickers and team defenses&quot;&gt;n/a&lt;/span&gt;&#x27;;
@@ -1837,13 +1912,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         if(group===&#x27;td&#x27;) parts=p.pos===&#x27;QB&#x27;?[liveMarketPart(p,&#x27;pass_td&#x27;,&#x27;P&#x27;)||vegasPart(p,&#x27;passTds&#x27;,&#x27;P&#x27;),liveMarketPart(p,&#x27;rush_td&#x27;,&#x27;R&#x27;)||vegasPart(p,&#x27;rushTds&#x27;,&#x27;R&#x27;)]:[liveCombinedCell(p,[&#x27;rush_td&#x27;,&#x27;rec_td&#x27;],&#x27;Combined rushing and receiving touchdowns&#x27;)||vegasCombined(p,[&#x27;rushTds&#x27;,&#x27;recTds&#x27;],&#x27;Combined rushing and receiving touchdowns&#x27;)];
         return parts.filter(Boolean).join(&#x27;&#x27;) || &#x27;&lt;span class=&quot;dft-muted&quot;&gt;—&lt;/span&gt;&#x27;;
       };
-      const vegasPointsCell = p =&gt; { if([&#x27;K&#x27;,&#x27;DST&#x27;].includes(p.pos)) return &#x27;&lt;span class=&quot;dft-muted&quot; aria-label=&quot;Not applicable for kickers and team defenses&quot;&gt;n/a&lt;/span&gt;&#x27;; const v=vegasMeta(p), sourceClass=v.kind===&#x27;live&#x27;?&#x27;dft-vmixed&#x27;:v.kind===&#x27;aggregate&#x27;?&#x27;dft-vactual&#x27;:v.kind===&#x27;estimate&#x27;?&#x27;dft-vestimate&#x27;:&#x27;&#x27;; return `&lt;span class=&quot;dft-vegaspts ${sourceClass} ${v.cls} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(v.label)}&quot;&gt;${escapeHtml(v.text)}&lt;/span&gt;`; };
+      const vegasPointsCell = p =&gt; { if([&#x27;K&#x27;,&#x27;DST&#x27;].includes(p.pos)) return &#x27;&lt;span class=&quot;dft-muted&quot; aria-label=&quot;Not applicable for kickers and team defenses&quot;&gt;n/a&lt;/span&gt;&#x27;; const v=vegasMeta(p), sourceClass=v.kind===&#x27;live&#x27;?&#x27;dft-vmixed&#x27;:v.kind===&#x27;aggregate&#x27;?&#x27;dft-vactual&#x27;:v.kind===&#x27;estimate&#x27;?&#x27;dft-vestimate&#x27;:&#x27;&#x27;; if(v.kind===&#x27;live&#x27;) return `&lt;span class=&quot;dft-vegaspts ${sourceClass} ${v.cls} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(v.label)}&quot;&gt;${Math.round(v.value)}&lt;span class=&quot;dft-vdelta&quot;&gt;${signed(v.adjustment,0)}&lt;/span&gt;&lt;span class=&quot;dft-vcue&quot;&gt;${v.bookFloor}b·${ageLabel(v.retrievedAt)}&lt;/span&gt;&lt;/span&gt;`; return `&lt;span class=&quot;dft-vegaspts ${sourceClass} ${v.cls}&quot;&gt;${escapeHtml(v.text)}&lt;/span&gt;`; };
       const vegasYards = p =&gt; liveAdjustedStat(p,p.pos===&#x27;QB&#x27;?[&#x27;pass_yds&#x27;,&#x27;rush_yds&#x27;]:[&#x27;rush_yds&#x27;,&#x27;rec_yds&#x27;])?.value ?? (!p.vegas?null:(p.pos===&#x27;QB&#x27;?(p.vegas.passYards||0)+(p.vegas.rushYards||0):(p.vegas.rushYards||0)+(p.vegas.recYards||0)));
       const vegasTds = p =&gt; liveAdjustedStat(p,p.pos===&#x27;QB&#x27;?[&#x27;pass_td&#x27;,&#x27;rush_td&#x27;]:[&#x27;rush_td&#x27;,&#x27;rec_td&#x27;])?.value ?? (!p.vegas?null:(p.pos===&#x27;QB&#x27;?(p.vegas.passTds||0)+(p.vegas.rushTds||0):(p.vegas.rushTds||0)+(p.vegas.recTds||0)));
       const sortValue = (p,k) =&gt; ({
         name:p.name.toLowerCase(), decision:state.cag?p.cagRank:p.decision, tier:displayTier(p), active:activeRank(p), other:otherRank(p), lr:analystRank(p),
         espn:p.espn, yahoo:p.yahoo, edge:analystEdge(p), proj:projectedPoints(p), risk:riskMeta(p).rank,
-        vegas_rec:liveMarket(p,&#x27;receptions&#x27;)?.consensusLine??p.vegas?.receptions, vegas_yds:vegasYards(p), vegas_td:vegasTds(p), vegas_pts:vegasPoints(p)
+        vegas_rec:liveMarket(p,&#x27;receptions&#x27;)?.consensusLine??p.vegas?.receptions, vegas_yds:vegasYards(p), vegas_td:vegasTds(p), vegas_pts:vegasPoints(p), vegas_rank:vegasInsight(p)?.rank
       })[k];
       const sortPlayers = (list,table) =&gt; {
         const cfg=state.sort[table];
@@ -1920,8 +1995,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (edge&gt;=7) reasons.push(`LR is ${Math.round(edge)} picks higher`);
         else if (edge&lt;=-7) risks.push(`Room price is ${Math.abs(Math.round(edge))} picks richer than LR`);
         if (cross!=null &amp;&amp; cross&gt;=8) reasons.push(`${state.platform===&#x27;yahoo&#x27;?&#x27;ESPN&#x27;:&#x27;Yahoo&#x27;} takes him ${Math.round(cross)} earlier`);
-        if (vegas.qualified&amp;&amp;vegas.cls===&#x27;good&#x27;) reasons.push(`Live Vegas is ${Math.round(vegas.value-projectedPoints(p))} pts higher`);
-        if (vegas.qualified&amp;&amp;vegas.cls===&#x27;bad&#x27;) risks.push(`Live Vegas is ${Math.abs(Math.round(vegas.value-projectedPoints(p)))} pts lower`);
+        if (vegas.qualified&amp;&amp;vegas.cls===&#x27;good&#x27;) reasons.push(`Vegas-relative signal ${signed(vegas.relativeAdjustment)} pts`);
+        if (vegas.qualified&amp;&amp;vegas.cls===&#x27;bad&#x27;) risks.push(`Vegas-relative signal ${signed(vegas.relativeAdjustment)} pts`);
         if (p.tier!=null &amp;&amp; remain&lt;=2) reasons.push(`Only ${remain} left in Tier ${p.tier}`);
         const need=needLabel(p,c); if(need) reasons.push(need);
         if (ar&gt;w.after+10) risks.push(`Likely lasts to pick ${w.after}`);
@@ -1973,14 +2048,14 @@ html&gt;body{padding:0}&lt;/style&gt;
           liveCoverage.className=`${failures?&#x27;partial&#x27;:&#x27;loaded&#x27;} dft-hastip`;
           liveCoverage.tabIndex=0;
           liveCoverage.textContent=`${failures?&#x27;△&#x27;:&#x27;✓&#x27;} Live ${state.liveVegasPlayers}p · ${state.liveVegasBooks}b`;
-          liveCoverage.dataset.tooltip=`Last complete snapshot ${ageLabel(state.liveVegasRetrievedAt)} ago\n${state.liveVegasPlayers} matched players · ${state.liveVegasBooks} books${failures?`\n${failures} refresh failure${failures===1?&#x27;&#x27;:&#x27;s&#x27;} since the last good snapshot; good data remains active`:&#x27;\nRefresh pipeline healthy&#x27;}`;
+          liveCoverage.dataset.dftTip=`Last complete snapshot ${ageLabel(state.liveVegasRetrievedAt)} ago\n${state.liveVegasPlayers} matched players · ${state.liveVegasBooks} books${failures?`\n${failures} refresh failure${failures===1?&#x27;&#x27;:&#x27;s&#x27;} since the last good snapshot; good data remains active`:&#x27;\nRefresh pipeline healthy&#x27;}`;
           liveStatus.className=&#x27;loaded&#x27;; liveStatus.textContent=&#x27;loaded&#x27;;
-          liveDetail.textContent=`Current multi-book consensus for ${state.liveVegasPlayers} ranked players across ${state.liveVegasBooks} books; latest complete snapshot fetched ${ageLabel(state.liveVegasRetrievedAt)} ago. Each tooltip retains range, prices, quote quality, and movement.`;
+          liveDetail.textContent=`Current multi-book consensus for ${state.liveVegasPlayers} ranked players across ${state.liveVegasBooks} books; latest complete snapshot fetched ${ageLabel(state.liveVegasRetrievedAt)} ago. Focused tooltips show projection impact, price lean, book range, movement, and freshness.`;
         } else if(state.liveVegasStatus===&#x27;loading&#x27;){
           liveCoverage.className=&#x27;&#x27;; liveCoverage.textContent=&#x27;… Live Vegas&#x27;; liveStatus.className=&#x27;pending&#x27;; liveStatus.textContent=&#x27;refreshing&#x27;;
         } else {
           liveCoverage.className=&#x27;&#x27;; liveCoverage.textContent=&#x27;○ Live Vegas staged&#x27;; liveStatus.className=&#x27;pending&#x27;; liveStatus.textContent=&#x27;staged&#x27;;
-          liveCoverage.removeAttribute(&#x27;data-tooltip&#x27;); liveCoverage.removeAttribute(&#x27;tabindex&#x27;);
+          liveCoverage.removeAttribute(&#x27;data-dft-tip&#x27;); liveCoverage.removeAttribute(&#x27;tabindex&#x27;);
           liveDetail.textContent=&#x27;The ingestion, consensus, history, and quote-quality layers are built. The aggregate snapshot remains visibly separate until the live provider secret and first successful pull are present.&#x27;;
         }
         root.querySelectorAll(&#x27;[data-star-only]&#x27;).forEach(b=&gt;{ b.setAttribute(&#x27;aria-pressed&#x27;,String(state.starOnly)); b.textContent=state.starOnly?&#x27;★ Starred only&#x27;:&#x27;☆ Starred&#x27;; });
@@ -2009,7 +2084,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         toggle.textContent=state.recsCollapsed?&#x27;Show suggestions&#x27;:&#x27;Hide suggestions&#x27;;
         section.innerHTML=recommendationData().map((p,i)=&gt;{
           const e=explain(p), ar=activeRank(p), edge=edgeMeta(p), risk=riskMeta(p), vegas=vegasMeta(p);
-          return `&lt;article class=&quot;dft-rec&quot;&gt;&lt;div class=&quot;dft-rechead&quot;&gt;&lt;div class=&quot;dft-recname&quot;&gt;${starButton(p)}&lt;strong&gt;${i+1}. ${escapeHtml(p.name)}&lt;/strong&gt;&lt;div class=&quot;dft-meta&quot;&gt;${p.pos} · ${p.team} · T${displayTier(p)??&#x27;—&#x27;} · room ${ar??&#x27;—&#x27;} R${roundOf(ar)??&#x27;—&#x27;}${projectedPoints(p)!=null?` · ${projectedPoints(p)} pts`:&#x27;&#x27;}&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;dft-call ${e.call.toLowerCase()}&quot;&gt;${e.call}&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;dft-why&quot;&gt;&lt;span&gt;${escapeHtml(e.reasons[0]||&#x27;&#x27;)}&lt;/span&gt;${e.reasons[1]?`&lt;span&gt;${escapeHtml(e.reasons[1])}&lt;/span&gt;`:&#x27;&#x27;}${e.risk?`&lt;span class=&quot;dft-risk&quot;&gt;${escapeHtml(e.risk)}&lt;/span&gt;`:&#x27;&#x27;}&lt;/div&gt;&lt;div class=&quot;dft-recfoot&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(edge.label)}&quot;&gt;${edge.text}&lt;/span&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level} risk&lt;/span&gt;${p.vegas||p.liveVegas?`&lt;span class=&quot;dft-vegas ${vegas.cls} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(vegas.label)}&quot;&gt;V ${vegas.text}&lt;/span&gt;`:&#x27;&#x27;}&lt;div class=&quot;dft-inline-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-taken=&quot;${p.id}&quot;&gt;Taken&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-primary&quot; data-mine=&quot;${p.id}&quot;&gt;Mine&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/article&gt;`;
+          return `&lt;article class=&quot;dft-rec&quot;&gt;&lt;div class=&quot;dft-rechead&quot;&gt;&lt;div class=&quot;dft-recname&quot;&gt;${starButton(p)}&lt;strong&gt;${i+1}. ${escapeHtml(p.name)}&lt;/strong&gt;&lt;div class=&quot;dft-meta&quot;&gt;${p.pos} · ${p.team} · T${displayTier(p)??&#x27;—&#x27;} · room ${ar??&#x27;—&#x27;} R${roundOf(ar)??&#x27;—&#x27;}${projectedPoints(p)!=null?` · ${projectedPoints(p)} pts`:&#x27;&#x27;}&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;dft-call ${e.call.toLowerCase()}&quot;&gt;${e.call}&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;dft-why&quot;&gt;&lt;span&gt;${escapeHtml(e.reasons[0]||&#x27;&#x27;)}&lt;/span&gt;${e.reasons[1]?`&lt;span&gt;${escapeHtml(e.reasons[1])}&lt;/span&gt;`:&#x27;&#x27;}${e.risk?`&lt;span class=&quot;dft-risk&quot;&gt;${escapeHtml(e.risk)}&lt;/span&gt;`:&#x27;&#x27;}&lt;/div&gt;&lt;div class=&quot;dft-recfoot&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls}&quot;&gt;${edge.text}&lt;/span&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level} risk&lt;/span&gt;${p.vegas||p.liveVegas?(vegas.kind===&#x27;live&#x27;?`&lt;span class=&quot;dft-vegas ${vegas.cls} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(vegas.label)}&quot;&gt;V ${vegas.text}&lt;/span&gt;`:`&lt;span class=&quot;dft-vegas ${vegas.cls}&quot;&gt;V ${vegas.text}&lt;/span&gt;`):&#x27;&#x27;}&lt;div class=&quot;dft-inline-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-taken=&quot;${p.id}&quot;&gt;Taken&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-primary&quot; data-mine=&quot;${p.id}&quot;&gt;Mine&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/article&gt;`;
         }).join(&#x27;&#x27;);
       }
       function renderHistory(){
@@ -2038,13 +2113,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         if(!filtersActive){
           remainingOwnPicks.forEach((pick,i)=&gt;{
             const index=pick-current, label=i===0?&#x27;YOUR NEXT PICK&#x27;:&#x27;YOUR PICK&#x27;;
-            if(index&gt;=0 &amp;&amp; index&lt;shown.length) markers.set(index,`&lt;tr class=&quot;dft-pickmarker ${i===0?&#x27;current&#x27;:&#x27;future&#x27;}&quot; data-pick-marker=&quot;${pick}&quot;&gt;&lt;td colspan=&quot;15&quot;&gt;&lt;div class=&quot;dft-pickmarkerline&quot;&gt;${label} #${pick} · R${roundOf(pick)}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`);
+            if(index&gt;=0 &amp;&amp; index&lt;shown.length) markers.set(index,`&lt;tr class=&quot;dft-pickmarker ${i===0?&#x27;current&#x27;:&#x27;future&#x27;}&quot; data-pick-marker=&quot;${pick}&quot;&gt;&lt;td colspan=&quot;17&quot;&gt;&lt;div class=&quot;dft-pickmarkerline&quot;&gt;${label} #${pick} · R${roundOf(pick)}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`);
           });
         }
         root.querySelector(&#x27;[data-live-table]&#x27;).innerHTML=shown.map((p,index)=&gt;{
           const ar=activeRank(p), or=otherRank(p), edge=edgeMeta(p), risk=riskMeta(p), vegas=vegasMeta(p);
-          return `${markers.get(index)||&#x27;&#x27;}&lt;tr class=&quot;${tierTone(p)}&quot;&gt;&lt;td class=&quot;num dft-lr-cell&quot;&gt;${rankCell(analystRank(p))}&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;${starButton(p)}&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-tierchip&quot;&gt;T${displayTier(p)??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-model-col&quot;&gt;${state.cag?&#x27;&#x27;:rankCell(p.decision)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(ar)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(or)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(edge.label)}&quot;&gt;${edge.text}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${projectionCell(p)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level===&#x27;Medium&#x27;?&#x27;Med&#x27;:risk.level}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;rec&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;yds&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;td&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasPointsCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-fastread&quot;&gt;${escapeHtml(quickRead(p))}&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;dft-rowactions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-taken=&quot;${p.id}&quot;&gt;Taken&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn&quot; data-mine=&quot;${p.id}&quot;&gt;Mine&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`;
-        }).join(&#x27;&#x27;) || `&lt;tr&gt;&lt;td colspan=&quot;15&quot; class=&quot;dft-muted&quot;&gt;No available players match this filter.&lt;/td&gt;&lt;/tr&gt;`;
+          return `${markers.get(index)||&#x27;&#x27;}&lt;tr class=&quot;${tierTone(p)}&quot;&gt;&lt;td class=&quot;dft-round-cell&quot;&gt;${starRoundCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-lr-cell&quot;&gt;${rankNumberCell(analystRank(p))}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-tierchip&quot;&gt;T${displayTier(p)??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-model-col&quot;&gt;${state.cag?&#x27;&#x27;:rankCell(p.decision)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(ar)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(or)}&lt;/td&gt;&lt;td class=&quot;num dft-edgecell ${edge.cls}&quot; style=&quot;${edge.style}&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls}&quot;&gt;${edge.text}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${projectionCell(p)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level===&#x27;Medium&#x27;?&#x27;Med&#x27;:risk.level}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;rec&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;yds&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;td&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasPointsCell(p)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasRankCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-fastread&quot;&gt;${escapeHtml(quickRead(p))}&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;dft-rowactions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-taken=&quot;${p.id}&quot;&gt;Taken&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn&quot; data-mine=&quot;${p.id}&quot;&gt;Mine&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`;
+        }).join(&#x27;&#x27;) || `&lt;tr&gt;&lt;td colspan=&quot;17&quot; class=&quot;dft-muted&quot;&gt;No available players match this filter.&lt;/td&gt;&lt;/tr&gt;`;
         root.querySelector(&#x27;[data-show-more-live]&#x27;).hidden=list.length&lt;=visibleLimit;
         renderSortIndicators();
       }
@@ -2059,7 +2134,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           const cross=p.espn!=null&amp;&amp;p.yahoo!=null?p.yahoo-p.espn:null;
           const read=cross==null?&#x27;Platform comparison unavailable&#x27;:Math.abs(cross)&lt;5?&#x27;Rooms broadly agree&#x27;:cross&gt;0?`ESPN takes him ${cross} earlier`:`Yahoo takes him ${Math.abs(cross)} earlier`;
           const edge=edgeMeta(p), risk=riskMeta(p), vegas=vegasMeta(p);
-          return `&lt;tr class=&quot;${tierTone(p)} ${dset.has(p.id)?&#x27;dft-drafted&#x27;:&#x27;&#x27;}&quot;&gt;&lt;td class=&quot;num dft-lr-cell&quot;&gt;${rankCell(analystRank(p))}&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;${starButton(p)}&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-tierchip&quot;&gt;T${displayTier(p)??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-model-col&quot;&gt;${state.cag?&#x27;&#x27;:rankCell(p.decision)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(p.espn)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(p.yahoo)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(edge.label)}&quot;&gt;${edge.text}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${projectionCell(p)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-tooltip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level===&#x27;Medium&#x27;?&#x27;Med&#x27;:risk.level}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;rec&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;yds&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;td&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasPointsCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-fastread&quot;&gt;${escapeHtml(read)}&lt;/td&gt;&lt;/tr&gt;`;
+          return `&lt;tr class=&quot;${tierTone(p)} ${dset.has(p.id)?&#x27;dft-drafted&#x27;:&#x27;&#x27;}&quot;&gt;&lt;td class=&quot;dft-round-cell&quot;&gt;${starRoundCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-lr-cell&quot;&gt;${rankNumberCell(analystRank(p))}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-tierchip&quot;&gt;T${displayTier(p)??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-model-col&quot;&gt;${state.cag?&#x27;&#x27;:rankCell(p.decision)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(p.espn)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${rankCell(p.yahoo)}&lt;/td&gt;&lt;td class=&quot;num dft-edgecell ${edge.cls}&quot; style=&quot;${edge.style}&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls}&quot;&gt;${edge.text}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${projectionCell(p)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level===&#x27;Medium&#x27;?&#x27;Med&#x27;:risk.level}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;rec&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;yds&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;td&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasPointsCell(p)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasRankCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-fastread&quot;&gt;${escapeHtml(read)}&lt;/td&gt;&lt;/tr&gt;`;
         }).join(&#x27;&#x27;);
         root.querySelector(&#x27;[data-show-more-rank]&#x27;).hidden=list.length&lt;=state.rankLimit;
         renderSortIndicators();
@@ -2094,6 +2169,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         state.starred.has(id)?state.starred.delete(id):state.starred.add(id); saveState(); renderAll();
       }
       function applyLiveVegasRows(rows,meta={}){
+        vegasInsightMemo=null;
         players.forEach(p=&gt;{ p.liveVegas=null; });
         const seenPlayers=new Set();
         for(const row of rows){
@@ -2144,25 +2220,26 @@ html&gt;body{padding:0}&lt;/style&gt;
         } catch (_) { state.liveVegasStatus=&#x27;unavailable&#x27;; }
         finally { clearTimeout(timeout); renderAll(); }
       }
-      const tooltipLayer=root.querySelector(&#x27;[data-tooltip-layer]&#x27;);
-      let tooltipTrigger=null;
-      function hideTooltip(){ tooltipLayer.hidden=true; tooltipTrigger=null; }
+      const tooltipLayer=root.querySelector(&#x27;[data-dft-tooltip-layer]&#x27;);
+      let tooltipTrigger=null, tooltipTimer=null;
+      function hideTooltip(){ clearTimeout(tooltipTimer); tooltipLayer.hidden=true; tooltipTrigger=null; }
       function showTooltip(trigger){
-        if(!trigger?.dataset.tooltip) return;
-        tooltipTrigger=trigger; tooltipLayer.textContent=trigger.dataset.tooltip; tooltipLayer.hidden=false;
+        if(!trigger?.dataset.dftTip) return;
+        tooltipTrigger=trigger; tooltipLayer.textContent=trigger.dataset.dftTip; tooltipLayer.hidden=false;
         const anchor=trigger.getBoundingClientRect(), box=tooltipLayer.getBoundingClientRect(), pad=8;
         let left=Math.min(window.innerWidth-box.width-pad,Math.max(pad,anchor.left));
         let top=anchor.bottom+6;
         if(top+box.height&gt;window.innerHeight-pad) top=Math.max(pad,anchor.top-box.height-6);
         tooltipLayer.style.left=`${left}px`; tooltipLayer.style.top=`${top}px`;
       }
+      function queueTooltip(trigger){ clearTimeout(tooltipTimer); tooltipTimer=setTimeout(()=&gt;showTooltip(trigger),180); }
       function renderAll(){ renderSettings(); renderStatus(); renderRoster(); renderRecommendations(); renderHistory(); renderLiveTable(); renderRankings(); }
 
-      root.addEventListener(&#x27;pointerover&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-tooltip]&#x27;); if(trigger) showTooltip(trigger); });
-      root.addEventListener(&#x27;pointerout&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-tooltip]&#x27;); if(trigger&amp;&amp;!trigger.contains(e.relatedTarget)) hideTooltip(); });
-      root.addEventListener(&#x27;focusin&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-tooltip]&#x27;); if(trigger) showTooltip(trigger); });
-      root.addEventListener(&#x27;focusout&#x27;,e=&gt;{ if(e.target.closest(&#x27;[data-tooltip]&#x27;)) hideTooltip(); });
-      root.addEventListener(&#x27;click&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-tooltip]&#x27;); if(trigger&amp;&amp;!trigger.closest(&#x27;button&#x27;)) showTooltip(trigger); else if(!trigger) hideTooltip(); });
+      root.addEventListener(&#x27;pointerover&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-dft-tip]&#x27;); if(trigger) queueTooltip(trigger); });
+      root.addEventListener(&#x27;pointerout&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-dft-tip]&#x27;); if(trigger&amp;&amp;!trigger.contains(e.relatedTarget)) hideTooltip(); });
+      root.addEventListener(&#x27;focusin&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-dft-tip]&#x27;); if(trigger) showTooltip(trigger); });
+      root.addEventListener(&#x27;focusout&#x27;,e=&gt;{ if(e.target.closest(&#x27;[data-dft-tip]&#x27;)) hideTooltip(); });
+      root.addEventListener(&#x27;click&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-dft-tip]&#x27;); if(trigger&amp;&amp;!trigger.closest(&#x27;button&#x27;)) showTooltip(trigger); else if(!trigger) hideTooltip(); });
       root.addEventListener(&#x27;keydown&#x27;,e=&gt;{ if(e.key===&#x27;Escape&#x27;) hideTooltip(); });
       root.addEventListener(&#x27;click&#x27;,e=&gt;{
         const b=e.target.closest(&#x27;button&#x27;); if(!b) return;
@@ -2170,7 +2247,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         if(b.dataset.platform){ state.platform=b.dataset.platform; saveState(); renderAll(); }
         if(b.hasAttribute(&#x27;data-cag&#x27;)){
           state.cag=!state.cag;
-          const key=state.cag?&#x27;lr&#x27;:&#x27;decision&#x27;;
+          const key=&#x27;lr&#x27;;
           state.sort.live={key,dir:&#x27;asc&#x27;};
           state.sort.rankings={key,dir:&#x27;asc&#x27;};
           state.liveLimit=200;

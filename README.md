@@ -30,9 +30,12 @@ The source is scoped to NFL `SEASON` + `REG_SEASON` player totals. Game props, p
 - **No-vig price lean:** over and under American prices are paired within player + market + book + line, converted to implied probabilities, normalized, and then summarized across books.
 - **Movement:** change from the preceding complete snapshot and the closest snapshot at least 24 hours old.
 - **Evidence quality (0–100):** up to 45 points for independent-book breadth, 15 for paired O/U prices, 20 for quote freshness across both newest and oldest books, and 20 for cross-book agreement.
-- **Vegas-adjusted fantasy points:** begins with the ESPN Mike Clay projection and replaces only stat components supported by current live markets. Missing prop categories retain the projection; they never become zero.
+- **V median:** begins with the ESPN Mike Clay projection and replaces only stat components supported by current live markets. Missing prop categories retain the projection; they never become zero. This is a sportsbook-threshold total, not a second expected-mean projection.
+- **V rank:** for each supported market, subtracts the normal QB/FLEX peer median difference between the sportsbook threshold and the ESPN stat projection. The remaining relative signal is added to projected points, then ranked separately as `QB#` or `F#`. It requires at least two verified markets, two books, average evidence quality of 55, fresh quotes, and at least five peer observations for each normalization baseline.
 
-Orange means a current, multi-book quote. Orange-underlined total points are a mixed Vegas/projection result. Blue `A` is the older aggregate snapshot without book-level proof. Gray `~` is projection-only. A cue such as `4b·12m` means four consensus books and a 12-minute-old complete snapshot. Tooltips show consensus-versus-reporting breadth, the robust range, IQR, any screened line and book, no-vig price lean, movement, projection delta, core book list, evidence rating, and quote age.
+Orange means a current, multi-book quote. Orange-underlined totals mix Vegas and projection components. Blue `A` is the older aggregate snapshot without book-level proof. Gray `~` is projection-only. A cue such as `4b·12m` means four consensus books and a 12-minute-old complete snapshot. Only live evidence, risk, health, V median, and V rank receive tooltips; routine values no longer repeat themselves in popovers.
+
+The apparent Vegas “discount” is expected rather than a PPR mismatch: a season over/under threshold is closer to the market median outcome, while a projection is an expected mean under playing-time assumptions. The current embedded skill-player data was audited directly: all 209 RB/WR/TE rows reproduce from `0.1 × rushing yards + 6 × rushing TD + 0.5 × receptions + 0.1 × receiving yards + 6 × receiving TD`, within source rounding. That proves the displayed ESPN-derived totals are half-PPR, not full-PPR.
 
 Live markets may influence the draft recommendation only when at least two supported stat components are present, at least two books report, average quality is at least 55, and every contributing market passes the freshness check. A failed, incomplete, thin, or stale refresh cannot replace the last good snapshot.
 
@@ -69,7 +72,8 @@ Supabase documents [scheduled Edge Functions with Cron, pg_net, and Vault](https
 ## Local checks
 
 ```powershell
+node --test tests/site_contract.test.mjs
 node --experimental-strip-types --test tests/vegas_parser.test.ts tests/vegas_consensus.test.ts
 ```
 
-The browser regression covers 200 default players, Yahoo and ESPN projections, automatic board expansion for every remaining snake-pick marker, fast evidence tooltips, the Buffalo-superfan CAG board, history/undo/restart/stars, sorting, mobile recommendation scrolling, and horizontal table scrolling.
+The static site contract verifies embedded-script syntax, the single tooltip system, default Late-Round sort, compact column order, half-PPR scoring, and the qualified peer-normalized V rank. The existing browser regression covers 200 default players, Yahoo and ESPN projections, all remaining snake-pick markers, the Buffalo-superfan CAG board, history/undo/restart/stars, sorting, mobile recommendation scrolling, and horizontal table scrolling.
