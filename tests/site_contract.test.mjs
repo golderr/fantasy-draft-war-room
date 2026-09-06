@@ -53,8 +53,11 @@ test("live table keeps identity and draft actions at the left edge", () => {
   assert.match(labels[1], /Player/);
   assert.match(labels[2], /Draft/);
   assert.match(labels[3], /Late-Round/);
-  assert.match(labels[14], /V median/);
-  assert.match(labels[15], /V rank/);
+  assert.match(labels[9], /Proj pts/);
+  assert.match(labels[10], /V median/);
+  assert.match(labels[11], /V rank/);
+  assert.match(labels[12], /Risk/);
+  assert.match(labels[13], /V Rec/);
   assert.match(liveHead, /<th class="dft-player-head">/);
   assert.match(appScript, /dft-playercell[\s\S]*?dft-actions-cell[\s\S]*?dft-lr-cell/);
   assert.doesNotMatch(appScript, /dft-fastread dft-fast-col[\s\S]{0,200}data-taken/);
@@ -80,6 +83,21 @@ test("live draft position filter includes a combined FLEX view", () => {
   const liveView = app.match(/<section class="dft-view" data-view="live">([\s\S]*?)<section class="dft-view" data-view="rankings"/)?.[1] ?? "";
   assert.match(liveView, /<option value="FLEX">FLEX · RB\/WR\/TE<\/option>/);
   assert.match(appScript, /pos==='FLEX'&&\['RB','WR','TE'\]\.includes\(p\.pos\)/);
+});
+
+test("Vegas median and rank sit immediately after projected points", () => {
+  for (const label of ["Available player board", "Player rankings"]) {
+    const table = app.match(new RegExp(`<table class="dft-core-table" aria-label="${label}">[\\s\\S]*?<\\/table>`))?.[0] ?? "";
+    const keys = [...table.matchAll(/data-sort-key="([^"]+)"/g)].map((match) => match[1]);
+    const projectedIndex = keys.indexOf("proj");
+    assert.equal(keys[projectedIndex + 1], "vegas_pts");
+    assert.equal(keys[projectedIndex + 2], "vegas_rank");
+  }
+  const liveRenderer = appScript.match(/function renderLiveTable\(\)[\s\S]*?function filteredRankings\(\)/)?.[0] ?? "";
+  const cells = ["projectionCell(p)", "vegasPointsCell(p)", "vegasRankCell(p)", "risk.level.toLowerCase()", "vegasStatCell(p,'rec')"];
+  const indexes = cells.map((token) => liveRenderer.indexOf(token));
+  assert.ok(indexes.every((index) => index >= 0));
+  assert.ok(indexes.every((index, position) => position === 0 || index > indexes[position - 1]));
 });
 
 test("Late-Round stays the default draft sort and 2025 results start by pace", () => {
