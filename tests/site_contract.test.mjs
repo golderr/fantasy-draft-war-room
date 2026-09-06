@@ -111,6 +111,7 @@ test("2025 workload is embedded from nflverse and remains separate from scoring"
   const rows = Function(`return ${dataLiteral}`)();
   const byName = new Map(rows.map((row) => [row[0], row]));
   assert.equal(rows.filter((row) => row[11] > 0).length, 225);
+  assert.equal(rows.filter((row) => row[11] > 0 && ["QB", "RB", "WR", "TE"].includes(row[1])).length, 215);
   assert.deepEqual(byName.get("Christian McCaffrey").slice(11, 18), [17, 1, 311, 129, 102, 2126, 17]);
   assert.deepEqual(byName.get("Puka Nacua").slice(11, 18), [16, 0, 10, 166, 129, 1820, 11]);
   assert.deepEqual(byName.get("Josh Allen").slice(11, 15), [16, 460, 112, 0]);
