@@ -74,15 +74,20 @@ test("2025 results add position finishes, FLEX, and all three 2026 cost signals"
   assert.match(app, /<option value="FLEX">FLEX · RB\/WR\/TE<\/option>/);
   const pastHead = app.match(/<table aria-label="2025 half-PPR performance and 2026 draft cost">[\s\S]*?<thead><tr>([\s\S]*?)<\/tr><\/thead>/)?.[1] ?? "";
   const labels = [...pastHead.matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((match) => match[1].replace(/<[^>]+>/g, "").trim());
-  assert.equal(labels.length, 14);
+  assert.equal(labels.length, 16);
   assert.deepEqual(labels.slice(0, 3), ["2025 rank", "Player", "Pos finish"]);
   assert.match(labels[3], /FLEX finish/);
-  assert.match(labels[9], /2026 LR/);
-  assert.match(labels[10], /2026 Y ADP/);
-  assert.match(labels[11], /2026 E ADP/);
-  assert.match(labels[12], /Value vs 2025/);
+  assert.match(labels[8], /2025 usage/);
+  assert.match(labels[10], /2026 LR/);
+  assert.match(labels[11], /2026 Y ADP/);
+  assert.match(labels[12], /2026 E ADP/);
+  assert.match(labels[13], /2026 OL/);
+  assert.match(labels[14], /Value vs 2025/);
+  assert.match(labels[15], /Situation/);
   assert.match(appScript, /pos==='FLEX'&&\['RB','WR','TE'\]\.includes\(row\.pos\)/);
   assert.match(appScript, /event\.target\.value==='FLEX'.*flexRank/s);
+  assert.match(app, /data-past-signal/);
+  assert.match(appScript, /historySignalMatch\(row,signal\)/);
 });
 
 test("position finishes rank the selected 2025 pace within position", () => {
@@ -97,8 +102,43 @@ test("position finishes rank the selected 2025 pace within position", () => {
   assert.match(appScript, /row\.flexRank==null\?'—':'FLEX'\+row\.flexRank/);
   assert.match(appScript, /row\.valueBasis=flexEligible\?'FLEX':row\.pos/);
   assert.match(appScript, /historyTeamChanged\(row\)/);
-  assert.match(appScript, /Cause not in current data/);
-  assert.match(appScript, /This is a research flag, not a projection/);
+  assert.match(appScript, /current structured data does not explain this large price\/performance gap/);
+  assert.match(appScript, /this is a screening flag, not a projection/);
+});
+
+test("2025 workload is embedded from nflverse and remains separate from scoring", () => {
+  const dataLiteral = appScript.match(/const history2025Rows = (\[[^\n]+\]);/)?.[1];
+  const rows = Function(`return ${dataLiteral}`)();
+  const byName = new Map(rows.map((row) => [row[0], row]));
+  assert.equal(rows.filter((row) => row[11] > 0).length, 225);
+  assert.deepEqual(byName.get("Christian McCaffrey").slice(11, 18), [17, 1, 311, 129, 102, 2126, 17]);
+  assert.deepEqual(byName.get("Puka Nacua").slice(11, 18), [16, 0, 10, 166, 129, 1820, 11]);
+  assert.deepEqual(byName.get("Josh Allen").slice(11, 15), [16, 460, 112, 0]);
+  for (const row of rows) {
+    assert.ok(row[13] >= 0 && row[14] >= 0 && row[15] >= 0, `${row[0]} usage should be nonnegative`);
+    assert.ok(row[14] >= row[15], `${row[0]} targets should cover receptions`);
+  }
+  assert.match(app, /Workload: nflverse/);
+  assert.match(appScript, /row\.carries\+row\.targets/);
+  assert.match(appScript, /Volume describes role; it is not an efficiency or 2026 projection/);
+});
+
+test("2026 line and coaching context use complete, labeled evidence maps", () => {
+  const olLiteral = appScript.match(/const historyOlRanks2026=(\{[^\n]+\});/)?.[1];
+  const coachLiteral = appScript.match(/const historyHeadCoachChanges2026=(\{[^\n]+\});/)?.[1];
+  assert.ok(olLiteral && coachLiteral);
+  const ol = Function(`return ${olLiteral}`)();
+  const coaches = Function(`return ${coachLiteral}`)();
+  assert.equal(Object.keys(ol).length, 32);
+  assert.deepEqual(Object.values(ol).sort((a, b) => a - b), Array.from({ length: 32 }, (_, index) => index + 1));
+  assert.equal(ol.DEN, 1);
+  assert.equal(ol.WAS, 32);
+  assert.equal(Object.keys(coaches).length, 10);
+  assert.deepEqual(coaches.BUF, ["Sean McDermott", "Joe Brady"]);
+  assert.deepEqual(coaches.NYG, ["Brian Daboll", "John Harbaugh"]);
+  assert.match(appScript, /Context only: this rank does not change the Value score/);
+  assert.match(appScript, /Teammate pressure is an inference/);
+  assert.match(appScript, /state\.cag\?player\.name/);
 });
 
 test("Late-Round board uses the September 4 page 294 release", () => {

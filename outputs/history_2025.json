@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-09-06T03:58:56.881Z",
+  "generatedAt": "2026-09-06T17:28:59.564Z",
   "sources": {
     "espnUrl": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2025/segments/0/leaguedefaults/1?view=kona_player_info",
     "yahooUrl": "https://pub-api-ro.fantasysports.yahoo.com/fantasy/v2/league/461.l.public;out=settings/players;position=ALL;start=0;count=1000;sort=average_pick;search=;out=auction_values,ranks;ranks=o-rank;out=expert_ranks;expert_ranks.rank_type=projected_season_remaining/draft_analysis;cut_types=diamond;slices=last7days?format=json_f",
     "yahooStatsUrl": "https://pub-api-ro.fantasysports.yahoo.com/fantasy/v2/league/461.l.public;out=settings/players;position=ALL;start=0;count=1000;sort=PTS;sort_type=season;sort_season=2025;search=/stats?format=json_f",
-    "rosterUrl": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2025.csv"
+    "rosterUrl": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2025.csv",
+    "playerStatsUrl": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv"
   },
   "rows": [
     {
@@ -22,7 +23,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 243,
+      "targets": 94,
+      "receptions": 77,
+      "scrimmageYards": 1839,
+      "scrimmageTds": 18
     },
     {
       "name": "Bijan Robinson",
@@ -39,7 +47,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 287,
+      "targets": 103,
+      "receptions": 79,
+      "scrimmageYards": 2298,
+      "scrimmageTds": 11
     },
     {
       "name": "Ja'Marr Chase",
@@ -66,7 +81,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 3,
+      "targets": 185,
+      "receptions": 125,
+      "scrimmageYards": 1426,
+      "scrimmageTds": 8
     },
     {
       "name": "Puka Nacua",
@@ -93,7 +115,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 10,
+      "targets": 166,
+      "receptions": 129,
+      "scrimmageYards": 1820,
+      "scrimmageTds": 11
     },
     {
       "name": "Christian McCaffrey",
@@ -110,7 +139,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 1,
+      "carries": 311,
+      "targets": 129,
+      "receptions": 102,
+      "scrimmageYards": 2126,
+      "scrimmageTds": 17
     },
     {
       "name": "Jaxon Smith-Njigba",
@@ -127,7 +163,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 7,
+      "targets": 163,
+      "receptions": 119,
+      "scrimmageYards": 1829,
+      "scrimmageTds": 10
     },
     {
       "name": "Amon-Ra St. Brown",
@@ -144,7 +187,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 3,
+      "targets": 172,
+      "receptions": 117,
+      "scrimmageYards": 1410,
+      "scrimmageTds": 11
     },
     {
       "name": "James Cook",
@@ -161,7 +211,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 309,
+      "targets": 40,
+      "receptions": 33,
+      "scrimmageYards": 1912,
+      "scrimmageTds": 14
     },
     {
       "name": "Jonathan Taylor",
@@ -178,7 +235,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 323,
+      "targets": 55,
+      "receptions": 46,
+      "scrimmageYards": 1963,
+      "scrimmageTds": 20
     },
     {
       "name": "Saquon Barkley",
@@ -195,7 +259,14 @@
       "reason": "Held out in Week 18 as Philadelphia rested most starters for the playoffs",
       "reasonKind": "verified",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 280,
+      "targets": 50,
+      "receptions": 37,
+      "scrimmageYards": 1413,
+      "scrimmageTds": 9
     },
     {
       "name": "Chase Brown",
@@ -212,7 +283,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 232,
+      "targets": 88,
+      "receptions": 69,
+      "scrimmageYards": 1456,
+      "scrimmageTds": 11
     },
     {
       "name": "Kenneth Walker",
@@ -229,7 +307,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 221,
+      "targets": 36,
+      "receptions": 31,
+      "scrimmageYards": 1309,
+      "scrimmageTds": 5
     },
     {
       "name": "Ashton Jeanty",
@@ -246,7 +331,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 266,
+      "targets": 73,
+      "receptions": 55,
+      "scrimmageYards": 1321,
+      "scrimmageTds": 10
     },
     {
       "name": "CeeDee Lamb",
@@ -275,7 +367,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 117,
+      "receptions": 75,
+      "scrimmageYards": 1079,
+      "scrimmageTds": 3
     },
     {
       "name": "Omarion Hampton",
@@ -325,7 +424,14 @@
           ]
         }
       ],
-      "activeSnapshots": 9
+      "activeSnapshots": 9,
+      "statGames": 9,
+      "passAttempts": 0,
+      "carries": 124,
+      "targets": 35,
+      "receptions": 32,
+      "scrimmageYards": 737,
+      "scrimmageTds": 5
     },
     {
       "name": "Derrick Henry",
@@ -342,7 +448,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 1,
+      "carries": 307,
+      "targets": 21,
+      "receptions": 15,
+      "scrimmageYards": 1745,
+      "scrimmageTds": 16
     },
     {
       "name": "De'Von Achane",
@@ -369,7 +482,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 238,
+      "targets": 85,
+      "receptions": 67,
+      "scrimmageYards": 1838,
+      "scrimmageTds": 12
     },
     {
       "name": "Justin Jefferson",
@@ -386,7 +506,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 141,
+      "receptions": 84,
+      "scrimmageYards": 1055,
+      "scrimmageTds": 2
     },
     {
       "name": "Drake London",
@@ -417,7 +544,14 @@
           ]
         }
       ],
-      "activeSnapshots": 12
+      "activeSnapshots": 12,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 112,
+      "receptions": 68,
+      "scrimmageYards": 919,
+      "scrimmageTds": 7
     },
     {
       "name": "Brock Bowers",
@@ -456,7 +590,14 @@
           ]
         }
       ],
-      "activeSnapshots": 12
+      "activeSnapshots": 12,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 86,
+      "receptions": 64,
+      "scrimmageYards": 682,
+      "scrimmageTds": 7
     },
     {
       "name": "AJ Brown",
@@ -483,7 +624,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 121,
+      "receptions": 78,
+      "scrimmageYards": 1003,
+      "scrimmageTds": 7
     },
     {
       "name": "Nico Collins",
@@ -511,7 +659,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 120,
+      "receptions": 71,
+      "scrimmageYards": 1132,
+      "scrimmageTds": 7
     },
     {
       "name": "Chris Olave",
@@ -538,7 +693,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 1,
+      "carries": 1,
+      "targets": 156,
+      "receptions": 100,
+      "scrimmageYards": 1160,
+      "scrimmageTds": 9
     },
     {
       "name": "Malik Nabers",
@@ -577,7 +739,14 @@
           ]
         }
       ],
-      "activeSnapshots": 4
+      "activeSnapshots": 4,
+      "statGames": 4,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 35,
+      "receptions": 18,
+      "scrimmageYards": 271,
+      "scrimmageTds": 2
     },
     {
       "name": "George Pickens",
@@ -594,7 +763,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 137,
+      "receptions": 93,
+      "scrimmageYards": 1429,
+      "scrimmageTds": 9
     },
     {
       "name": "DeVonta Smith",
@@ -611,7 +787,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 113,
+      "receptions": 77,
+      "scrimmageYards": 1008,
+      "scrimmageTds": 4
     },
     {
       "name": "Zay Flowers",
@@ -628,7 +811,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 10,
+      "targets": 118,
+      "receptions": 86,
+      "scrimmageYards": 1273,
+      "scrimmageTds": 6
     },
     {
       "name": "Rashee Rice",
@@ -679,7 +869,14 @@
           ]
         }
       ],
-      "activeSnapshots": 8
+      "activeSnapshots": 8,
+      "statGames": 8,
+      "passAttempts": 0,
+      "carries": 5,
+      "targets": 78,
+      "receptions": 53,
+      "scrimmageYards": 591,
+      "scrimmageTds": 6
     },
     {
       "name": "Breece Hall",
@@ -706,7 +903,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 1,
+      "carries": 243,
+      "targets": 48,
+      "receptions": 36,
+      "scrimmageYards": 1415,
+      "scrimmageTds": 5
     },
     {
       "name": "Trey McBride",
@@ -723,7 +927,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 169,
+      "receptions": 126,
+      "scrimmageYards": 1239,
+      "scrimmageTds": 11
     },
     {
       "name": "Javonte Williams",
@@ -750,7 +961,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 252,
+      "targets": 51,
+      "receptions": 35,
+      "scrimmageYards": 1338,
+      "scrimmageTds": 13
     },
     {
       "name": "Josh Allen",
@@ -767,7 +985,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 460,
+      "carries": 112,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 579,
+      "scrimmageTds": 14
     },
     {
       "name": "Kyren Williams",
@@ -784,7 +1009,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 259,
+      "targets": 50,
+      "receptions": 36,
+      "scrimmageYards": 1533,
+      "scrimmageTds": 13
     },
     {
       "name": "Jeremiyah Love",
@@ -801,7 +1033,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jaylen Waddle",
@@ -828,7 +1067,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 1,
+      "carries": 2,
+      "targets": 100,
+      "receptions": 64,
+      "scrimmageYards": 938,
+      "scrimmageTds": 6
     },
     {
       "name": "Tetairoa McMillan",
@@ -845,7 +1091,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 122,
+      "receptions": 70,
+      "scrimmageYards": 1014,
+      "scrimmageTds": 7
     },
     {
       "name": "Ladd McConkey",
@@ -862,7 +1115,14 @@
       "reason": "No Week 18 statistical appearance while the playoff-bound Chargers used backups",
       "reasonKind": "verified",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 106,
+      "receptions": 66,
+      "scrimmageYards": 789,
+      "scrimmageTds": 6
     },
     {
       "name": "Emeka Egbuka",
@@ -879,7 +1139,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 127,
+      "receptions": 63,
+      "scrimmageYards": 947,
+      "scrimmageTds": 6
     },
     {
       "name": "Tee Higgins",
@@ -907,7 +1174,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 98,
+      "receptions": 59,
+      "scrimmageYards": 846,
+      "scrimmageTds": 11
     },
     {
       "name": "Garrett Wilson",
@@ -959,7 +1233,14 @@
           ]
         }
       ],
-      "activeSnapshots": 7
+      "activeSnapshots": 7,
+      "statGames": 7,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 59,
+      "receptions": 36,
+      "scrimmageYards": 395,
+      "scrimmageTds": 4
     },
     {
       "name": "Luther Burden",
@@ -987,7 +1268,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 6,
+      "targets": 60,
+      "receptions": 47,
+      "scrimmageYards": 689,
+      "scrimmageTds": 2
     },
     {
       "name": "Colston Loveland",
@@ -1014,7 +1302,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 82,
+      "receptions": 58,
+      "scrimmageYards": 711,
+      "scrimmageTds": 6
     },
     {
       "name": "D'Andre Swift",
@@ -1041,7 +1336,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 223,
+      "targets": 48,
+      "receptions": 34,
+      "scrimmageYards": 1386,
+      "scrimmageTds": 10
     },
     {
       "name": "Travis Etienne",
@@ -1058,7 +1360,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 260,
+      "targets": 52,
+      "receptions": 36,
+      "scrimmageYards": 1399,
+      "scrimmageTds": 13
     },
     {
       "name": "Terry McLaurin",
@@ -1091,7 +1400,14 @@
           ]
         }
       ],
-      "activeSnapshots": 10
+      "activeSnapshots": 10,
+      "statGames": 10,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 60,
+      "receptions": 38,
+      "scrimmageYards": 582,
+      "scrimmageTds": 3
     },
     {
       "name": "Cam Skattebo",
@@ -1126,7 +1442,14 @@
           ]
         }
       ],
-      "activeSnapshots": 8
+      "activeSnapshots": 8,
+      "statGames": 8,
+      "passAttempts": 0,
+      "carries": 101,
+      "targets": 32,
+      "receptions": 24,
+      "scrimmageYards": 617,
+      "scrimmageTds": 7
     },
     {
       "name": "David Montgomery",
@@ -1143,7 +1466,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 2,
+      "carries": 158,
+      "targets": 29,
+      "receptions": 24,
+      "scrimmageYards": 908,
+      "scrimmageTds": 8
     },
     {
       "name": "Bhayshul Tuten",
@@ -1171,7 +1501,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 83,
+      "targets": 14,
+      "receptions": 10,
+      "scrimmageYards": 386,
+      "scrimmageTds": 7
     },
     {
       "name": "Quinshon Judkins",
@@ -1199,7 +1536,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 230,
+      "targets": 36,
+      "receptions": 26,
+      "scrimmageYards": 998,
+      "scrimmageTds": 7
     },
     {
       "name": "Parker Washington",
@@ -1226,7 +1570,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 7,
+      "targets": 95,
+      "receptions": 58,
+      "scrimmageYards": 847,
+      "scrimmageTds": 5
     },
     {
       "name": "Christian Watson",
@@ -1258,7 +1609,14 @@
           ]
         }
       ],
-      "activeSnapshots": 11
+      "activeSnapshots": 11,
+      "statGames": 10,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 55,
+      "receptions": 35,
+      "scrimmageYards": 614,
+      "scrimmageTds": 6
     },
     {
       "name": "Bucky Irving",
@@ -1291,7 +1649,14 @@
           ]
         }
       ],
-      "activeSnapshots": 10
+      "activeSnapshots": 10,
+      "statGames": 10,
+      "passAttempts": 0,
+      "carries": 173,
+      "targets": 35,
+      "receptions": 30,
+      "scrimmageYards": 865,
+      "scrimmageTds": 4
     },
     {
       "name": "DJ Moore",
@@ -1308,7 +1673,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 1,
+      "carries": 15,
+      "targets": 85,
+      "receptions": 50,
+      "scrimmageYards": 761,
+      "scrimmageTds": 7
     },
     {
       "name": "Jameson Williams",
@@ -1325,7 +1697,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 6,
+      "targets": 102,
+      "receptions": 65,
+      "scrimmageYards": 1129,
+      "scrimmageTds": 7
     },
     {
       "name": "Davante Adams",
@@ -1354,7 +1733,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 114,
+      "receptions": 60,
+      "scrimmageYards": 789,
+      "scrimmageTds": 14
     },
     {
       "name": "Mike Evans",
@@ -1405,7 +1791,14 @@
           ]
         }
       ],
-      "activeSnapshots": 8
+      "activeSnapshots": 8,
+      "statGames": 8,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 62,
+      "receptions": 30,
+      "scrimmageYards": 368,
+      "scrimmageTds": 3
     },
     {
       "name": "Rome Odunze",
@@ -1435,7 +1828,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 90,
+      "receptions": 44,
+      "scrimmageYards": 661,
+      "scrimmageTds": 6
     },
     {
       "name": "Lamar Jackson",
@@ -1465,7 +1865,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 13,
+      "passAttempts": 302,
+      "carries": 67,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 349,
+      "scrimmageTds": 2
     },
     {
       "name": "Rhamondre Stevenson",
@@ -1494,7 +1901,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 130,
+      "targets": 37,
+      "receptions": 32,
+      "scrimmageYards": 948,
+      "scrimmageTds": 9
     },
     {
       "name": "Jadarian Price",
@@ -1511,7 +1925,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "MarShawn Lloyd",
@@ -1562,7 +1983,14 @@
           ]
         }
       ],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "TreVeyon Henderson",
@@ -1579,7 +2007,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 180,
+      "targets": 42,
+      "receptions": 35,
+      "scrimmageYards": 1132,
+      "scrimmageTds": 10
     },
     {
       "name": "Tyler Warren",
@@ -1596,7 +2031,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 1,
+      "carries": 6,
+      "targets": 112,
+      "receptions": 76,
+      "scrimmageYards": 825,
+      "scrimmageTds": 5
     },
     {
       "name": "Drake Maye",
@@ -1613,7 +2055,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 492,
+      "carries": 103,
+      "targets": 1,
+      "receptions": 1,
+      "scrimmageYards": 452,
+      "scrimmageTds": 4
     },
     {
       "name": "Jayden Daniels",
@@ -1649,7 +2098,14 @@
           ]
         }
       ],
-      "activeSnapshots": 7
+      "activeSnapshots": 7,
+      "statGames": 7,
+      "passAttempts": 188,
+      "carries": 58,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 278,
+      "scrimmageTds": 2
     },
     {
       "name": "Jalen Hurts",
@@ -1666,7 +2122,14 @@
       "reason": "Held out in Week 18 as Philadelphia rested most starters for the playoffs",
       "reasonKind": "verified",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 454,
+      "carries": 105,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 421,
+      "scrimmageTds": 8
     },
     {
       "name": "Carnell Tate",
@@ -1683,7 +2146,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jonathon Brooks",
@@ -1726,7 +2196,14 @@
           ]
         }
       ],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jaylen Warren",
@@ -1753,7 +2230,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 211,
+      "targets": 45,
+      "receptions": 40,
+      "scrimmageYards": 1291,
+      "scrimmageTds": 8
     },
     {
       "name": "Chris Godwin",
@@ -1788,7 +2272,14 @@
           ]
         }
       ],
-      "activeSnapshots": 9
+      "activeSnapshots": 9,
+      "statGames": 9,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 51,
+      "receptions": 33,
+      "scrimmageYards": 360,
+      "scrimmageTds": 2
     },
     {
       "name": "Tucker Kraft",
@@ -1823,7 +2314,14 @@
           ]
         }
       ],
-      "activeSnapshots": 8
+      "activeSnapshots": 8,
+      "statGames": 8,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 44,
+      "receptions": 32,
+      "scrimmageYards": 492,
+      "scrimmageTds": 6
     },
     {
       "name": "Marvin Harrison",
@@ -1862,7 +2360,14 @@
           ]
         }
       ],
-      "activeSnapshots": 12
+      "activeSnapshots": 12,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 73,
+      "receptions": 41,
+      "scrimmageYards": 608,
+      "scrimmageTds": 4
     },
     {
       "name": "Stefon Diggs",
@@ -1879,7 +2384,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 102,
+      "receptions": 85,
+      "scrimmageYards": 1013,
+      "scrimmageTds": 4
     },
     {
       "name": "Rico Dowdle",
@@ -1896,7 +2408,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 236,
+      "targets": 50,
+      "receptions": 39,
+      "scrimmageYards": 1373,
+      "scrimmageTds": 7
     },
     {
       "name": "Brian Thomas",
@@ -1925,7 +2444,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 3,
+      "targets": 91,
+      "receptions": 48,
+      "scrimmageYards": 728,
+      "scrimmageTds": 3
     },
     {
       "name": "Joe Burrow",
@@ -1968,7 +2494,14 @@
           ]
         }
       ],
-      "activeSnapshots": 8
+      "activeSnapshots": 8,
+      "statGames": 8,
+      "passAttempts": 259,
+      "carries": 14,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 41,
+      "scrimmageTds": 0
     },
     {
       "name": "Kenneth Gainwell",
@@ -1985,7 +2518,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "RJ Harvey",
@@ -2002,7 +2542,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 1,
+      "carries": 146,
+      "targets": 58,
+      "receptions": 47,
+      "scrimmageYards": 896,
+      "scrimmageTds": 12
     },
     {
       "name": "DK Metcalf",
@@ -2030,7 +2577,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 99,
+      "receptions": 59,
+      "scrimmageYards": 862,
+      "scrimmageTds": 7
     },
     {
       "name": "Sam LaPorta",
@@ -2064,7 +2618,14 @@
           ]
         }
       ],
-      "activeSnapshots": 9
+      "activeSnapshots": 9,
+      "statGames": 9,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 49,
+      "receptions": 40,
+      "scrimmageYards": 489,
+      "scrimmageTds": 3
     },
     {
       "name": "Alec Pierce",
@@ -2092,7 +2653,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 84,
+      "receptions": 47,
+      "scrimmageYards": 1003,
+      "scrimmageTds": 6
     },
     {
       "name": "Jordan Mason",
@@ -2119,7 +2687,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 159,
+      "targets": 16,
+      "receptions": 14,
+      "scrimmageYards": 809,
+      "scrimmageTds": 6
     },
     {
       "name": "Justin Herbert",
@@ -2146,7 +2721,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 512,
+      "carries": 83,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 498,
+      "scrimmageTds": 2
     },
     {
       "name": "Caleb Williams",
@@ -2163,7 +2745,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 568,
+      "carries": 77,
+      "targets": 2,
+      "receptions": 2,
+      "scrimmageYards": 410,
+      "scrimmageTds": 4
     },
     {
       "name": "Josh Downs",
@@ -2190,7 +2779,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 88,
+      "receptions": 58,
+      "scrimmageYards": 564,
+      "scrimmageTds": 4
     },
     {
       "name": "Michael Pittman",
@@ -2207,7 +2803,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 111,
+      "receptions": 80,
+      "scrimmageYards": 784,
+      "scrimmageTds": 7
     },
     {
       "name": "Wan'Dale Robinson",
@@ -2234,7 +2837,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 3,
+      "targets": 140,
+      "receptions": 92,
+      "scrimmageYards": 1019,
+      "scrimmageTds": 4
     },
     {
       "name": "Chuba Hubbard",
@@ -2262,7 +2872,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 134,
+      "targets": 39,
+      "receptions": 30,
+      "scrimmageYards": 734,
+      "scrimmageTds": 4
     },
     {
       "name": "Trevor Lawrence",
@@ -2279,7 +2896,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 560,
+      "carries": 82,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 359,
+      "scrimmageTds": 9
     },
     {
       "name": "Brock Purdy",
@@ -2314,7 +2938,14 @@
           ]
         }
       ],
-      "activeSnapshots": 9
+      "activeSnapshots": 9,
+      "statGames": 9,
+      "passAttempts": 284,
+      "carries": 33,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 147,
+      "scrimmageTds": 3
     },
     {
       "name": "Jaxson Dart",
@@ -2342,7 +2973,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 14,
+      "passAttempts": 339,
+      "carries": 86,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 487,
+      "scrimmageTds": 9
     },
     {
       "name": "Tony Pollard",
@@ -2359,7 +2997,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 242,
+      "targets": 41,
+      "receptions": 33,
+      "scrimmageYards": 1288,
+      "scrimmageTds": 5
     },
     {
       "name": "Makai Lemon",
@@ -2376,7 +3021,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jayden Reed",
@@ -2420,7 +3072,14 @@
           ]
         }
       ],
-      "activeSnapshots": 7
+      "activeSnapshots": 7,
+      "statGames": 5,
+      "passAttempts": 0,
+      "carries": 3,
+      "targets": 22,
+      "receptions": 19,
+      "scrimmageYards": 235,
+      "scrimmageTds": 1
     },
     {
       "name": "George Kittle",
@@ -2460,7 +3119,14 @@
           ]
         }
       ],
-      "activeSnapshots": 11
+      "activeSnapshots": 11,
+      "statGames": 11,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 69,
+      "receptions": 57,
+      "scrimmageYards": 625,
+      "scrimmageTds": 7
     },
     {
       "name": "Michael Wilson",
@@ -2477,7 +3143,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 126,
+      "receptions": 78,
+      "scrimmageYards": 1006,
+      "scrimmageTds": 7
     },
     {
       "name": "Courtland Sutton",
@@ -2494,7 +3167,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 124,
+      "receptions": 74,
+      "scrimmageYards": 1017,
+      "scrimmageTds": 7
     },
     {
       "name": "Blake Corum",
@@ -2511,7 +3191,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 145,
+      "targets": 14,
+      "receptions": 8,
+      "scrimmageYards": 782,
+      "scrimmageTds": 6
     },
     {
       "name": "Dalton Kincaid",
@@ -2542,7 +3229,14 @@
           ]
         }
       ],
-      "activeSnapshots": 12
+      "activeSnapshots": 12,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 49,
+      "receptions": 39,
+      "scrimmageYards": 571,
+      "scrimmageTds": 5
     },
     {
       "name": "KC Concepcion",
@@ -2559,7 +3253,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "De'Zhaun Stribling",
@@ -2576,7 +3277,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Harold Fannin",
@@ -2603,7 +3311,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 7,
+      "targets": 107,
+      "receptions": 72,
+      "scrimmageYards": 744,
+      "scrimmageTds": 7
     },
     {
       "name": "Dak Prescott",
@@ -2620,7 +3335,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 600,
+      "carries": 53,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 177,
+      "scrimmageTds": 2
     },
     {
       "name": "Quentin Johnston",
@@ -2648,7 +3370,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 84,
+      "receptions": 51,
+      "scrimmageYards": 742,
+      "scrimmageTds": 8
     },
     {
       "name": "Matthew Golden",
@@ -2677,7 +3406,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 10,
+      "targets": 44,
+      "receptions": 29,
+      "scrimmageYards": 410,
+      "scrimmageTds": 0
     },
     {
       "name": "Kyle Pitts",
@@ -2694,7 +3430,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 118,
+      "receptions": 88,
+      "scrimmageYards": 928,
+      "scrimmageTds": 5
     },
     {
       "name": "JK Dobbins",
@@ -2727,7 +3470,14 @@
           ]
         }
       ],
-      "activeSnapshots": 10
+      "activeSnapshots": 10,
+      "statGames": 10,
+      "passAttempts": 0,
+      "carries": 153,
+      "targets": 14,
+      "receptions": 11,
+      "scrimmageYards": 809,
+      "scrimmageTds": 4
     },
     {
       "name": "Jacory Croskey-Merritt",
@@ -2744,7 +3494,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 175,
+      "targets": 13,
+      "receptions": 9,
+      "scrimmageYards": 873,
+      "scrimmageTds": 8
     },
     {
       "name": "Jordan Addison",
@@ -2773,7 +3530,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 79,
+      "receptions": 42,
+      "scrimmageYards": 691,
+      "scrimmageTds": 4
     },
     {
       "name": "Kyle Monangai",
@@ -2790,7 +3554,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 169,
+      "targets": 30,
+      "receptions": 18,
+      "scrimmageYards": 947,
+      "scrimmageTds": 5
     },
     {
       "name": "Bo Nix",
@@ -2807,7 +3578,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 612,
+      "carries": 83,
+      "targets": 1,
+      "receptions": 0,
+      "scrimmageYards": 356,
+      "scrimmageTds": 5
     },
     {
       "name": "Rachaad White",
@@ -2824,7 +3602,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 132,
+      "targets": 45,
+      "receptions": 40,
+      "scrimmageYards": 790,
+      "scrimmageTds": 4
     },
     {
       "name": "Chris Rodriguez",
@@ -2853,7 +3638,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 112,
+      "targets": 4,
+      "receptions": 3,
+      "scrimmageYards": 530,
+      "scrimmageTds": 6
     },
     {
       "name": "Tyler Shough",
@@ -2870,7 +3662,14 @@
       "reason": "Began 2025 as New Orleans' backup, then took over as the starter during the season",
       "reasonKind": "verified",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 11,
+      "passAttempts": 327,
+      "carries": 45,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 186,
+      "scrimmageTds": 3
     },
     {
       "name": "Patrick Mahomes",
@@ -2899,7 +3698,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 502,
+      "carries": 64,
+      "targets": 1,
+      "receptions": 1,
+      "scrimmageYards": 412,
+      "scrimmageTds": 5
     },
     {
       "name": "Kyler Murray",
@@ -2945,7 +3751,14 @@
           ]
         }
       ],
-      "activeSnapshots": 5
+      "activeSnapshots": 5,
+      "statGames": 5,
+      "passAttempts": 161,
+      "carries": 29,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 173,
+      "scrimmageTds": 1
     },
     {
       "name": "Aaron Jones",
@@ -2984,7 +3797,14 @@
           ]
         }
       ],
-      "activeSnapshots": 12
+      "activeSnapshots": 12,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 132,
+      "targets": 41,
+      "receptions": 28,
+      "scrimmageYards": 747,
+      "scrimmageTds": 3
     },
     {
       "name": "Matthew Stafford",
@@ -3001,7 +3821,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 597,
+      "carries": 29,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 1,
+      "scrimmageTds": 0
     },
     {
       "name": "Malik Willis",
@@ -3028,7 +3855,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 4,
+      "passAttempts": 35,
+      "carries": 22,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 123,
+      "scrimmageTds": 2
     },
     {
       "name": "Jared Goff",
@@ -3045,7 +3879,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 578,
+      "carries": 19,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 45,
+      "scrimmageTds": 0
     },
     {
       "name": "Isaiah Likely",
@@ -3075,7 +3916,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 36,
+      "receptions": 27,
+      "scrimmageYards": 307,
+      "scrimmageTds": 1
     },
     {
       "name": "Dallas Goedert",
@@ -3103,7 +3951,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 82,
+      "receptions": 60,
+      "scrimmageYards": 591,
+      "scrimmageTds": 11
     },
     {
       "name": "Jakobi Meyers",
@@ -3130,7 +3985,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 5,
+      "targets": 110,
+      "receptions": 75,
+      "scrimmageYards": 848,
+      "scrimmageTds": 3
     },
     {
       "name": "Travis Kelce",
@@ -3147,7 +4009,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 108,
+      "receptions": 76,
+      "scrimmageYards": 852,
+      "scrimmageTds": 5
     },
     {
       "name": "Jordan Love",
@@ -3174,7 +4043,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 15,
+      "passAttempts": 439,
+      "carries": 47,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 199,
+      "scrimmageTds": 0
     },
     {
       "name": "Jalen Coker",
@@ -3214,7 +4090,14 @@
           ]
         }
       ],
-      "activeSnapshots": 11
+      "activeSnapshots": 11,
+      "statGames": 11,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 43,
+      "receptions": 33,
+      "scrimmageYards": 394,
+      "scrimmageTds": 3
     },
     {
       "name": "Deebo Samuel",
@@ -3241,7 +4124,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 17,
+      "targets": 99,
+      "receptions": 72,
+      "scrimmageYards": 802,
+      "scrimmageTds": 6
     },
     {
       "name": "Josh Jacobs",
@@ -3269,7 +4159,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 234,
+      "targets": 44,
+      "receptions": 36,
+      "scrimmageYards": 1211,
+      "scrimmageTds": 14
     },
     {
       "name": "Woody Marks",
@@ -3296,7 +4193,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 196,
+      "targets": 36,
+      "receptions": 24,
+      "scrimmageYards": 911,
+      "scrimmageTds": 5
     },
     {
       "name": "Tyjae Spears",
@@ -3326,7 +4230,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 72,
+      "targets": 50,
+      "receptions": 45,
+      "scrimmageYards": 547,
+      "scrimmageTds": 2
     },
     {
       "name": "Romeo Doubs",
@@ -3343,7 +4254,14 @@
       "reason": "No Week 18 statistical appearance while Green Bay rested regulars for the playoffs",
       "reasonKind": "verified",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 85,
+      "receptions": 55,
+      "scrimmageYards": 724,
+      "scrimmageTds": 6
     },
     {
       "name": "Keaton Mitchell",
@@ -3374,7 +4292,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 59,
+      "targets": 12,
+      "receptions": 9,
+      "scrimmageYards": 404,
+      "scrimmageTds": 1
     },
     {
       "name": "Baker Mayfield",
@@ -3391,7 +4316,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 543,
+      "carries": 55,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 382,
+      "scrimmageTds": 1
     },
     {
       "name": "Xavier Worthy",
@@ -3420,7 +4352,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 11,
+      "targets": 73,
+      "receptions": 42,
+      "scrimmageYards": 619,
+      "scrimmageTds": 1
     },
     {
       "name": "Juwan Johnson",
@@ -3437,7 +4376,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 102,
+      "receptions": 77,
+      "scrimmageYards": 889,
+      "scrimmageTds": 3
     },
     {
       "name": "Jordyn Tyson",
@@ -3454,7 +4400,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Mark Andrews",
@@ -3471,7 +4424,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 10,
+      "targets": 70,
+      "receptions": 48,
+      "scrimmageYards": 470,
+      "scrimmageTds": 6
     },
     {
       "name": "Rashid Shaheed",
@@ -3488,7 +4448,14 @@
       "reason": "Played 18 regular-season games after a midseason trade from New Orleans to Seattle created an extra player-game",
       "reasonKind": "verified",
       "rosterFlags": [],
-      "activeSnapshots": 18
+      "activeSnapshots": 18,
+      "statGames": 18,
+      "passAttempts": 0,
+      "carries": 9,
+      "targets": 92,
+      "receptions": 59,
+      "scrimmageYards": 756,
+      "scrimmageTds": 2
     },
     {
       "name": "Tyler Allgeier",
@@ -3505,7 +4472,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 143,
+      "targets": 16,
+      "receptions": 14,
+      "scrimmageYards": 610,
+      "scrimmageTds": 8
     },
     {
       "name": "Zach Charbonnet",
@@ -3532,7 +4506,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 184,
+      "targets": 24,
+      "receptions": 20,
+      "scrimmageYards": 874,
+      "scrimmageTds": 12
     },
     {
       "name": "Khalil Shakir",
@@ -3549,7 +4530,14 @@
       "reason": "Held out of Week 18 while Buffalo rested most starters",
       "reasonKind": "verified",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 95,
+      "receptions": 72,
+      "scrimmageYards": 724,
+      "scrimmageTds": 4
     },
     {
       "name": "Denzel Boston",
@@ -3566,7 +4554,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Mike Washington",
@@ -3583,7 +4578,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Terrance Ferguson",
@@ -3612,7 +4614,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 11,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 25,
+      "receptions": 11,
+      "scrimmageYards": 231,
+      "scrimmageTds": 3
     },
     {
       "name": "Jake Ferguson",
@@ -3629,7 +4638,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 102,
+      "receptions": 82,
+      "scrimmageYards": 601,
+      "scrimmageTds": 8
     },
     {
       "name": "Kenyon Sadiq",
@@ -3646,7 +4662,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jalen McMillan",
@@ -3685,7 +4708,14 @@
           ]
         }
       ],
-      "activeSnapshots": 4
+      "activeSnapshots": 4,
+      "statGames": 4,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 15,
+      "receptions": 12,
+      "scrimmageYards": 179,
+      "scrimmageTds": 0
     },
     {
       "name": "Keenan Allen",
@@ -3702,7 +4732,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 122,
+      "receptions": 81,
+      "scrimmageYards": 777,
+      "scrimmageTds": 4
     },
     {
       "name": "Chig Okonkwo",
@@ -3719,7 +4756,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 79,
+      "receptions": 56,
+      "scrimmageYards": 560,
+      "scrimmageTds": 2
     },
     {
       "name": "Dontayvion Wicks",
@@ -3748,7 +4792,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 46,
+      "receptions": 30,
+      "scrimmageYards": 338,
+      "scrimmageTds": 2
     },
     {
       "name": "Pat Bryant",
@@ -3776,7 +4827,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 49,
+      "receptions": 31,
+      "scrimmageYards": 378,
+      "scrimmageTds": 1
     },
     {
       "name": "Ja'Kobi Lane",
@@ -3793,7 +4851,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jonah Coleman",
@@ -3810,7 +4875,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Dalton Schultz",
@@ -3827,7 +4899,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 106,
+      "receptions": 82,
+      "scrimmageYards": 777,
+      "scrimmageTds": 3
     },
     {
       "name": "Daniel Jones",
@@ -3857,7 +4936,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 13,
+      "passAttempts": 384,
+      "carries": 45,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 164,
+      "scrimmageTds": 5
     },
     {
       "name": "Sam Darnold",
@@ -3874,7 +4960,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 477,
+      "carries": 35,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 95,
+      "scrimmageTds": 0
     },
     {
       "name": "Brenton Strange",
@@ -3913,7 +5006,14 @@
           ]
         }
       ],
-      "activeSnapshots": 12
+      "activeSnapshots": 12,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 60,
+      "receptions": 46,
+      "scrimmageYards": 540,
+      "scrimmageTds": 3
     },
     {
       "name": "Tank Bigsby",
@@ -3930,7 +5030,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 63,
+      "targets": 4,
+      "receptions": 3,
+      "scrimmageYards": 388,
+      "scrimmageTds": 2
     },
     {
       "name": "Dylan Sampson",
@@ -3958,7 +5065,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 65,
+      "targets": 40,
+      "receptions": 33,
+      "scrimmageYards": 446,
+      "scrimmageTds": 2
     },
     {
       "name": "Hunter Henry",
@@ -3975,7 +5089,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 87,
+      "receptions": 60,
+      "scrimmageYards": 768,
+      "scrimmageTds": 7
     },
     {
       "name": "Tre Harris",
@@ -3992,7 +5113,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 43,
+      "receptions": 30,
+      "scrimmageYards": 334,
+      "scrimmageTds": 1
     },
     {
       "name": "Cam Ward",
@@ -4009,7 +5137,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 540,
+      "carries": 39,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 159,
+      "scrimmageTds": 2
     },
     {
       "name": "CJ Stroud",
@@ -4038,7 +5173,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 423,
+      "carries": 48,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 209,
+      "scrimmageTds": 1
     },
     {
       "name": "Kayshon Boutte",
@@ -4067,7 +5209,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 46,
+      "receptions": 33,
+      "scrimmageYards": 551,
+      "scrimmageTds": 6
     },
     {
       "name": "Adonai Mitchell",
@@ -4095,7 +5244,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 74,
+      "receptions": 33,
+      "scrimmageYards": 449,
+      "scrimmageTds": 2
     },
     {
       "name": "Emmett Johnson",
@@ -4112,7 +5268,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jaylin Noel",
@@ -4129,7 +5292,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 6,
+      "targets": 35,
+      "receptions": 26,
+      "scrimmageYards": 304,
+      "scrimmageTds": 2
     },
     {
       "name": "Devaughn Vele",
@@ -4167,7 +5337,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 9,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 39,
+      "receptions": 25,
+      "scrimmageYards": 293,
+      "scrimmageTds": 2
     },
     {
       "name": "Brian Robinson",
@@ -4184,7 +5361,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 92,
+      "targets": 12,
+      "receptions": 8,
+      "scrimmageYards": 425,
+      "scrimmageTds": 2
     },
     {
       "name": "Tre Tucker",
@@ -4201,7 +5385,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 11,
+      "targets": 92,
+      "receptions": 57,
+      "scrimmageYards": 747,
+      "scrimmageTds": 5
     },
     {
       "name": "Geno Smith",
@@ -4229,7 +5420,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 448,
+      "carries": 41,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 109,
+      "scrimmageTds": 0
     },
     {
       "name": "Greg Dulcich",
@@ -4262,7 +5460,14 @@
           ]
         }
       ],
-      "activeSnapshots": 10
+      "activeSnapshots": 10,
+      "statGames": 9,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 33,
+      "receptions": 26,
+      "scrimmageYards": 328,
+      "scrimmageTds": 1
     },
     {
       "name": "Caleb Douglas",
@@ -4279,7 +5484,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Omar Cooper",
@@ -4296,7 +5508,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jacoby Brissett",
@@ -4313,7 +5532,14 @@
       "reason": "Began 2025 as Arizona's backup, then made 12 starts after Kyler Murray was injured",
       "reasonKind": "verified",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 14,
+      "passAttempts": 485,
+      "carries": 38,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 168,
+      "scrimmageTds": 1
     },
     {
       "name": "TJ Hockenson",
@@ -4341,7 +5567,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 66,
+      "receptions": 51,
+      "scrimmageYards": 438,
+      "scrimmageTds": 3
     },
     {
       "name": "Braelon Allen",
@@ -4380,7 +5613,14 @@
           ]
         }
       ],
-      "activeSnapshots": 4
+      "activeSnapshots": 4,
+      "statGames": 4,
+      "passAttempts": 0,
+      "carries": 18,
+      "targets": 3,
+      "receptions": 2,
+      "scrimmageYards": 93,
+      "scrimmageTds": 1
     },
     {
       "name": "Ray Davis",
@@ -4397,7 +5637,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 58,
+      "targets": 13,
+      "receptions": 10,
+      "scrimmageYards": 361,
+      "scrimmageTds": 2
     },
     {
       "name": "Kimani Vidal",
@@ -4435,7 +5682,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 155,
+      "targets": 22,
+      "receptions": 16,
+      "scrimmageYards": 779,
+      "scrimmageTds": 4
     },
     {
       "name": "Kaelon Black",
@@ -4452,7 +5706,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Cyrus Allen",
@@ -4469,7 +5730,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Najee Harris",
@@ -4509,7 +5777,14 @@
           ]
         }
       ],
-      "activeSnapshots": 3
+      "activeSnapshots": 3,
+      "statGames": 3,
+      "passAttempts": 0,
+      "carries": 15,
+      "targets": 3,
+      "receptions": 3,
+      "scrimmageYards": 86,
+      "scrimmageTds": 0
     },
     {
       "name": "Tyrone Tracy",
@@ -4537,7 +5812,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 176,
+      "targets": 48,
+      "receptions": 36,
+      "scrimmageYards": 1028,
+      "scrimmageTds": 4
     },
     {
       "name": "Alvin Kamara",
@@ -4569,7 +5851,14 @@
           ]
         }
       ],
-      "activeSnapshots": 11
+      "activeSnapshots": 11,
+      "statGames": 11,
+      "passAttempts": 0,
+      "carries": 131,
+      "targets": 39,
+      "receptions": 33,
+      "scrimmageYards": 657,
+      "scrimmageTds": 1
     },
     {
       "name": "Malik Davis",
@@ -4610,7 +5899,14 @@
           ]
         }
       ],
-      "activeSnapshots": 10
+      "activeSnapshots": 10,
+      "statGames": 10,
+      "passAttempts": 0,
+      "carries": 52,
+      "targets": 5,
+      "receptions": 2,
+      "scrimmageYards": 266,
+      "scrimmageTds": 2
     },
     {
       "name": "Aaron Rodgers",
@@ -4637,7 +5933,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 498,
+      "carries": 21,
+      "targets": 1,
+      "receptions": 1,
+      "scrimmageYards": 52,
+      "scrimmageTds": 1
     },
     {
       "name": "Nick Singleton",
@@ -4654,7 +5957,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Ryan Flournoy",
@@ -4681,7 +5991,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 4,
+      "targets": 56,
+      "receptions": 40,
+      "scrimmageYards": 500,
+      "scrimmageTds": 4
     },
     {
       "name": "Pat Freiermuth",
@@ -4698,7 +6015,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 54,
+      "receptions": 41,
+      "scrimmageYards": 486,
+      "scrimmageTds": 4
     },
     {
       "name": "Bryce Young",
@@ -4725,7 +6049,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 478,
+      "carries": 54,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 216,
+      "scrimmageTds": 2
     },
     {
       "name": "Rashod Bateman",
@@ -4755,7 +6086,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 38,
+      "receptions": 19,
+      "scrimmageYards": 224,
+      "scrimmageTds": 2
     },
     {
       "name": "AJ Barner",
@@ -4772,7 +6110,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 10,
+      "targets": 68,
+      "receptions": 52,
+      "scrimmageYards": 533,
+      "scrimmageTds": 7
     },
     {
       "name": "Zachariah Branch",
@@ -4789,7 +6134,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Malik Washington",
@@ -4806,7 +6158,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 17,
+      "targets": 65,
+      "receptions": 46,
+      "scrimmageYards": 427,
+      "scrimmageTds": 4
     },
     {
       "name": "Chris Bell",
@@ -4823,7 +6182,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jalen Nailor",
@@ -4840,7 +6206,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 53,
+      "receptions": 29,
+      "scrimmageYards": 457,
+      "scrimmageTds": 4
     },
     {
       "name": "Isaac TeSlaa",
@@ -4857,7 +6230,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 27,
+      "receptions": 16,
+      "scrimmageYards": 239,
+      "scrimmageTds": 6
     },
     {
       "name": "Kaytron Allen",
@@ -4874,7 +6254,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Germie Bernard",
@@ -4891,7 +6278,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "George Holani",
@@ -4923,7 +6317,14 @@
           ]
         }
       ],
-      "activeSnapshots": 11
+      "activeSnapshots": 11,
+      "statGames": 10,
+      "passAttempts": 0,
+      "carries": 22,
+      "targets": 2,
+      "receptions": 2,
+      "scrimmageYards": 88,
+      "scrimmageTds": 1
     },
     {
       "name": "Seth McGowan",
@@ -4940,7 +6341,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Chris Brooks",
@@ -4957,7 +6365,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 27,
+      "targets": 17,
+      "receptions": 13,
+      "scrimmageYards": 197,
+      "scrimmageTds": 0
     },
     {
       "name": "Jauan Jennings",
@@ -4985,7 +6400,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 90,
+      "receptions": 55,
+      "scrimmageYards": 643,
+      "scrimmageTds": 9
     },
     {
       "name": "Calvin Ridley",
@@ -5029,7 +6451,14 @@
           ]
         }
       ],
-      "activeSnapshots": 7
+      "activeSnapshots": 7,
+      "statGames": 7,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 36,
+      "receptions": 17,
+      "scrimmageYards": 303,
+      "scrimmageTds": 0
     },
     {
       "name": "Cade Otton",
@@ -5056,7 +6485,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 81,
+      "receptions": 59,
+      "scrimmageYards": 572,
+      "scrimmageTds": 1
     },
     {
       "name": "Evan Engram",
@@ -5083,7 +6519,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 76,
+      "receptions": 50,
+      "scrimmageYards": 468,
+      "scrimmageTds": 1
     },
     {
       "name": "Gunnar Helm",
@@ -5110,7 +6553,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 55,
+      "receptions": 44,
+      "scrimmageYards": 357,
+      "scrimmageTds": 2
     },
     {
       "name": "David Njoku",
@@ -5141,7 +6591,14 @@
           ]
         }
       ],
-      "activeSnapshots": 12
+      "activeSnapshots": 12,
+      "statGames": 11,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 48,
+      "receptions": 33,
+      "scrimmageYards": 293,
+      "scrimmageTds": 4
     },
     {
       "name": "Jordan James",
@@ -5182,7 +6639,14 @@
           ]
         }
       ],
-      "activeSnapshots": 3
+      "activeSnapshots": 3,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Michael Mayer",
@@ -5212,7 +6676,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 50,
+      "receptions": 35,
+      "scrimmageYards": 328,
+      "scrimmageTds": 1
     },
     {
       "name": "Oronde Gadsden",
@@ -5241,7 +6712,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 69,
+      "receptions": 49,
+      "scrimmageYards": 664,
+      "scrimmageTds": 3
     },
     {
       "name": "Ted Hurst",
@@ -5258,7 +6736,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jerry Jeudy",
@@ -5275,7 +6760,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 106,
+      "receptions": 50,
+      "scrimmageYards": 607,
+      "scrimmageTds": 2
     },
     {
       "name": "Malachi Fields",
@@ -5292,7 +6784,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Travis Hunter",
@@ -5328,7 +6827,14 @@
           ]
         }
       ],
-      "activeSnapshots": 7
+      "activeSnapshots": 7,
+      "statGames": 7,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 45,
+      "receptions": 28,
+      "scrimmageYards": 298,
+      "scrimmageTds": 1
     },
     {
       "name": "Colby Parkinson",
@@ -5357,7 +6863,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 56,
+      "receptions": 43,
+      "scrimmageYards": 408,
+      "scrimmageTds": 8
     },
     {
       "name": "Charlie Kolar",
@@ -5374,7 +6887,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 15,
+      "receptions": 10,
+      "scrimmageYards": 142,
+      "scrimmageTds": 2
     },
     {
       "name": "Michael Penix",
@@ -5416,7 +6936,14 @@
           ]
         }
       ],
-      "activeSnapshots": 9
+      "activeSnapshots": 9,
+      "statGames": 9,
+      "passAttempts": 276,
+      "carries": 21,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 70,
+      "scrimmageTds": 1
     },
     {
       "name": "Antonio Williams",
@@ -5433,7 +6960,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Troy Franklin",
@@ -5450,7 +6984,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 5,
+      "targets": 104,
+      "receptions": 65,
+      "scrimmageYards": 721,
+      "scrimmageTds": 6
     },
     {
       "name": "Jalen Tolbert",
@@ -5480,7 +7021,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 34,
+      "receptions": 18,
+      "scrimmageYards": 203,
+      "scrimmageTds": 1
     },
     {
       "name": "Bryce Lance",
@@ -5497,7 +7045,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Kyle Williams",
@@ -5514,7 +7069,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 2,
+      "targets": 21,
+      "receptions": 10,
+      "scrimmageYards": 212,
+      "scrimmageTds": 3
     },
     {
       "name": "Kaleb Johnson",
@@ -5543,7 +7105,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 10,
+      "passAttempts": 0,
+      "carries": 28,
+      "targets": 2,
+      "receptions": 1,
+      "scrimmageYards": 78,
+      "scrimmageTds": 0
     },
     {
       "name": "Isaiah Davis",
@@ -5570,7 +7139,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 43,
+      "targets": 28,
+      "receptions": 21,
+      "scrimmageYards": 422,
+      "scrimmageTds": 1
     },
     {
       "name": "Fernando Mendoza",
@@ -5587,7 +7163,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Justice Hill",
@@ -5636,7 +7219,14 @@
           ]
         }
       ],
-      "activeSnapshots": 10
+      "activeSnapshots": 10,
+      "statGames": 10,
+      "passAttempts": 0,
+      "carries": 18,
+      "targets": 27,
+      "receptions": 21,
+      "scrimmageYards": 262,
+      "scrimmageTds": 3
     },
     {
       "name": "James Conner",
@@ -5676,7 +7266,14 @@
           ]
         }
       ],
-      "activeSnapshots": 3
+      "activeSnapshots": 3,
+      "statGames": 3,
+      "passAttempts": 0,
+      "carries": 32,
+      "targets": 9,
+      "receptions": 8,
+      "scrimmageYards": 133,
+      "scrimmageTds": 2
     },
     {
       "name": "Tory Horton",
@@ -5719,7 +7316,14 @@
           ]
         }
       ],
-      "activeSnapshots": 8
+      "activeSnapshots": 8,
+      "statGames": 8,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 22,
+      "receptions": 13,
+      "scrimmageYards": 161,
+      "scrimmageTds": 5
     },
     {
       "name": "Demario Douglas",
@@ -5736,7 +7340,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 7,
+      "targets": 46,
+      "receptions": 31,
+      "scrimmageYards": 468,
+      "scrimmageTds": 3
     },
     {
       "name": "Demond Claiborne",
@@ -5753,7 +7364,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Xavier Hutchinson",
@@ -5770,7 +7388,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 3,
+      "targets": 57,
+      "receptions": 35,
+      "scrimmageYards": 450,
+      "scrimmageTds": 3
     },
     {
       "name": "Sean Tucker",
@@ -5787,7 +7412,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 86,
+      "targets": 11,
+      "receptions": 8,
+      "scrimmageYards": 354,
+      "scrimmageTds": 8
     },
     {
       "name": "Isiah Pacheco",
@@ -5817,7 +7449,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 13,
+      "passAttempts": 0,
+      "carries": 118,
+      "targets": 26,
+      "receptions": 19,
+      "scrimmageYards": 563,
+      "scrimmageTds": 2
     },
     {
       "name": "Darnell Mooney",
@@ -5846,7 +7485,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 72,
+      "receptions": 32,
+      "scrimmageYards": 443,
+      "scrimmageTds": 1
     },
     {
       "name": "LeQuint Allen",
@@ -5863,7 +7509,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 23,
+      "targets": 11,
+      "receptions": 10,
+      "scrimmageYards": 148,
+      "scrimmageTds": 0
     },
     {
       "name": "Mike Gesicki",
@@ -5893,7 +7546,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 42,
+      "receptions": 28,
+      "scrimmageYards": 307,
+      "scrimmageTds": 2
     },
     {
       "name": "Emanuel Wilson",
@@ -5910,7 +7570,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 125,
+      "targets": 17,
+      "receptions": 15,
+      "scrimmageYards": 595,
+      "scrimmageTds": 3
     },
     {
       "name": "Cooper Kupp",
@@ -5937,7 +7604,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 1,
+      "carries": 0,
+      "targets": 70,
+      "receptions": 47,
+      "scrimmageYards": 593,
+      "scrimmageTds": 2
     },
     {
       "name": "Eli Raridon",
@@ -5954,7 +7628,14 @@
       "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
       "reasonKind": "rookie",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Tank Dell",
@@ -5997,7 +7678,14 @@
           ]
         }
       ],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Tyquan Thornton",
@@ -6034,7 +7722,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 37,
+      "receptions": 19,
+      "scrimmageYards": 438,
+      "scrimmageTds": 3
     },
     {
       "name": "Elic Ayomanor",
@@ -6061,7 +7756,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 16,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 89,
+      "receptions": 41,
+      "scrimmageYards": 515,
+      "scrimmageTds": 4
     },
     {
       "name": "Tez Johnson",
@@ -6088,7 +7790,14 @@
           ]
         }
       ],
-      "activeSnapshots": 16
+      "activeSnapshots": 16,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 7,
+      "targets": 44,
+      "receptions": 28,
+      "scrimmageYards": 344,
+      "scrimmageTds": 5
     },
     {
       "name": "Samaje Perine",
@@ -6116,7 +7825,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 84,
+      "targets": 21,
+      "receptions": 17,
+      "scrimmageYards": 469,
+      "scrimmageTds": 3
     },
     {
       "name": "Darius Slayton",
@@ -6145,7 +7861,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 63,
+      "receptions": 37,
+      "scrimmageYards": 538,
+      "scrimmageTds": 1
     },
     {
       "name": "Devin Singletary",
@@ -6162,7 +7885,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 119,
+      "targets": 19,
+      "receptions": 18,
+      "scrimmageYards": 588,
+      "scrimmageTds": 5
     },
     {
       "name": "Demarcus Robinson",
@@ -6191,7 +7921,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 35,
+      "receptions": 22,
+      "scrimmageYards": 282,
+      "scrimmageTds": 1
     },
     {
       "name": "Jake Tonges",
@@ -6208,7 +7945,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 10,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 46,
+      "receptions": 34,
+      "scrimmageYards": 293,
+      "scrimmageTds": 5
     },
     {
       "name": "Emari Demercado",
@@ -6238,7 +7982,14 @@
           ]
         }
       ],
-      "activeSnapshots": 13
+      "activeSnapshots": 13,
+      "statGames": 12,
+      "passAttempts": 0,
+      "carries": 44,
+      "targets": 20,
+      "receptions": 13,
+      "scrimmageYards": 413,
+      "scrimmageTds": 1
     },
     {
       "name": "Texans D/ST",
@@ -6255,7 +8006,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Broncos D/ST",
@@ -6272,7 +8030,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Steelers D/ST",
@@ -6289,7 +8054,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Seahawks D/ST",
@@ -6306,7 +8078,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Rams D/ST",
@@ -6323,7 +8102,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Ravens D/ST",
@@ -6340,7 +8126,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Eagles D/ST",
@@ -6357,7 +8150,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Browns D/ST",
@@ -6374,7 +8174,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Patriots D/ST",
@@ -6391,7 +8198,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Lions D/ST",
@@ -6408,7 +8222,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 0
+      "activeSnapshots": 0,
+      "statGames": 0,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Brandon Aubrey",
@@ -6425,7 +8246,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 1,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 6,
+      "scrimmageTds": 0
     },
     {
       "name": "Cameron Dicker",
@@ -6442,7 +8270,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jason Myers",
@@ -6459,7 +8294,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Harrison Mevis",
@@ -6496,7 +8338,14 @@
           ]
         }
       ],
-      "activeSnapshots": 9
+      "activeSnapshots": 9,
+      "statGames": 9,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Ka'imi Fairbairn",
@@ -6524,7 +8373,14 @@
           ]
         }
       ],
-      "activeSnapshots": 15
+      "activeSnapshots": 15,
+      "statGames": 15,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Eddy Pineiro",
@@ -6552,7 +8408,14 @@
           ]
         }
       ],
-      "activeSnapshots": 14
+      "activeSnapshots": 14,
+      "statGames": 14,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Harrison Butker",
@@ -6569,7 +8432,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Cam Little",
@@ -6586,7 +8456,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Jake Bates",
@@ -6603,7 +8480,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     },
     {
       "name": "Tyler Loop",
@@ -6620,7 +8504,14 @@
       "reason": "Played all 17 regular-season games",
       "reasonKind": "full",
       "rosterFlags": [],
-      "activeSnapshots": 17
+      "activeSnapshots": 17,
+      "statGames": 17,
+      "passAttempts": 0,
+      "carries": 0,
+      "targets": 0,
+      "receptions": 0,
+      "scrimmageYards": 0,
+      "scrimmageTds": 0
     }
   ]
 }
