@@ -67,20 +67,22 @@ test("2025 scoring, pace, ADP, and missed-time evidence remain distinct", () => 
   assert.match(appScript, /const hasAsterisk=row\.actual!=null&&row\.games<17/);
   assert.match(appScript, /data-dft-tip=/);
   assert.match(appScript, /Straight-line pace; not a durability forecast/);
-  assert.match(appScript, /row\.activeAdpPosRank-row\.posRank/);
+  assert.match(appScript, /row\.activeComparisonRank-pastComparisonRank/);
 });
 
 test("2025 results add position finishes, FLEX, and all three 2026 cost signals", () => {
   assert.match(app, /<option value="FLEX">FLEX · RB\/WR\/TE<\/option>/);
   const pastHead = app.match(/<table aria-label="2025 half-PPR performance and 2026 draft cost">[\s\S]*?<thead><tr>([\s\S]*?)<\/tr><\/thead>/)?.[1] ?? "";
   const labels = [...pastHead.matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((match) => match[1].replace(/<[^>]+>/g, "").trim());
-  assert.equal(labels.length, 13);
+  assert.equal(labels.length, 14);
   assert.deepEqual(labels.slice(0, 3), ["2025 rank", "Player", "Pos finish"]);
-  assert.match(labels[8], /2026 LR/);
-  assert.match(labels[9], /2026 Y ADP/);
-  assert.match(labels[10], /2026 E ADP/);
-  assert.match(labels[11], /Value vs 2025/);
+  assert.match(labels[3], /FLEX finish/);
+  assert.match(labels[9], /2026 LR/);
+  assert.match(labels[10], /2026 Y ADP/);
+  assert.match(labels[11], /2026 E ADP/);
+  assert.match(labels[12], /Value vs 2025/);
   assert.match(appScript, /pos==='FLEX'&&\['RB','WR','TE'\]\.includes\(row\.pos\)/);
+  assert.match(appScript, /event\.target\.value==='FLEX'.*flexRank/s);
 });
 
 test("position finishes rank the selected 2025 pace within position", () => {
@@ -92,6 +94,8 @@ test("position finishes rank the selected 2025 pace within position", () => {
   assert.equal(runningBacks[0][0], "Christian McCaffrey");
   assert.equal(runningBacks[1][0], "Jonathan Taylor");
   assert.match(appScript, /row\.posRank==null\?'—':row\.pos\+row\.posRank/);
+  assert.match(appScript, /row\.flexRank==null\?'—':'FLEX'\+row\.flexRank/);
+  assert.match(appScript, /row\.valueBasis=flexEligible\?'FLEX':row\.pos/);
   assert.match(appScript, /historyTeamChanged\(row\)/);
   assert.match(appScript, /Cause not in current data/);
   assert.match(appScript, /This is a research flag, not a projection/);

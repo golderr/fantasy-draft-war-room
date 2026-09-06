@@ -1452,6 +1452,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool [data-view=&quot;past&quot;] .dft-playercell { min-width: 175px; }
     #draft-room-tool [data-view=&quot;past&quot;] .dft-adpedge { min-width: 66px; }
 
+    #draft-room-tool .dft-flexfinish { color: var(--dft-good); font-weight: 900; font-variant-numeric: tabular-nums; }
   &lt;/style&gt;
 
   &lt;div class=&quot;dft-shell&quot;&gt;
@@ -1609,7 +1610,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       &lt;section class=&quot;dft-view&quot; data-view=&quot;past&quot; hidden&gt;
         &lt;div class=&quot;dft-boardhead&quot;&gt;
-          &lt;div&gt;&lt;h2&gt;2025 performance vs 2026 cost&lt;/h2&gt;&lt;div class=&quot;dft-statlegend&quot;&gt;&lt;span class=&quot;dft-sourceflag&quot; data-past-scoring&gt;Yahoo Public half-PPR&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;&lt;span class=&quot;dft-past-star&quot;&gt;*&lt;/span&gt; = straight-line 17-game pace&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;Value compares position finish with selected-room ADP&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;h2&gt;2025 performance vs 2026 cost&lt;/h2&gt;&lt;div class=&quot;dft-statlegend&quot;&gt;&lt;span class=&quot;dft-sourceflag&quot; data-past-scoring&gt;Yahoo Public half-PPR&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;&lt;span class=&quot;dft-past-star&quot;&gt;*&lt;/span&gt; = straight-line 17-game pace&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;Value uses FLEX rank for RB/WR/TE&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;div class=&quot;dft-controls&quot;&gt;
             &lt;input type=&quot;search&quot; data-past-search placeholder=&quot;Find a player&quot; aria-label=&quot;Find a player in 2025 results&quot;&gt;
             &lt;select data-past-position aria-label=&quot;Filter 2025 results by position&quot;&gt;
@@ -1617,13 +1618,14 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;/select&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;dft-past-note&quot;&gt;&lt;strong&gt;How to read it:&lt;/strong&gt; Pos finish ranks the 17-game pace within position—RB1, WR1, and so on. Value compares that finish with the player&#x27;s 2026 ADP rank at the same position in the selected room. Green flags a discount; red flags a premium. It is a screening signal, not a projection. Actual points and GP remain visible, and the context column separates known facts from an unexplained gap.&lt;/div&gt;
+        &lt;div class=&quot;dft-past-note&quot;&gt;&lt;strong&gt;How to read it:&lt;/strong&gt; 2025 rank is the all-player view; Pos finish is RB1, WR1, and so on; FLEX finish ranks RB/WR/TE together. For RB/WR/TE, Value compares 2025 FLEX finish with 2026 FLEX ADP rank in the selected room. QB/K/DST stay position-relative. Green flags a discount; red flags a premium. It is a screening signal, not a projection, and the context column separates known facts from an unexplained gap.&lt;/div&gt;
         &lt;div class=&quot;dft-tablewrap&quot;&gt;
           &lt;table aria-label=&quot;2025 half-PPR performance and 2026 draft cost&quot;&gt;
             &lt;thead&gt;&lt;tr&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;past&quot; data-sort-key=&quot;paceRank&quot; data-label=&quot;2025 rank&quot;&gt;2025 rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;past&quot; data-sort-key=&quot;name&quot; data-label=&quot;Player&quot;&gt;Player &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;past&quot; data-sort-key=&quot;posRank&quot; data-label=&quot;Pos finish&quot;&gt;Pos finish &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;past&quot; data-sort-key=&quot;flexRank&quot; data-label=&quot;FLEX finish&quot;&gt;FLEX finish &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;past&quot; data-sort-key=&quot;games&quot; data-label=&quot;GP&quot;&gt;GP &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;past&quot; data-sort-key=&quot;actual&quot; data-label=&quot;Actual pts&quot;&gt;Actual pts &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;past&quot; data-sort-key=&quot;ppg&quot; data-label=&quot;Pts/game&quot;&gt;Pts/game &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
@@ -2233,6 +2235,22 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         groups.forEach(group=&gt;group.sort((a,b)=&gt;(descending?b.value-a.value:a.value-b.value)||a.row.name.localeCompare(b.row.name)).forEach((item,index)=&gt;output.set(item.row.name,index+1)));
         return output;
       }
+      function historyPositionRanks(rows,valueKey,descending=false){
+        const output=new Map(), groups=new Map();
+        rows.forEach(row=&gt;{
+          const value=typeof valueKey===&#x27;function&#x27;?valueKey(row):row[valueKey];
+          if(!Number.isFinite(value)) return;
+          if(!groups.has(row.pos)) groups.set(row.pos,[]);
+          groups.get(row.pos).push({row,value});
+        });
+        groups.forEach(group=&gt;group.sort((a,b)=&gt;(descending?b.value-a.value:a.value-b.value)||a.row.name.localeCompare(b.row.name)).forEach((item,index)=&gt;output.set(item.row.name,index+1)));
+        return output;
+      }
+      function historyFlexRanks(rows,valueKey,descending=false){
+        const ranked=rows.filter(row=&gt;[&#x27;RB&#x27;,&#x27;WR&#x27;,&#x27;TE&#x27;].includes(row.pos)).map(row=&gt;({row,value:typeof valueKey===&#x27;function&#x27;?valueKey(row):row[valueKey]})).filter(item=&gt;Number.isFinite(item.value));
+        ranked.sort((a,b)=&gt;(descending?b.value-a.value:a.value-b.value)||a.row.name.localeCompare(b.row.name));
+        return new Map(ranked.map((item,index)=&gt;[item.row.name,index+1]));
+      }
       function historyScoredRows(){
         const pointKey=state.platform===&#x27;yahoo&#x27;?&#x27;yahooPoints&#x27;:&#x27;espnPoints&#x27;;
         const paceKey=state.platform===&#x27;yahoo&#x27;?&#x27;yahooPace&#x27;:&#x27;espnPace&#x27;;
@@ -2240,27 +2258,38 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         const lrPos=historyPositionRanks(players,player=&gt;player.lr);
         const yahooAdpPos=historyPositionRanks(players,player=&gt;player.yahooAdp);
         const espnAdpPos=historyPositionRanks(players,player=&gt;player.espnAdp);
+        const lrFlex=historyFlexRanks(players,player=&gt;player.lr);
+        const yahooAdpFlex=historyFlexRanks(players,player=&gt;player.yahooAdp);
+        const espnAdpFlex=historyFlexRanks(players,player=&gt;player.espnAdp);
         const enriched=history2025.map(row=&gt;{
           const current=currentByName.get(row.name), actual=Number.isFinite(row[pointKey])?row[pointKey]:null;
           const pace=Number.isFinite(row[paceKey])?row[paceKey]:null, ppg=actual!=null&amp;&amp;row.games&gt;0?actual/row.games:null;
-          return {...row,actual,pace,ppg,paceRank:null,posRank:null,yahooAdp2025:row.yahooAdp,
+          return {...row,actual,pace,ppg,paceRank:null,posRank:null,flexRank:null,yahooAdp2025:row.yahooAdp,
             currentTeam:current?.team??null,lr:current?.lr??null,yahooAdp2026:current?.yahooAdp??null,espnAdp2026:current?.espnAdp??null,
             lrPosRank:lrPos.get(row.name)??null,yahooAdpPosRank:yahooAdpPos.get(row.name)??null,espnAdpPosRank:espnAdpPos.get(row.name)??null,
-            activeAdpPosRank:null,valueGap:null,context:&#x27;&#x27;};
+            lrFlexRank:lrFlex.get(row.name)??null,yahooAdpFlexRank:yahooAdpFlex.get(row.name)??null,espnAdpFlexRank:espnAdpFlex.get(row.name)??null,
+            activeAdpPosRank:null,activeComparisonRank:null,lrComparisonRank:null,valueBasis:null,valueGap:null,context:&#x27;&#x27;};
         });
         const ranked=enriched.filter(row=&gt;row.pace!=null).sort((a,b)=&gt;b.pace-a.pace||(b.actual??-Infinity)-(a.actual??-Infinity)||a.name.localeCompare(b.name));
         ranked.forEach((row,index)=&gt;{ row.paceRank=index+1; });
         const posRanks=historyPositionRanks(enriched,row=&gt;row.pace,true);
+        const flexRanks=historyFlexRanks(enriched,row=&gt;row.pace,true);
         enriched.forEach(row=&gt;{
           row.posRank=posRanks.get(row.name)??null;
+          row.flexRank=flexRanks.get(row.name)??null;
           row.activeAdpPosRank=state.platform===&#x27;yahoo&#x27;?row.yahooAdpPosRank:row.espnAdpPosRank;
-          row.valueGap=Number.isFinite(row.posRank)&amp;&amp;Number.isFinite(row.activeAdpPosRank)?row.activeAdpPosRank-row.posRank:null;
+          const flexEligible=[&#x27;RB&#x27;,&#x27;WR&#x27;,&#x27;TE&#x27;].includes(row.pos);
+          row.valueBasis=flexEligible?&#x27;FLEX&#x27;:row.pos;
+          row.activeComparisonRank=flexEligible?(state.platform===&#x27;yahoo&#x27;?row.yahooAdpFlexRank:row.espnAdpFlexRank):row.activeAdpPosRank;
+          row.lrComparisonRank=flexEligible?row.lrFlexRank:row.lrPosRank;
+          const pastComparisonRank=flexEligible?row.flexRank:row.posRank;
+          row.valueGap=Number.isFinite(pastComparisonRank)&amp;&amp;Number.isFinite(row.activeComparisonRank)?row.activeComparisonRank-pastComparisonRank:null;
           row.context=historyGapContext(row).join(&#x27; · &#x27;);
         });
         return enriched;
       }
       function historySortValue(row,keyName){
-        return ({paceRank:row.paceRank,name:row.name,posRank:row.posRank,games:row.games,actual:row.actual,ppg:row.ppg,pace:row.pace,
+        return ({paceRank:row.paceRank,name:row.name,posRank:row.posRank,flexRank:row.flexRank,games:row.games,actual:row.actual,ppg:row.ppg,pace:row.pace,
           yahooAdp2025:row.yahooAdp2025,lr:row.lr,yahooAdp2026:row.yahooAdp2026,espnAdp2026:row.espnAdp2026,valueGap:row.valueGap,context:row.context})[keyName];
       }
       function sortHistoryRows(rows){
@@ -2281,7 +2310,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
       }
       const normalizedHistoryTeam=team=&gt;team===&#x27;LA&#x27;?&#x27;LAR&#x27;:team;
       function historyTeamChanged(row){ return Boolean(row.team&amp;&amp;row.currentTeam&amp;&amp;normalizedHistoryTeam(row.team)!==normalizedHistoryTeam(row.currentTeam)); }
-      function historyGapThreshold(row){ return row.pos===&#x27;QB&#x27;||row.pos===&#x27;TE&#x27;||row.pos===&#x27;K&#x27;||row.pos===&#x27;DST&#x27;?3:5; }
+      function historyGapThreshold(row){ return [&#x27;RB&#x27;,&#x27;WR&#x27;,&#x27;TE&#x27;].includes(row.pos)?8:3; }
       function historyGapContext(row){
         if(row.actual==null) return [&#x27;2026 rookie&#x27;];
         const notes=[];
@@ -2293,7 +2322,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
           return notes.slice(0,3);
         }
         const threshold=historyGapThreshold(row);
-        if(!state.cag&amp;&amp;Number.isFinite(row.valueGap)&amp;&amp;row.valueGap&gt;=threshold&amp;&amp;Number.isFinite(row.lrPosRank)&amp;&amp;Number.isFinite(row.activeAdpPosRank)&amp;&amp;row.lrPosRank&lt;row.activeAdpPosRank) notes.push(&#x27;LR confirms discount&#x27;);
+        if(!state.cag&amp;&amp;Number.isFinite(row.valueGap)&amp;&amp;row.valueGap&gt;=threshold&amp;&amp;Number.isFinite(row.lrComparisonRank)&amp;&amp;Number.isFinite(row.activeComparisonRank)&amp;&amp;row.lrComparisonRank&lt;row.activeComparisonRank) notes.push(&#x27;LR confirms discount&#x27;);
         if(!notes.length&amp;&amp;Number.isFinite(row.valueGap)&amp;&amp;Math.abs(row.valueGap)&gt;=threshold) notes.push(&#x27;Cause not in current data&#x27;);
         if(!notes.length) notes.push(&#x27;No major gap&#x27;);
         return notes.slice(0,3);
@@ -2301,16 +2330,19 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
       function historyValueMeta(row){
         if(!Number.isFinite(row.valueGap)) return {html:&#x27;&lt;span class=&quot;dft-muted&quot;&gt;—&lt;/span&gt;&#x27;,tip:&#x27;&#x27;};
         const gap=row.valueGap, threshold=historyGapThreshold(row), cls=gap&gt;=threshold?&#x27;good&#x27;:gap&lt;=-threshold?&#x27;bad&#x27;:&#x27;neutral&#x27;;
-        const strength=Math.min(Math.abs(gap)/(row.pos===&#x27;RB&#x27;||row.pos===&#x27;WR&#x27;?24:12),1);
+        const strength=Math.min(Math.abs(gap)/(row.valueBasis===&#x27;FLEX&#x27;?36:12),1);
         const background=cls===&#x27;good&#x27;?`rgba(46, 204, 126, ${(.12+.55*strength).toFixed(2)})`:cls===&#x27;bad&#x27;?`rgba(244, 96, 108, ${(.12+.52*strength).toFixed(2)})`:&#x27;var(--dft-panel-2)&#x27;;
         const arrow=cls===&#x27;good&#x27;?&#x27;▲&#x27;:cls===&#x27;bad&#x27;?&#x27;▼&#x27;:&#x27;•&#x27;, signed=gap&gt;0?`+${gap}`:String(gap);
         const room=state.platform===&#x27;yahoo&#x27;?&#x27;Yahoo&#x27;:&#x27;ESPN&#x27;, activeAdp=state.platform===&#x27;yahoo&#x27;?row.yahooAdp2026:row.espnAdp2026;
-        const direction=cls===&#x27;good&#x27;?`${room} drafts him ${gap} ${row.pos} spots later than his 2025 pace finish.`:cls===&#x27;bad&#x27;?`${room} drafts him ${Math.abs(gap)} ${row.pos} spots earlier than his 2025 pace finish.`:&#x27;2025 pace and the selected room are broadly aligned.&#x27;;
-        const lrLine=state.cag||!Number.isFinite(row.lr)?&#x27;&#x27;:`\nLate-Round: #${row.lr} overall (${row.pos}${row.lrPosRank??&#x27;—&#x27;}).`;
+        const direction=cls===&#x27;good&#x27;?`${room} drafts him ${gap} ${row.valueBasis} spots later than his 2025 pace finish.`:cls===&#x27;bad&#x27;?`${room} drafts him ${Math.abs(gap)} ${row.valueBasis} spots earlier than his 2025 pace finish.`:&#x27;2025 pace and the selected room are broadly aligned.&#x27;;
+        const lrDetail=row.valueBasis===&#x27;FLEX&#x27;?`FLEX${row.lrFlexRank??&#x27;—&#x27;}`:`${row.pos}${row.lrPosRank??&#x27;—&#x27;}`;
+        const lrLine=state.cag||!Number.isFinite(row.lr)?&#x27;&#x27;:`\nLate-Round: #${row.lr} overall (${lrDetail}).`;
         const changeLine=historyTeamChanged(row)?`\nTeam: ${row.team} → ${row.currentTeam}.`:`\nTeam: ${row.currentTeam??row.team??&#x27;—&#x27;} (no team change in current data).`;
         const caution=row.games&lt;15?` Pace is based on only ${row.games} games, so treat the gap cautiously.`:&#x27; Full-season sample.&#x27;;
-        const tip=`2025: ${row.pos}${row.posRank} pace · ${row.actual.toFixed(1)} actual points in ${row.games} games.\n2026 ${room}: ADP ${Number.isFinite(activeAdp)?activeAdp.toFixed(1):&#x27;—&#x27;} (${row.pos}${row.activeAdpPosRank}).${lrLine}${changeLine}\nRead: ${direction}${caution} This is a research flag, not a projection.`;
-        return {html:`&lt;span class=&quot;dft-adpedge ${cls} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(tip)}&quot; style=&quot;background:${background}&quot;&gt;${arrow} ${signed} ${row.pos}&lt;/span&gt;`,tip};
+        const flexDetail=Number.isFinite(row.flexRank)?` · FLEX${row.flexRank}`:&#x27;&#x27;;
+        const currentDetail=`${row.valueBasis}${row.activeComparisonRank}`;
+        const tip=`2025: ${row.pos}${row.posRank}${flexDetail} pace · ${row.actual.toFixed(1)} actual points in ${row.games} games.\n2026 ${room}: ADP ${Number.isFinite(activeAdp)?activeAdp.toFixed(1):&#x27;—&#x27;} (${currentDetail}).${lrLine}${changeLine}\nRead: ${direction}${caution} This is a research flag, not a projection.`;
+        return {html:`&lt;span class=&quot;dft-adpedge ${cls} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(tip)}&quot; style=&quot;background:${background}&quot;&gt;${arrow} ${signed} ${row.valueBasis}&lt;/span&gt;`,tip};
       }
       function historyAdp(value){ return Number.isFinite(value)?value.toFixed(1):&#x27;—&#x27;; }
       function renderPastResults(){
@@ -2324,8 +2356,8 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
           const teams=historyTeamChanged(row)?`${row.team} → ${row.currentTeam}`:(row.currentTeam??row.team??&#x27;—&#x27;);
           const subline=row.actual==null?&#x27;No 2025 NFL record&#x27;:`${teams} · ${row.games===17?&#x27;full season&#x27;:row.games&gt;17?row.games+&#x27; games; pace normalized&#x27;:hasAsterisk?&#x27;hover * for missed time&#x27;:row.games+&#x27; games&#x27;}`;
           const paceText=row.pace==null?&#x27;—&#x27;:`${row.pace.toFixed(1)}${hasAsterisk?&#x27;&lt;span class=&quot;dft-past-star&quot;&gt;*&lt;/span&gt;&#x27;:&#x27;&#x27;}`;
-          return `&lt;tr&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-past-rank&quot;&gt;${row.paceRank??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;&lt;strong class=&quot;${nameClass}&quot;${tipAttrs}&gt;${escapeHtml(row.name)}${hasAsterisk?&#x27;&lt;span class=&quot;dft-past-star&quot;&gt;*&lt;/span&gt;&#x27;:&#x27;&#x27;}&lt;/strong&gt;&lt;span&gt;${escapeHtml(subline)}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;strong class=&quot;dft-posfinish&quot;&gt;${row.posRank==null?&#x27;—&#x27;:row.pos+row.posRank}&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${row.actual==null?&#x27;—&#x27;:row.games}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${row.actual==null?&#x27;—&#x27;:row.actual.toFixed(1)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${row.ppg==null?&#x27;—&#x27;:row.ppg.toFixed(1)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;strong&gt;${paceText}&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${historyAdp(row.yahooAdp2025)}&lt;/td&gt;&lt;td class=&quot;num dft-private-source&quot;&gt;&lt;strong class=&quot;dft-lr-cell&quot;&gt;${row.lr??&#x27;—&#x27;}&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${historyAdp(row.yahooAdp2026)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${historyAdp(row.espnAdp2026)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${value.html}&lt;/td&gt;&lt;td class=&quot;dft-gapcontext&quot;&gt;${escapeHtml(row.context)}&lt;/td&gt;&lt;/tr&gt;`;
-        }).join(&#x27;&#x27;)||&#x27;&lt;tr&gt;&lt;td colspan=&quot;13&quot; class=&quot;dft-muted&quot;&gt;No 2025 results match this filter.&lt;/td&gt;&lt;/tr&gt;&#x27;;
+          return `&lt;tr&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-past-rank&quot;&gt;${row.paceRank??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;&lt;strong class=&quot;${nameClass}&quot;${tipAttrs}&gt;${escapeHtml(row.name)}${hasAsterisk?&#x27;&lt;span class=&quot;dft-past-star&quot;&gt;*&lt;/span&gt;&#x27;:&#x27;&#x27;}&lt;/strong&gt;&lt;span&gt;${escapeHtml(subline)}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;strong class=&quot;dft-posfinish&quot;&gt;${row.posRank==null?&#x27;—&#x27;:row.pos+row.posRank}&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;strong class=&quot;dft-flexfinish&quot;&gt;${row.flexRank==null?&#x27;—&#x27;:&#x27;FLEX&#x27;+row.flexRank}&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${row.actual==null?&#x27;—&#x27;:row.games}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${row.actual==null?&#x27;—&#x27;:row.actual.toFixed(1)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${row.ppg==null?&#x27;—&#x27;:row.ppg.toFixed(1)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;strong&gt;${paceText}&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${historyAdp(row.yahooAdp2025)}&lt;/td&gt;&lt;td class=&quot;num dft-private-source&quot;&gt;&lt;strong class=&quot;dft-lr-cell&quot;&gt;${row.lr??&#x27;—&#x27;}&lt;/strong&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${historyAdp(row.yahooAdp2026)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${historyAdp(row.espnAdp2026)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${value.html}&lt;/td&gt;&lt;td class=&quot;dft-gapcontext&quot;&gt;${escapeHtml(row.context)}&lt;/td&gt;&lt;/tr&gt;`;
+        }).join(&#x27;&#x27;)||&#x27;&lt;tr&gt;&lt;td colspan=&quot;14&quot; class=&quot;dft-muted&quot;&gt;No 2025 results match this filter.&lt;/td&gt;&lt;/tr&gt;&#x27;;
         renderSortIndicators();
       }
 
@@ -2473,7 +2505,11 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
       root.querySelector(&#x27;[data-rank-search]&#x27;).addEventListener(&#x27;input&#x27;,()=&gt;{ state.rankLimit=250; renderRankings(); });
       root.querySelector(&#x27;[data-rank-position]&#x27;).addEventListener(&#x27;change&#x27;,()=&gt;{ state.rankLimit=250; renderRankings(); });
       root.querySelector(&#x27;[data-past-search]&#x27;).addEventListener(&#x27;input&#x27;,renderPastResults);
-      root.querySelector(&#x27;[data-past-position]&#x27;).addEventListener(&#x27;change&#x27;,renderPastResults);
+      root.querySelector(&#x27;[data-past-position]&#x27;).addEventListener(&#x27;change&#x27;,event=&gt;{
+        if(event.target.value===&#x27;FLEX&#x27;) state.sort.past={key:&#x27;flexRank&#x27;,dir:&#x27;asc&#x27;};
+        else if(state.sort.past.key===&#x27;flexRank&#x27;) state.sort.past={key:&#x27;paceRank&#x27;,dir:&#x27;asc&#x27;};
+        renderPastResults();
+      });
       fillSlotSelect();
       renderAll();
       loadLiveVegas();
