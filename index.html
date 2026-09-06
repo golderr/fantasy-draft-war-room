@@ -1191,7 +1191,12 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool .dft-tablewrap::-webkit-scrollbar { width: 10px; height: 10px; }
     #draft-room-tool .dft-tablewrap::-webkit-scrollbar-thumb { background: var(--dft-muted); border: 2px solid var(--dft-panel); border-radius: 999px; }
     #draft-room-tool .dft-tablewrap::-webkit-scrollbar-track { background: var(--dft-panel-2); }
-    #draft-room-tool table { width: 100%; min-width: 1600px; border-collapse: collapse; background: transparent; }
+    #draft-room-tool table { --dft-round-col: 62px; --dft-player-col: 200px; width: 100%; min-width: 1600px; border-collapse: collapse; background: transparent; }
+    #draft-room-tool.dft-hide-fast table.dft-core-table { min-width: 1410px; }
+    #draft-room-tool.dft-hide-vegas table.dft-core-table { min-width: 1250px; }
+    #draft-room-tool.dft-hide-vegas.dft-hide-fast table.dft-core-table { min-width: 1060px; }
+    #draft-room-tool.dft-hide-vegas .dft-vegas-col,
+    #draft-room-tool.dft-hide-fast .dft-fast-col { display: none; }
     #draft-room-tool th {
       position: sticky;
       top: 0;
@@ -1220,7 +1225,20 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool .dft-pickmarker.future .dft-pickmarkerline::before,
     #draft-room-tool .dft-pickmarker.future .dft-pickmarkerline::after { height:1px; background:var(--dft-muted); opacity:.65; }
     #draft-room-tool td.num, #draft-room-tool th.num { text-align: right; font-variant-numeric: tabular-nums; }
-    #draft-room-tool .dft-playercell { min-width: 168px; white-space: nowrap; }
+    #draft-room-tool .dft-player-head,
+    #draft-room-tool .dft-playercell {
+      position: sticky;
+      left: var(--dft-round-col);
+      width: var(--dft-player-col);
+      min-width: var(--dft-player-col);
+      max-width: var(--dft-player-col);
+      background: var(--dft-panel);
+      box-shadow: 2px 0 0 var(--dft-line), 7px 0 12px color-mix(in srgb, var(--dft-text) 8%, transparent);
+    }
+    #draft-room-tool .dft-player-head { top: 0; z-index: 6; }
+    #draft-room-tool .dft-playercell { z-index: 3; white-space: nowrap; overflow: hidden; }
+    #draft-room-tool .dft-actions-head { min-width: 105px; }
+    #draft-room-tool .dft-actions-cell { min-width: 105px; }
     #draft-room-tool .dft-playercell strong { display: inline; font-weight: 500; }
     #draft-room-tool .dft-playercell span { display: inline; color: var(--dft-muted); font-size: 10px; margin-left: 5px; }
     #draft-room-tool .dft-star {
@@ -1240,7 +1258,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool .dft-round { display: inline-block; margin-left: 3px; color: var(--dft-muted); font-size: 9px; letter-spacing: .02em; }
     #draft-room-tool .dft-round-head {
       left: 0;
-      z-index: 6;
+      z-index: 7;
       width: 62px;
       min-width: 62px;
       background: var(--dft-panel);
@@ -1336,7 +1354,9 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool .dft-fastread { min-width: 190px; max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     #draft-room-tool .dft-gap.good { color: var(--dft-good); }
     #draft-room-tool .dft-gap.bad { color: var(--dft-risk); }
-    #draft-room-tool .dft-rowactions { display: flex; justify-content: flex-end; gap: 5px; white-space: nowrap; }
+    #draft-room-tool .dft-rowactions { display: flex; justify-content: flex-start; gap: 5px; white-space: nowrap; }
+    #draft-room-tool .dft-coltoggle { min-height: 0; padding: 5px 8px; font-size: 11px; font-weight: 700; }
+    #draft-room-tool .dft-coltoggle[aria-expanded=&quot;false&quot;] { color: var(--dft-muted); background: var(--dft-panel-2); }
     #draft-room-tool .dft-view[hidden], #draft-room-tool .dft-sources[hidden], #draft-room-tool .dft-history[hidden], #draft-room-tool .dft-recs[hidden] { display: none; }
     #draft-room-tool .dft-drafted { opacity: .46; }
     #draft-room-tool .dft-drafted .dft-playercell strong { text-decoration: line-through; }
@@ -1558,6 +1578,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;div class=&quot;dft-boardhead&quot;&gt;
           &lt;div&gt;&lt;h2&gt;Available board&lt;/h2&gt;&lt;div class=&quot;dft-statlegend&quot;&gt;&lt;span class=&quot;dft-vlive&quot;&gt;Orange = live consensus&lt;/span&gt;&lt;span class=&quot;dft-vactual&quot;&gt;A Blue = aggregate&lt;/span&gt;&lt;span class=&quot;dft-vestimate&quot;&gt;~ Gray = projection-only&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;V rank arrow = Vegas vs selected room&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;RB/WR/TE Yds + TD are combined&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot; data-pick-lines-note&gt;Pick lines follow current board order&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;div class=&quot;dft-controls&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;dft-quiet dft-coltoggle&quot; data-column-toggle=&quot;vegas&quot; aria-expanded=&quot;true&quot;&gt;Vegas ▾&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-quiet dft-coltoggle&quot; data-column-toggle=&quot;fast&quot; aria-expanded=&quot;true&quot;&gt;Fast read ▾&lt;/button&gt;
             &lt;input type=&quot;search&quot; data-search placeholder=&quot;Find a player&quot; aria-label=&quot;Find a player&quot;&gt;
             &lt;button type=&quot;button&quot; class=&quot;dft-quiet&quot; data-star-only aria-pressed=&quot;false&quot;&gt;☆ Starred&lt;/button&gt;
             &lt;select data-position aria-label=&quot;Filter by position&quot;&gt;
@@ -1566,10 +1587,11 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;dft-tablewrap&quot;&gt;
-          &lt;table aria-label=&quot;Available player board&quot;&gt;
+          &lt;table class=&quot;dft-core-table&quot; aria-label=&quot;Available player board&quot;&gt;
             &lt;thead&gt;&lt;tr&gt;
               &lt;th class=&quot;dft-round-head&quot; aria-label=&quot;Star and Late-Round round&quot;&gt;★ R&lt;/th&gt;
-              &lt;th&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;name&quot; data-label=&quot;Player&quot;&gt;Player &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;dft-player-head&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;name&quot; data-label=&quot;Player&quot;&gt;Player &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;dft-actions-head&quot; aria-label=&quot;Draft actions&quot;&gt;Draft&lt;/th&gt;
               &lt;th class=&quot;num dft-lr-head&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;lr&quot; data-label=&quot;Late-Round&quot; data-private-rank-head&gt;Late-Round &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;tier&quot; data-label=&quot;Tier&quot;&gt;Tier &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num dft-model-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;decision&quot; data-label=&quot;Model rank&quot;&gt;Model rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
@@ -1578,12 +1600,12 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;edge&quot; data-label=&quot;LR edge&quot; data-edge-head&gt;LR edge &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;proj&quot; data-label=&quot;Proj pts&quot;&gt;Proj pts &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;risk&quot; data-label=&quot;Risk&quot;&gt;Risk &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_rec&quot; data-label=&quot;V Rec&quot;&gt;V Rec &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_yds&quot; data-label=&quot;V Yds&quot;&gt;V Yds &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_td&quot; data-label=&quot;V TD&quot;&gt;V TD &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_pts&quot; data-label=&quot;V median&quot;&gt;V median &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_rank&quot; data-label=&quot;V rank&quot;&gt;V rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th&gt;Fast read&lt;/th&gt;&lt;th aria-label=&quot;Actions&quot;&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_rec&quot; data-label=&quot;V Rec&quot;&gt;V Rec &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_yds&quot; data-label=&quot;V Yds&quot;&gt;V Yds &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_td&quot; data-label=&quot;V TD&quot;&gt;V TD &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_pts&quot; data-label=&quot;V median&quot;&gt;V median &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;live&quot; data-sort-key=&quot;vegas_rank&quot; data-label=&quot;V rank&quot;&gt;V rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;dft-fast-col&quot;&gt;Fast read&lt;/th&gt;
             &lt;/tr&gt;&lt;/thead&gt;
             &lt;tbody data-live-table&gt;&lt;/tbody&gt;
           &lt;/table&gt;
@@ -1595,6 +1617,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;div class=&quot;dft-boardhead&quot;&gt;
           &lt;div&gt;&lt;h2&gt;Player rankings&lt;/h2&gt;&lt;div class=&quot;dft-statlegend&quot;&gt;&lt;span class=&quot;dft-vlive&quot;&gt;Orange = live consensus&lt;/span&gt;&lt;span class=&quot;dft-vactual&quot;&gt;A Blue = aggregate&lt;/span&gt;&lt;span class=&quot;dft-vestimate&quot;&gt;~ Gray = projection-only&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;V rank arrow = Vegas vs selected room&lt;/span&gt;&lt;span class=&quot;dft-sourceflag&quot;&gt;RB/WR/TE Yds + TD are combined&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;div class=&quot;dft-controls&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;dft-quiet dft-coltoggle&quot; data-column-toggle=&quot;vegas&quot; aria-expanded=&quot;true&quot;&gt;Vegas ▾&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-quiet dft-coltoggle&quot; data-column-toggle=&quot;fast&quot; aria-expanded=&quot;true&quot;&gt;Fast read ▾&lt;/button&gt;
             &lt;input type=&quot;search&quot; data-rank-search placeholder=&quot;Find a player&quot; aria-label=&quot;Find a ranked player&quot;&gt;
             &lt;button type=&quot;button&quot; class=&quot;dft-quiet&quot; data-star-only aria-pressed=&quot;false&quot;&gt;☆ Starred&lt;/button&gt;
             &lt;select data-rank-position aria-label=&quot;Filter rankings by position&quot;&gt;
@@ -1603,10 +1626,10 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;dft-tablewrap&quot;&gt;
-          &lt;table aria-label=&quot;Player rankings&quot;&gt;
+          &lt;table class=&quot;dft-core-table&quot; aria-label=&quot;Player rankings&quot;&gt;
             &lt;thead&gt;&lt;tr&gt;
               &lt;th class=&quot;dft-round-head&quot; aria-label=&quot;Star and Late-Round round&quot;&gt;★ R&lt;/th&gt;
-              &lt;th&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;name&quot; data-label=&quot;Player&quot;&gt;Player &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;dft-player-head&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;name&quot; data-label=&quot;Player&quot;&gt;Player &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num dft-lr-head&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;lr&quot; data-label=&quot;Late-Round&quot; data-private-rank-head&gt;Late-Round &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;tier&quot; data-label=&quot;Tier&quot;&gt;Tier &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num dft-model-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;decision&quot; data-label=&quot;Model rank&quot;&gt;Model rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
@@ -1615,12 +1638,12 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;edge&quot; data-label=&quot;LR edge&quot; data-edge-head&gt;LR edge &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;proj&quot; data-label=&quot;Proj pts&quot;&gt;Proj pts &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
               &lt;th&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;risk&quot; data-label=&quot;Risk&quot;&gt;Risk &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_rec&quot; data-label=&quot;V Rec&quot;&gt;V Rec &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_yds&quot; data-label=&quot;V Yds&quot;&gt;V Yds &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_td&quot; data-label=&quot;V TD&quot;&gt;V TD &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_pts&quot; data-label=&quot;V median&quot;&gt;V median &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th class=&quot;num&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_rank&quot; data-label=&quot;V rank&quot;&gt;V rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
-              &lt;th&gt;Cross-platform read&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_rec&quot; data-label=&quot;V Rec&quot;&gt;V Rec &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_yds&quot; data-label=&quot;V Yds&quot;&gt;V Yds &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_td&quot; data-label=&quot;V TD&quot;&gt;V TD &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_pts&quot; data-label=&quot;V median&quot;&gt;V median &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;num dft-vegas-col&quot;&gt;&lt;button class=&quot;dft-sort&quot; data-sort-table=&quot;rankings&quot; data-sort-key=&quot;vegas_rank&quot; data-label=&quot;V rank&quot;&gt;V rank &lt;span class=&quot;dft-sortmark&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/th&gt;
+              &lt;th class=&quot;dft-fast-col&quot;&gt;Cross-platform read&lt;/th&gt;
             &lt;/tr&gt;&lt;/thead&gt;
             &lt;tbody data-rank-table&gt;&lt;/tbody&gt;
           &lt;/table&gt;
@@ -1719,7 +1742,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         scrimmageYards:row[16], scrimmageTds:row[17]
       }));
       const state = {
-        platform: &#x27;yahoo&#x27;, teams: 10, slot: 5, drafted: [], mine: new Set(), starred: new Set(), liveLimit: 200, rankLimit: 250, view: &#x27;live&#x27;, starOnly: false, recsCollapsed: false, historyOpen: false, cag: false,
+        platform: &#x27;yahoo&#x27;, teams: 10, slot: 5, drafted: [], mine: new Set(), starred: new Set(), liveLimit: 200, rankLimit: 250, view: &#x27;live&#x27;, starOnly: false, vegasCollapsed: false, fastReadCollapsed: false, recsCollapsed: false, historyOpen: false, cag: false,
         liveVegasStatus: &#x27;idle&#x27;, liveVegasPlayers: 0, liveVegasBooks: 0, liveVegasRetrievedAt: null, liveVegasHealth: null,
         sort: { live:{key:&#x27;lr&#x27;,dir:&#x27;asc&#x27;}, rankings:{key:&#x27;lr&#x27;,dir:&#x27;asc&#x27;}, past:{key:&#x27;paceRank&#x27;,dir:&#x27;asc&#x27;} }
       };
@@ -1778,6 +1801,8 @@ html&gt;body{padding:0}&lt;/style&gt;
           state.mine = new Set(Array.isArray(saved.mine) ? saved.mine : []);
           state.starred = new Set(Array.isArray(saved.starred) ? saved.starred.filter(id=&gt;players.some(p=&gt;p.id===id)) : []);
           state.recsCollapsed = Boolean(saved.recsCollapsed);
+          state.vegasCollapsed = Boolean(saved.vegasCollapsed);
+          state.fastReadCollapsed = Boolean(saved.fastReadCollapsed);
           state.cag = Boolean(saved.cag);
         }
       } catch (_) {}
@@ -1793,7 +1818,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       const roundOf = rank =&gt; rank == null ? null : Math.max(1,Math.ceil(Number(rank)/state.teams));
       const tierTone = p =&gt; displayTier(p) == null ? &#x27;&#x27; : `dft-tier-tone-${((displayTier(p)-1)%8)+1}`;
       const saveState = () =&gt; {
-        try { localStorage.setItem(storageKey, JSON.stringify({platform:state.platform,teams:state.teams,slot:state.slot,drafted:state.drafted,mine:[...state.mine],starred:[...state.starred],recsCollapsed:state.recsCollapsed,cag:state.cag})); } catch (_) {}
+        try { localStorage.setItem(storageKey, JSON.stringify({platform:state.platform,teams:state.teams,slot:state.slot,drafted:state.drafted,mine:[...state.mine],starred:[...state.starred],recsCollapsed:state.recsCollapsed,vegasCollapsed:state.vegasCollapsed,fastReadCollapsed:state.fastReadCollapsed,cag:state.cag})); } catch (_) {}
       };
       const rankCell = rank =&gt; rank == null ? &#x27;&lt;span class=&quot;dft-muted&quot;&gt;—&lt;/span&gt;&#x27; : `&lt;span class=&quot;dft-rankcell&quot;&gt;&lt;span class=&quot;dft-ranknum&quot;&gt;${Math.round(rank)}&lt;/span&gt;&lt;span class=&quot;dft-round&quot;&gt;R${roundOf(rank)}&lt;/span&gt;&lt;/span&gt;`;
       const platformRankCell = (p,platform) =&gt; {
@@ -2124,6 +2149,17 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         el.innerHTML=Array.from({length:state.teams},(_,i)=&gt;`&lt;option value=&quot;${i+1}&quot;&gt;${i+1}&lt;/option&gt;`).join(&#x27;&#x27;);
         state.slot=prior; el.value=String(prior);
       }
+      function renderColumnVisibility(){
+        root.classList.toggle(&#x27;dft-hide-vegas&#x27;,state.vegasCollapsed);
+        root.classList.toggle(&#x27;dft-hide-fast&#x27;,state.fastReadCollapsed);
+        root.querySelectorAll(&#x27;[data-column-toggle]&#x27;).forEach(button=&gt;{
+          const isVegas=button.dataset.columnToggle===&#x27;vegas&#x27;, collapsed=isVegas?state.vegasCollapsed:state.fastReadCollapsed;
+          const label=isVegas?&#x27;Vegas&#x27;:&#x27;Fast read&#x27;;
+          button.setAttribute(&#x27;aria-expanded&#x27;,String(!collapsed));
+          button.setAttribute(&#x27;aria-label&#x27;,(collapsed?&#x27;Show &#x27;:&#x27;Hide &#x27;)+label+&#x27; columns&#x27;);
+          button.textContent=label+&#x27; &#x27;+(collapsed?&#x27;▸&#x27;:&#x27;▾&#x27;);
+        });
+      }
       function renderSortIndicators(){
         root.querySelectorAll(&#x27;[data-sort-table]&#x27;).forEach(b=&gt;{
           const cfg=state.sort[b.dataset.sortTable], active=cfg.key===b.dataset.sortKey;
@@ -2223,7 +2259,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         }
         root.querySelector(&#x27;[data-live-table]&#x27;).innerHTML=shown.map((p,index)=&gt;{
           const ar=activeRank(p), or=otherRank(p), edge=edgeMeta(p), risk=riskMeta(p), vegas=vegasMeta(p);
-          return `${markers.get(index)||&#x27;&#x27;}&lt;tr class=&quot;${tierTone(p)}&quot;&gt;&lt;td class=&quot;dft-round-cell&quot;&gt;${starRoundCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-lr-cell&quot;&gt;${rankNumberCell(analystRank(p))}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-tierchip&quot;&gt;T${displayTier(p)??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-model-col&quot;&gt;${state.cag?&#x27;&#x27;:rankCell(p.decision)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${platformRankCell(p,state.platform)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${platformRankCell(p,state.platform===&#x27;yahoo&#x27;?&#x27;espn&#x27;:&#x27;yahoo&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-edgecell ${edge.cls}&quot; style=&quot;${edge.style}&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls}&quot;&gt;${edge.text}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${projectionCell(p)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level===&#x27;Medium&#x27;?&#x27;Med&#x27;:risk.level}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;rec&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;yds&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;td&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasPointsCell(p)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasRankCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-fastread&quot;&gt;${escapeHtml(quickRead(p))}&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;dft-rowactions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-taken=&quot;${p.id}&quot;&gt;Taken&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn&quot; data-mine=&quot;${p.id}&quot;&gt;Mine&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`;
+          return `${markers.get(index)||&#x27;&#x27;}&lt;tr class=&quot;${tierTone(p)}&quot;&gt;&lt;td class=&quot;dft-round-cell&quot;&gt;${starRoundCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;dft-actions-cell&quot;&gt;&lt;div class=&quot;dft-rowactions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-taken=&quot;${p.id}&quot;&gt;Taken&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn&quot; data-mine=&quot;${p.id}&quot;&gt;Mine&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;num dft-lr-cell&quot;&gt;${rankNumberCell(analystRank(p))}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-tierchip&quot;&gt;T${displayTier(p)??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-model-col&quot;&gt;${state.cag?&#x27;&#x27;:rankCell(p.decision)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${platformRankCell(p,state.platform)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${platformRankCell(p,state.platform===&#x27;yahoo&#x27;?&#x27;espn&#x27;:&#x27;yahoo&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-edgecell ${edge.cls}&quot; style=&quot;${edge.style}&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls}&quot;&gt;${edge.text}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${projectionCell(p)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level===&#x27;Medium&#x27;?&#x27;Med&#x27;:risk.level}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasStatCell(p,&#x27;rec&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasStatCell(p,&#x27;yds&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasStatCell(p,&#x27;td&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasPointsCell(p)}&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasRankCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-fastread dft-fast-col&quot;&gt;${escapeHtml(quickRead(p))}&lt;/td&gt;&lt;/tr&gt;`;
         }).join(&#x27;&#x27;) || `&lt;tr&gt;&lt;td colspan=&quot;17&quot; class=&quot;dft-muted&quot;&gt;No available players match this filter.&lt;/td&gt;&lt;/tr&gt;`;
         root.querySelector(&#x27;[data-show-more-live]&#x27;).hidden=list.length&lt;=visibleLimit;
         renderSortIndicators();
@@ -2239,7 +2275,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
           const cross=p.espn!=null&amp;&amp;p.yahoo!=null?p.yahoo-p.espn:null;
           const read=cross==null?&#x27;Platform comparison unavailable&#x27;:Math.abs(cross)&lt;5?&#x27;Rooms broadly agree&#x27;:cross&gt;0?`ESPN takes him ${cross} earlier`:`Yahoo takes him ${Math.abs(cross)} earlier`;
           const edge=edgeMeta(p), risk=riskMeta(p), vegas=vegasMeta(p);
-          return `&lt;tr class=&quot;${tierTone(p)} ${dset.has(p.id)?&#x27;dft-drafted&#x27;:&#x27;&#x27;}&quot;&gt;&lt;td class=&quot;dft-round-cell&quot;&gt;${starRoundCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-lr-cell&quot;&gt;${rankNumberCell(analystRank(p))}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-tierchip&quot;&gt;T${displayTier(p)??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-model-col&quot;&gt;${state.cag?&#x27;&#x27;:rankCell(p.decision)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${platformRankCell(p,&#x27;espn&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${platformRankCell(p,&#x27;yahoo&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-edgecell ${edge.cls}&quot; style=&quot;${edge.style}&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls}&quot;&gt;${edge.text}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${projectionCell(p)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level===&#x27;Medium&#x27;?&#x27;Med&#x27;:risk.level}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;rec&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;yds&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasStatCell(p,&#x27;td&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasPointsCell(p)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${vegasRankCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-fastread&quot;&gt;${escapeHtml(read)}&lt;/td&gt;&lt;/tr&gt;`;
+          return `&lt;tr class=&quot;${tierTone(p)} ${dset.has(p.id)?&#x27;dft-drafted&#x27;:&#x27;&#x27;}&quot;&gt;&lt;td class=&quot;dft-round-cell&quot;&gt;${starRoundCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-playercell&quot;&gt;&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;dft-actions-cell&quot;&gt;&lt;div class=&quot;dft-rowactions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-taken=&quot;${p.id}&quot;&gt;Taken&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn&quot; data-mine=&quot;${p.id}&quot;&gt;Mine&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;num dft-lr-cell&quot;&gt;${rankNumberCell(analystRank(p))}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;&lt;span class=&quot;dft-tierchip&quot;&gt;T${displayTier(p)??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-model-col&quot;&gt;${state.cag?&#x27;&#x27;:rankCell(p.decision)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${platformRankCell(p,&#x27;espn&#x27;)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${platformRankCell(p,&#x27;yahoo&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-edgecell ${edge.cls}&quot; style=&quot;${edge.style}&quot;&gt;&lt;span class=&quot;dft-edge ${edge.cls}&quot;&gt;${edge.text}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${projectionCell(p)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;dft-riskbadge ${risk.level.toLowerCase()} dft-hastip&quot; tabindex=&quot;0&quot; data-dft-tip=&quot;${escapeHtml(risk.detail)}&quot;&gt;${risk.level===&#x27;Medium&#x27;?&#x27;Med&#x27;:risk.level}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasStatCell(p,&#x27;rec&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasStatCell(p,&#x27;yds&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasStatCell(p,&#x27;td&#x27;)}&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasPointsCell(p)}&lt;/td&gt;&lt;td class=&quot;num dft-vegas-col&quot;&gt;${vegasRankCell(p)}&lt;/td&gt;&lt;td class=&quot;dft-fastread dft-fast-col&quot;&gt;${escapeHtml(read)}&lt;/td&gt;&lt;/tr&gt;`;
         }).join(&#x27;&#x27;);
         root.querySelector(&#x27;[data-show-more-rank]&#x27;).hidden=list.length&lt;=state.rankLimit;
         renderSortIndicators();
@@ -2579,7 +2615,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         tooltipLayer.style.left=`${left}px`; tooltipLayer.style.top=`${top}px`;
       }
       function queueTooltip(trigger){ clearTimeout(tooltipTimer); tooltipTimer=setTimeout(()=&gt;showTooltip(trigger),180); }
-      function renderAll(){ renderSettings(); renderStatus(); renderRoster(); renderRecommendations(); renderHistory(); renderLiveTable(); renderRankings(); renderPastResults(); }
+      function renderAll(){ renderColumnVisibility(); renderSettings(); renderStatus(); renderRoster(); renderRecommendations(); renderHistory(); renderLiveTable(); renderRankings(); renderPastResults(); }
 
       root.addEventListener(&#x27;pointerover&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-dft-tip]&#x27;); if(trigger) queueTooltip(trigger); });
       root.addEventListener(&#x27;pointerout&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-dft-tip]&#x27;); if(trigger&amp;&amp;!trigger.contains(e.relatedTarget)) hideTooltip(); });
@@ -2617,6 +2653,11 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         if(b.hasAttribute(&#x27;data-undo&#x27;)) undo();
         if(b.hasAttribute(&#x27;data-history-button&#x27;)){ state.historyOpen=!state.historyOpen; renderHistory(); }
         if(b.hasAttribute(&#x27;data-history-close&#x27;)){ state.historyOpen=false; renderHistory(); }
+        if(b.dataset.columnToggle){
+          if(b.dataset.columnToggle===&#x27;vegas&#x27;) state.vegasCollapsed=!state.vegasCollapsed;
+          if(b.dataset.columnToggle===&#x27;fast&#x27;) state.fastReadCollapsed=!state.fastReadCollapsed;
+          saveState(); renderColumnVisibility();
+        }
         if(b.hasAttribute(&#x27;data-recs-toggle&#x27;)){ state.recsCollapsed=!state.recsCollapsed; saveState(); renderRecommendations(); }
         if(b.hasAttribute(&#x27;data-reset&#x27;) &amp;&amp; confirm(&#x27;Restart this draft? Taken and Mine will be cleared. Stars will stay saved.&#x27;)) resetDraft();
         if(b.hasAttribute(&#x27;data-show-more-live&#x27;)){ state.liveLimit+=200; renderLiveTable(); }

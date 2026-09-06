@@ -45,15 +45,35 @@ test("tooltips use one app-owned trigger system", () => {
   assert.match(appScript, /closest\('\[data-dft-tip\]'\)/);
 });
 
-test("table starts with star and round, then player, then Late-Round", () => {
-  const liveHead = app.match(/<table aria-label="Available player board">[\s\S]*?<thead><tr>([\s\S]*?)<\/tr><\/thead>/)?.[1] ?? "";
+test("live table keeps identity and draft actions at the left edge", () => {
+  const liveHead = app.match(/<table class="dft-core-table" aria-label="Available player board">[\s\S]*?<thead><tr>([\s\S]*?)<\/tr><\/thead>/)?.[1] ?? "";
   const labels = [...liveHead.matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((match) => match[1].replace(/<[^>]+>/g, "").trim());
   assert.equal(labels.length, 17);
   assert.match(labels[0], /★ R/);
   assert.match(labels[1], /Player/);
-  assert.match(labels[2], /Late-Round/);
-  assert.match(labels[13], /V median/);
-  assert.match(labels[14], /V rank/);
+  assert.match(labels[2], /Draft/);
+  assert.match(labels[3], /Late-Round/);
+  assert.match(labels[14], /V median/);
+  assert.match(labels[15], /V rank/);
+  assert.match(liveHead, /<th class="dft-player-head">/);
+  assert.match(appScript, /dft-playercell[\s\S]*?dft-actions-cell[\s\S]*?dft-lr-cell/);
+  assert.doesNotMatch(appScript, /dft-fastread dft-fast-col[\s\S]{0,200}data-taken/);
+});
+
+test("Vegas and Fast read column groups collapse together across board views", () => {
+  assert.equal((app.match(/data-column-toggle="vegas"/g) ?? []).length, 2);
+  assert.equal((app.match(/data-column-toggle="fast"/g) ?? []).length, 2);
+  assert.match(app, /\.dft-hide-vegas \.dft-vegas-col/);
+  assert.match(app, /\.dft-hide-fast \.dft-fast-col/);
+  assert.match(app, /dft-hide-vegas table\.dft-core-table/);
+  assert.equal((app.match(/<table class="dft-core-table"/g) ?? []).length, 2);
+  assert.match(app, /\.dft-player-head,[\s\S]*?\.dft-playercell[\s\S]*?position: sticky;[\s\S]*?left: var\(--dft-round-col\)/);
+  assert.match(appScript, /vegasCollapsed: false, fastReadCollapsed: false/);
+  assert.match(appScript, /root\.classList\.toggle\('dft-hide-vegas',state\.vegasCollapsed\)/);
+  assert.match(appScript, /root\.classList\.toggle\('dft-hide-fast',state\.fastReadCollapsed\)/);
+  assert.match(appScript, /if\(b\.dataset\.columnToggle\)/);
+  assert.equal((app.match(/<th class="num dft-vegas-col">/g) ?? []).length, 10);
+  assert.equal((app.match(/<th class="dft-fast-col">/g) ?? []).length, 2);
 });
 
 test("Late-Round stays the default draft sort and 2025 results start by pace", () => {
