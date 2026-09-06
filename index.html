@@ -1357,6 +1357,87 @@ html&gt;body{padding:0}&lt;/style&gt;
     #draft-room-tool .dft-rowactions { display: flex; justify-content: flex-start; gap: 5px; white-space: nowrap; }
     #draft-room-tool .dft-coltoggle { min-height: 0; padding: 5px 8px; font-size: 11px; font-weight: 700; }
     #draft-room-tool .dft-coltoggle[aria-expanded=&quot;false&quot;] { color: var(--dft-muted); background: var(--dft-panel-2); }
+    #draft-room-tool .dft-position-drawer {
+      position: fixed;
+      top: 16vh;
+      right: 0;
+      z-index: 60;
+      width: min(430px, calc(100vw - 44px));
+      height: min(72vh, 650px);
+      transform: translateX(100%);
+      transition: transform 180ms ease;
+    }
+    #draft-room-tool .dft-position-drawer.open { transform: translateX(0); }
+    #draft-room-tool .dft-position-drawer[hidden],
+    #draft-room-tool.dft-cag .dft-position-drawer { display: none; }
+    #draft-room-tool .dft-position-tab {
+      position: absolute;
+      top: 58px;
+      left: -40px;
+      width: 40px;
+      min-width: 40px;
+      height: 118px;
+      min-height: 118px;
+      padding: 9px 8px;
+      border-radius: 8px 0 0 8px;
+      border-color: var(--dft-accent);
+      background: var(--dft-accent);
+      color: #fff;
+      box-shadow: var(--dft-shadow);
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .04em;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+    #draft-room-tool .dft-position-tab:hover { transform: rotate(180deg); filter: brightness(1.06); }
+    #draft-room-tool .dft-position-panel {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid var(--dft-line);
+      border-right: 0;
+      border-radius: 10px 0 0 10px;
+      background: var(--dft-panel);
+      box-shadow: -12px 0 28px color-mix(in srgb, var(--dft-text) 18%, transparent);
+    }
+    #draft-room-tool .dft-position-drawer:not(.open) .dft-position-panel { visibility: hidden; pointer-events: none; }
+    #draft-room-tool .dft-position-head { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:10px; border-bottom:1px solid var(--dft-line); }
+    #draft-room-tool .dft-position-head strong { display:block; font-size:14px; }
+    #draft-room-tool .dft-position-head span { display:block; margin-top:2px; color:var(--dft-muted); font-size:10px; }
+    #draft-room-tool .dft-position-filter { display:flex; align-items:center; gap:7px; padding:8px 10px; border-bottom:1px solid var(--dft-line); background:var(--dft-panel-2); }
+    #draft-room-tool .dft-position-filter label { color:var(--dft-muted); font-size:11px; font-weight:700; }
+    #draft-room-tool .dft-position-filter select { flex:1; min-width:0; padding:6px 8px; }
+    #draft-room-tool .dft-position-scroll { flex:1; min-height:0; overflow:auto; overscroll-behavior:contain; }
+    #draft-room-tool table.dft-position-table { width:100%; min-width:0; table-layout:fixed; }
+    #draft-room-tool .dft-position-table th { padding:5px 4px; font-size:10px; }
+    #draft-room-tool .dft-position-table td { height:31px; padding:3px 4px; font-size:11px; }
+    #draft-room-tool .dft-position-table th:first-child { width:40%; }
+    #draft-room-tool .dft-position-table th:nth-child(2) { width:9%; }
+    #draft-room-tool .dft-position-table th:nth-child(3),
+    #draft-room-tool .dft-position-table th:nth-child(4) { width:11%; }
+    #draft-room-tool .dft-position-table th:last-child { width:29%; }
+    #draft-room-tool .dft-tray-player { min-width:0; overflow:hidden; border-left:4px solid var(--dft-accent); }
+    #draft-room-tool .dft-tray-player strong { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:11px; font-weight:700; }
+    #draft-room-tool .dft-tray-player span { display:block; margin-top:1px; color:var(--dft-muted); font-size:9px; white-space:nowrap; }
+    #draft-room-tool .dft-tray-lr { color:var(--dft-accent); font-weight:800; }
+    #draft-room-tool .dft-position-table .dft-rowactions { gap:3px; justify-content:flex-end; }
+    #draft-room-tool .dft-position-table .dft-smallbtn { padding:3px 6px; font-size:10px; }
+    #draft-room-tool .dft-position-foot { padding:6px 10px; border-top:1px solid var(--dft-line); color:var(--dft-muted); font-size:9px; }
+    #draft-room-tool tr.dft-tier-tone-1 .dft-tray-player { border-left-color: var(--dft-tier-accent-1); }
+    #draft-room-tool tr.dft-tier-tone-2 .dft-tray-player { border-left-color: var(--dft-tier-accent-2); }
+    #draft-room-tool tr.dft-tier-tone-3 .dft-tray-player { border-left-color: var(--dft-tier-accent-3); }
+    #draft-room-tool tr.dft-tier-tone-4 .dft-tray-player { border-left-color: var(--dft-tier-accent-4); }
+    #draft-room-tool tr.dft-tier-tone-5 .dft-tray-player { border-left-color: var(--dft-tier-accent-5); }
+    #draft-room-tool tr.dft-tier-tone-6 .dft-tray-player { border-left-color: var(--dft-tier-accent-6); }
+    #draft-room-tool tr.dft-tier-tone-7 .dft-tray-player { border-left-color: var(--dft-tier-accent-7); }
+    #draft-room-tool tr.dft-tier-tone-8 .dft-tray-player { border-left-color: var(--dft-tier-accent-8); }
+    @media (max-width: 560px) {
+      #draft-room-tool .dft-position-drawer { top: 12vh; height: 78vh; }
+      #draft-room-tool .dft-position-table th:first-child { width:36%; }
+      #draft-room-tool .dft-position-table th:last-child { width:33%; }
+    }
     #draft-room-tool .dft-view[hidden], #draft-room-tool .dft-sources[hidden], #draft-room-tool .dft-history[hidden], #draft-room-tool .dft-recs[hidden] { display: none; }
     #draft-room-tool .dft-drafted { opacity: .46; }
     #draft-room-tool .dft-drafted .dft-playercell strong { text-decoration: line-through; }
@@ -1695,6 +1776,15 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;/main&gt;
     &lt;div class=&quot;dft-footnote dft-normal-only&quot;&gt;Every remaining horizontal line marks one of your snake-draft picks through the platform’s full roster size (15 rounds for Yahoo Public; 16 for ESPN). Lines move as players are checked off and hide while filtering. Late-Round is the trusted-rank anchor and default sort; LR edge compares it with the selected platform’s default room rank. Proj pts comes from ESPN’s projected stat line scored for the active platform. V median is a sportsbook threshold, not a second mean projection; its adjacent difference is versus Proj pts. V rank normalizes the usual market median haircut and ranks qualified evidence within QB or FLEX; its arrow is versus the selected room’s rank in that same pool. RB/WR/TE rushing + receiving yards and TDs are combined; QB passing/rushing stay separate; K/DST show n/a. Undo last can be repeated; Taken restores any player; Restart keeps stars. State persists on this device.&lt;/div&gt;
     &lt;div class=&quot;dft-footnote dft-cag-only&quot;&gt;CAG mode is the Bills Mafia board: Josh Allen is 1 and Buffalo gets every benefit of the doubt. Public room ranks, projections, and Vegas fields remain unchanged. State persists on this device.&lt;/div&gt;
+    &lt;aside class=&quot;dft-position-drawer&quot; data-position-drawer aria-label=&quot;Position rankings tray&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;dft-position-tab&quot; data-position-tray-toggle aria-expanded=&quot;false&quot; aria-controls=&quot;dft-position-panel&quot;&gt;Position watch&lt;/button&gt;
+      &lt;section class=&quot;dft-position-panel&quot; id=&quot;dft-position-panel&quot; data-position-panel aria-hidden=&quot;true&quot;&gt;
+        &lt;div class=&quot;dft-position-head&quot;&gt;&lt;div&gt;&lt;strong data-position-title&gt;TE watch&lt;/strong&gt;&lt;span&gt;&lt;span data-position-count&gt;0&lt;/span&gt; available · Late-Round order&lt;/span&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-position-tray-close aria-label=&quot;Close position tray&quot;&gt;Close&lt;/button&gt;&lt;/div&gt;
+        &lt;div class=&quot;dft-position-filter&quot;&gt;&lt;label for=&quot;dft-tray-position&quot;&gt;Position&lt;/label&gt;&lt;select id=&quot;dft-tray-position&quot; data-tray-position aria-label=&quot;Choose position for the position tray&quot;&gt;&lt;option value=&quot;FLEX&quot;&gt;FLEX · RB/WR/TE&lt;/option&gt;&lt;option&gt;QB&lt;/option&gt;&lt;option&gt;RB&lt;/option&gt;&lt;option&gt;WR&lt;/option&gt;&lt;option selected&gt;TE&lt;/option&gt;&lt;option&gt;K&lt;/option&gt;&lt;option&gt;DST&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+        &lt;div class=&quot;dft-position-scroll&quot;&gt;&lt;table class=&quot;dft-position-table&quot; aria-label=&quot;Available players by position&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Player · Tier&lt;/th&gt;&lt;th class=&quot;num&quot;&gt;LR&lt;/th&gt;&lt;th class=&quot;num&quot;&gt;Y ADP&lt;/th&gt;&lt;th class=&quot;num&quot;&gt;E ADP&lt;/th&gt;&lt;th&gt;Draft&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody data-position-table&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+        &lt;div class=&quot;dft-position-foot&quot;&gt;Available players only · tier shading matches the main board&lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/aside&gt;
     &lt;div class=&quot;dft-tooltip&quot; data-dft-tooltip-layer role=&quot;tooltip&quot; hidden&gt;&lt;/div&gt;
     &lt;div class=&quot;dft-live&quot; aria-live=&quot;polite&quot; data-announcer&gt;&lt;/div&gt;
   &lt;/div&gt;
@@ -1742,7 +1832,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         scrimmageYards:row[16], scrimmageTds:row[17]
       }));
       const state = {
-        platform: &#x27;yahoo&#x27;, teams: 10, slot: 5, drafted: [], mine: new Set(), starred: new Set(), liveLimit: 200, rankLimit: 250, view: &#x27;live&#x27;, starOnly: false, vegasCollapsed: false, fastReadCollapsed: false, recsCollapsed: false, historyOpen: false, cag: false,
+        platform: &#x27;yahoo&#x27;, teams: 10, slot: 5, drafted: [], mine: new Set(), starred: new Set(), liveLimit: 200, rankLimit: 250, view: &#x27;live&#x27;, starOnly: false, trayOpen: false, trayPosition: &#x27;TE&#x27;, vegasCollapsed: false, fastReadCollapsed: false, recsCollapsed: false, historyOpen: false, cag: false,
         liveVegasStatus: &#x27;idle&#x27;, liveVegasPlayers: 0, liveVegasBooks: 0, liveVegasRetrievedAt: null, liveVegasHealth: null,
         sort: { live:{key:&#x27;lr&#x27;,dir:&#x27;asc&#x27;}, rankings:{key:&#x27;lr&#x27;,dir:&#x27;asc&#x27;}, past:{key:&#x27;paceRank&#x27;,dir:&#x27;asc&#x27;} }
       };
@@ -1803,6 +1893,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           state.recsCollapsed = Boolean(saved.recsCollapsed);
           state.vegasCollapsed = Boolean(saved.vegasCollapsed);
           state.fastReadCollapsed = Boolean(saved.fastReadCollapsed);
+          state.trayPosition = [&#x27;FLEX&#x27;,&#x27;QB&#x27;,&#x27;RB&#x27;,&#x27;WR&#x27;,&#x27;TE&#x27;,&#x27;K&#x27;,&#x27;DST&#x27;].includes(saved.trayPosition) ? saved.trayPosition : &#x27;TE&#x27;;
           state.cag = Boolean(saved.cag);
         }
       } catch (_) {}
@@ -1818,7 +1909,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       const roundOf = rank =&gt; rank == null ? null : Math.max(1,Math.ceil(Number(rank)/state.teams));
       const tierTone = p =&gt; displayTier(p) == null ? &#x27;&#x27; : `dft-tier-tone-${((displayTier(p)-1)%8)+1}`;
       const saveState = () =&gt; {
-        try { localStorage.setItem(storageKey, JSON.stringify({platform:state.platform,teams:state.teams,slot:state.slot,drafted:state.drafted,mine:[...state.mine],starred:[...state.starred],recsCollapsed:state.recsCollapsed,vegasCollapsed:state.vegasCollapsed,fastReadCollapsed:state.fastReadCollapsed,cag:state.cag})); } catch (_) {}
+        try { localStorage.setItem(storageKey, JSON.stringify({platform:state.platform,teams:state.teams,slot:state.slot,drafted:state.drafted,mine:[...state.mine],starred:[...state.starred],recsCollapsed:state.recsCollapsed,vegasCollapsed:state.vegasCollapsed,fastReadCollapsed:state.fastReadCollapsed,trayPosition:state.trayPosition,cag:state.cag})); } catch (_) {}
       };
       const rankCell = rank =&gt; rank == null ? &#x27;&lt;span class=&quot;dft-muted&quot;&gt;—&lt;/span&gt;&#x27; : `&lt;span class=&quot;dft-rankcell&quot;&gt;&lt;span class=&quot;dft-ranknum&quot;&gt;${Math.round(rank)}&lt;/span&gt;&lt;span class=&quot;dft-round&quot;&gt;R${roundOf(rank)}&lt;/span&gt;&lt;/span&gt;`;
       const platformRankCell = (p,platform) =&gt; {
@@ -2237,6 +2328,23 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
           return `&lt;div class=&quot;dft-historyrow&quot;&gt;&lt;span class=&quot;pick&quot;&gt;${i+1}&lt;/span&gt;&lt;span class=&quot;player&quot;&gt;${state.starred.has(p.id)?&#x27;★ &#x27;:&#x27;&#x27;}${escapeHtml(p.name)} · ${p.pos}${state.mine.has(p.id)?&#x27; &lt;span class=&quot;mine&quot;&gt;MINE&lt;/span&gt;&#x27;:&#x27;&#x27;}&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-restore=&quot;${p.id}&quot;&gt;Add back&lt;/button&gt;&lt;/div&gt;`;
         }).join(&#x27;&#x27;) : &#x27;&lt;span class=&quot;dft-sourceflag&quot;&gt;No players have been marked Taken or Mine.&lt;/span&gt;&#x27;;
       }
+      function renderPositionTray(){
+        const drawer=root.querySelector(&#x27;[data-position-drawer]&#x27;), panel=root.querySelector(&#x27;[data-position-panel]&#x27;), toggle=root.querySelector(&#x27;[data-position-tray-toggle]&#x27;);
+        if(state.cag){ drawer.hidden=true; state.trayOpen=false; return; }
+        drawer.hidden=false;
+        drawer.classList.toggle(&#x27;open&#x27;,state.trayOpen);
+        toggle.setAttribute(&#x27;aria-expanded&#x27;,String(state.trayOpen));
+        toggle.setAttribute(&#x27;aria-label&#x27;,state.trayOpen?&#x27;Close position watch&#x27;:&#x27;Open position watch&#x27;);
+        panel.setAttribute(&#x27;aria-hidden&#x27;,String(!state.trayOpen));
+        panel.inert=!state.trayOpen;
+        const select=root.querySelector(&#x27;[data-tray-position]&#x27;); select.value=state.trayPosition;
+        const flex=state.trayPosition===&#x27;FLEX&#x27;;
+        const list=players.filter(p=&gt;!draftedSet().has(p.id)&amp;&amp;(flex?[&#x27;RB&#x27;,&#x27;WR&#x27;,&#x27;TE&#x27;].includes(p.pos):p.pos===state.trayPosition)).sort((a,b)=&gt;(a.lr??9999)-(b.lr??9999)||(a.yahooAdp??9999)-(b.yahooAdp??9999)||a.name.localeCompare(b.name));
+        root.querySelector(&#x27;[data-position-title]&#x27;).textContent=(flex?&#x27;FLEX&#x27;:state.trayPosition)+&#x27; watch&#x27;;
+        root.querySelector(&#x27;[data-position-count]&#x27;).textContent=String(list.length);
+        const adp=value=&gt;Number.isFinite(value)?(Number.isInteger(value)?String(value):value.toFixed(1)):&#x27;—&#x27;;
+        root.querySelector(&#x27;[data-position-table]&#x27;).innerHTML=list.map(p=&gt;`&lt;tr class=&quot;${tierTone(p)}&quot;&gt;&lt;td class=&quot;dft-tray-player&quot;&gt;&lt;strong&gt;${escapeHtml(p.name)}&lt;/strong&gt;&lt;span&gt;${p.pos} · ${p.team} · T${p.tier??&#x27;—&#x27;}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num dft-tray-lr&quot;&gt;${p.lr??&#x27;—&#x27;}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${adp(p.yahooAdp)}&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${adp(p.espnAdp)}&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;dft-rowactions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn dft-quiet&quot; data-taken=&quot;${p.id}&quot;&gt;Taken&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;dft-smallbtn&quot; data-mine=&quot;${p.id}&quot;&gt;Mine&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)||&#x27;&lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;dft-muted&quot;&gt;No available players at this position.&lt;/td&gt;&lt;/tr&gt;&#x27;;
+      }
       function filteredAvailable(){
         const q=root.querySelector(&#x27;[data-search]&#x27;).value.trim().toLowerCase();
         const pos=root.querySelector(&#x27;[data-position]&#x27;).value;
@@ -2615,7 +2723,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         tooltipLayer.style.left=`${left}px`; tooltipLayer.style.top=`${top}px`;
       }
       function queueTooltip(trigger){ clearTimeout(tooltipTimer); tooltipTimer=setTimeout(()=&gt;showTooltip(trigger),180); }
-      function renderAll(){ renderColumnVisibility(); renderSettings(); renderStatus(); renderRoster(); renderRecommendations(); renderHistory(); renderLiveTable(); renderRankings(); renderPastResults(); }
+      function renderAll(){ renderColumnVisibility(); renderPositionTray(); renderSettings(); renderStatus(); renderRoster(); renderRecommendations(); renderHistory(); renderLiveTable(); renderRankings(); renderPastResults(); }
 
       root.addEventListener(&#x27;pointerover&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-dft-tip]&#x27;); if(trigger) queueTooltip(trigger); });
       root.addEventListener(&#x27;pointerout&#x27;,e=&gt;{ const trigger=e.target.closest(&#x27;[data-dft-tip]&#x27;); if(trigger&amp;&amp;!trigger.contains(e.relatedTarget)) hideTooltip(); });
@@ -2653,6 +2761,8 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         if(b.hasAttribute(&#x27;data-undo&#x27;)) undo();
         if(b.hasAttribute(&#x27;data-history-button&#x27;)){ state.historyOpen=!state.historyOpen; renderHistory(); }
         if(b.hasAttribute(&#x27;data-history-close&#x27;)){ state.historyOpen=false; renderHistory(); }
+        if(b.hasAttribute(&#x27;data-position-tray-toggle&#x27;)){ state.trayOpen=!state.trayOpen; renderPositionTray(); }
+        if(b.hasAttribute(&#x27;data-position-tray-close&#x27;)){ state.trayOpen=false; renderPositionTray(); }
         if(b.dataset.columnToggle){
           if(b.dataset.columnToggle===&#x27;vegas&#x27;) state.vegasCollapsed=!state.vegasCollapsed;
           if(b.dataset.columnToggle===&#x27;fast&#x27;) state.fastReadCollapsed=!state.fastReadCollapsed;
@@ -2665,6 +2775,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
       });
       root.querySelector(&#x27;#dft-teams&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{ state.teams=Number(e.target.value); fillSlotSelect(); saveState(); renderAll(); });
       root.querySelector(&#x27;#dft-slot&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{ state.slot=Number(e.target.value); saveState(); renderAll(); });
+      root.querySelector(&#x27;[data-tray-position]&#x27;).addEventListener(&#x27;change&#x27;,event=&gt;{ state.trayPosition=event.target.value; saveState(); renderPositionTray(); });
       root.querySelector(&#x27;[data-search]&#x27;).addEventListener(&#x27;input&#x27;,()=&gt;{ state.liveLimit=200; renderLiveTable(); });
       root.querySelector(&#x27;[data-position]&#x27;).addEventListener(&#x27;change&#x27;,()=&gt;{ state.liveLimit=200; renderLiveTable(); });
       root.querySelector(&#x27;[data-rank-search]&#x27;).addEventListener(&#x27;input&#x27;,()=&gt;{ state.rankLimit=250; renderRankings(); });

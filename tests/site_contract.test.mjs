@@ -100,6 +100,30 @@ test("Vegas median and rank sit immediately after projected points", () => {
   assert.ok(indexes.every((index, position) => position === 0 || index > indexes[position - 1]));
 });
 
+test("right-side position tray monitors available players with draft actions", () => {
+  const tray = app.match(/<aside class="dft-position-drawer"[\s\S]*?<\/aside>/)?.[0] ?? "";
+  assert.match(tray, /data-position-tray-toggle/);
+  assert.match(tray, /<option value="FLEX">FLEX · RB\/WR\/TE<\/option>/);
+  assert.match(tray, /<th class="num">LR<\/th><th class="num">Y ADP<\/th><th class="num">E ADP<\/th>/);
+  assert.match(app, /\.dft-position-drawer\.open \{ transform: translateX\(0\); \}/);
+  assert.match(app, /\.dft-position-scroll \{[^}]*overflow:auto/);
+  assert.match(appScript, /trayOpen: false, trayPosition: 'TE'/);
+  assert.match(appScript, /!draftedSet\(\)\.has\(p\.id\)/);
+  assert.match(appScript, /flex\?\['RB','WR','TE'\]\.includes\(p\.pos\):p\.pos===state\.trayPosition/);
+  assert.match(appScript, /\(a\.lr\?\?9999\)-\(b\.lr\?\?9999\)/);
+  assert.match(appScript, /adp\(p\.yahooAdp\)/);
+  assert.match(appScript, /adp\(p\.espnAdp\)/);
+  assert.match(appScript, /data-taken="\$\{p\.id\}"[\s\S]*?data-mine="\$\{p\.id\}"/);
+});
+
+test("position tray makes tiers explicit and stays out of CAG mode", () => {
+  assert.match(app, /\.dft-position-table tr\.dft-tier-tone-|tr\.dft-tier-tone-1 \.dft-tray-player/);
+  assert.match(appScript, /class="\$\{tierTone\(p\)\}"/);
+  assert.match(appScript, /· T\$\{p\.tier\?\?'—'\}/);
+  assert.match(appScript, /if\(state\.cag\)\{ drawer\.hidden=true; state\.trayOpen=false; return; \}/);
+  assert.match(app, /#draft-room-tool\.dft-cag \.dft-position-drawer \{ display: none; \}/);
+});
+
 test("Late-Round stays the default draft sort and 2025 results start by pace", () => {
   assert.match(appScript, /sort: \{ live:\{key:'lr',dir:'asc'\}, rankings:\{key:'lr',dir:'asc'\}, past:\{key:'paceRank',dir:'asc'\} \}/);
 });
