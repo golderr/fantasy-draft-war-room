@@ -46,7 +46,7 @@ test("Late-Round stays the default draft sort and 2025 results start by pace", (
 
 test("2025 half-PPR results cover the entire draft-tool player pool", () => {
   assert.match(app, /data-view-button="past"[^>]*>2025 results<\/button>/);
-  assert.match(app, /<table aria-label="2025 half-PPR performance">/);
+  assert.match(app, /<table aria-label="2025 half-PPR performance and 2026 draft cost">/);
   const dataLiteral = appScript.match(/const history2025Rows = (\[[^\n]+\]);/)?.[1];
   assert.ok(dataLiteral, "2025 history data should be extractable");
   const rows = Function(`return ${dataLiteral}`)();
@@ -67,7 +67,34 @@ test("2025 scoring, pace, ADP, and missed-time evidence remain distinct", () => 
   assert.match(appScript, /const hasAsterisk=row\.actual!=null&&row\.games<17/);
   assert.match(appScript, /data-dft-tip=/);
   assert.match(appScript, /Straight-line pace; not a durability forecast/);
-  assert.match(appScript, /row\.yahooAdp-row\.paceRank/);
+  assert.match(appScript, /row\.activeAdpPosRank-row\.posRank/);
+});
+
+test("2025 results add position finishes, FLEX, and all three 2026 cost signals", () => {
+  assert.match(app, /<option value="FLEX">FLEX · RB\/WR\/TE<\/option>/);
+  const pastHead = app.match(/<table aria-label="2025 half-PPR performance and 2026 draft cost">[\s\S]*?<thead><tr>([\s\S]*?)<\/tr><\/thead>/)?.[1] ?? "";
+  const labels = [...pastHead.matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((match) => match[1].replace(/<[^>]+>/g, "").trim());
+  assert.equal(labels.length, 13);
+  assert.deepEqual(labels.slice(0, 3), ["2025 rank", "Player", "Pos finish"]);
+  assert.match(labels[8], /2026 LR/);
+  assert.match(labels[9], /2026 Y ADP/);
+  assert.match(labels[10], /2026 E ADP/);
+  assert.match(labels[11], /Value vs 2025/);
+  assert.match(appScript, /pos==='FLEX'&&\['RB','WR','TE'\]\.includes\(row\.pos\)/);
+});
+
+test("position finishes rank the selected 2025 pace within position", () => {
+  const historyLiteral = appScript.match(/const history2025Rows = (\[[^\n]+\]);/)?.[1];
+  const rows = Function(`return ${historyLiteral}`)();
+  const runningBacks = rows
+    .filter((row) => row[1] === "RB" && Number.isFinite(row[7]))
+    .sort((a, b) => b[7] - a[7] || a[0].localeCompare(b[0]));
+  assert.equal(runningBacks[0][0], "Christian McCaffrey");
+  assert.equal(runningBacks[1][0], "Jonathan Taylor");
+  assert.match(appScript, /row\.posRank==null\?'—':row\.pos\+row\.posRank/);
+  assert.match(appScript, /historyTeamChanged\(row\)/);
+  assert.match(appScript, /Cause not in current data/);
+  assert.match(appScript, /This is a research flag, not a projection/);
 });
 
 test("Late-Round board uses the September 4 page 294 release", () => {
