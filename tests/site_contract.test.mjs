@@ -76,6 +76,12 @@ test("Vegas and Fast read column groups collapse together across board views", (
   assert.equal((app.match(/<th class="dft-fast-col">/g) ?? []).length, 2);
 });
 
+test("live draft position filter includes a combined FLEX view", () => {
+  const liveView = app.match(/<section class="dft-view" data-view="live">([\s\S]*?)<section class="dft-view" data-view="rankings"/)?.[1] ?? "";
+  assert.match(liveView, /<option value="FLEX">FLEX · RB\/WR\/TE<\/option>/);
+  assert.match(appScript, /pos==='FLEX'&&\['RB','WR','TE'\]\.includes\(p\.pos\)/);
+});
+
 test("Late-Round stays the default draft sort and 2025 results start by pace", () => {
   assert.match(appScript, /sort: \{ live:\{key:'lr',dir:'asc'\}, rankings:\{key:'lr',dir:'asc'\}, past:\{key:'paceRank',dir:'asc'\} \}/);
 });

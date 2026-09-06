@@ -1582,7 +1582,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;input type=&quot;search&quot; data-search placeholder=&quot;Find a player&quot; aria-label=&quot;Find a player&quot;&gt;
             &lt;button type=&quot;button&quot; class=&quot;dft-quiet&quot; data-star-only aria-pressed=&quot;false&quot;&gt;☆ Starred&lt;/button&gt;
             &lt;select data-position aria-label=&quot;Filter by position&quot;&gt;
-              &lt;option value=&quot;ALL&quot;&gt;All positions&lt;/option&gt;&lt;option&gt;QB&lt;/option&gt;&lt;option&gt;RB&lt;/option&gt;&lt;option&gt;WR&lt;/option&gt;&lt;option&gt;TE&lt;/option&gt;&lt;option&gt;K&lt;/option&gt;&lt;option&gt;DST&lt;/option&gt;
+              &lt;option value=&quot;ALL&quot;&gt;All positions&lt;/option&gt;&lt;option value=&quot;FLEX&quot;&gt;FLEX · RB/WR/TE&lt;/option&gt;&lt;option&gt;QB&lt;/option&gt;&lt;option&gt;RB&lt;/option&gt;&lt;option&gt;WR&lt;/option&gt;&lt;option&gt;TE&lt;/option&gt;&lt;option&gt;K&lt;/option&gt;&lt;option&gt;DST&lt;/option&gt;
             &lt;/select&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -2240,7 +2240,7 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
       function filteredAvailable(){
         const q=root.querySelector(&#x27;[data-search]&#x27;).value.trim().toLowerCase();
         const pos=root.querySelector(&#x27;[data-position]&#x27;).value;
-        return sortPlayers(players.filter(p=&gt;!draftedSet().has(p.id) &amp;&amp; (!state.starOnly||state.starred.has(p.id)) &amp;&amp; (pos===&#x27;ALL&#x27;||p.pos===pos) &amp;&amp; (!q||p.name.toLowerCase().includes(q))),&#x27;live&#x27;);
+        return sortPlayers(players.filter(p=&gt;!draftedSet().has(p.id) &amp;&amp; (!state.starOnly||state.starred.has(p.id)) &amp;&amp; (pos===&#x27;ALL&#x27;||p.pos===pos||(pos===&#x27;FLEX&#x27;&amp;&amp;[&#x27;RB&#x27;,&#x27;WR&#x27;,&#x27;TE&#x27;].includes(p.pos))) &amp;&amp; (!q||p.name.toLowerCase().includes(q))),&#x27;live&#x27;);
       }
       function renderLiveTable(){
         const list=filteredAvailable();
