@@ -1,0 +1,6626 @@
+{
+  "generatedAt": "2026-09-06T03:58:56.881Z",
+  "sources": {
+    "espnUrl": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2025/segments/0/leaguedefaults/1?view=kona_player_info",
+    "yahooUrl": "https://pub-api-ro.fantasysports.yahoo.com/fantasy/v2/league/461.l.public;out=settings/players;position=ALL;start=0;count=1000;sort=average_pick;search=;out=auction_values,ranks;ranks=o-rank;out=expert_ranks;expert_ranks.rank_type=projected_season_remaining/draft_analysis;cut_types=diamond;slices=last7days?format=json_f",
+    "yahooStatsUrl": "https://pub-api-ro.fantasysports.yahoo.com/fantasy/v2/league/461.l.public;out=settings/players;position=ALL;start=0;count=1000;sort=PTS;sort_type=season;sort_season=2025;search=/stats?format=json_f",
+    "rosterUrl": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2025.csv"
+  },
+  "rows": [
+    {
+      "name": "Jahmyr Gibbs",
+      "pos": "RB",
+      "team2025": "DET",
+      "espnId": 4429795,
+      "espnName": "Jahmyr Gibbs",
+      "games": 17,
+      "espnPoints": 328.4,
+      "yahooPoints": 328.4,
+      "espnPace": 328.4,
+      "yahooPace": 328.4,
+      "yahooAdp": 4.3,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Bijan Robinson",
+      "pos": "RB",
+      "team2025": "ATL",
+      "espnId": 4430807,
+      "espnName": "Bijan Robinson",
+      "games": 17,
+      "espnPoints": 331.3,
+      "yahooPoints": 331.3,
+      "espnPace": 331.3,
+      "yahooPace": 331.3,
+      "yahooAdp": 2.5,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Ja'Marr Chase",
+      "pos": "WR",
+      "team2025": "CIN",
+      "espnId": 4362628,
+      "espnName": "Ja'Marr Chase",
+      "games": 16,
+      "espnPoints": 251.1,
+      "yahooPoints": 251.1,
+      "espnPace": 266.8,
+      "yahooPace": 266.8,
+      "yahooAdp": 1.4,
+      "reason": "NFL suspension (Week 12)",
+      "reasonKind": "suspension",
+      "rosterFlags": [
+        {
+          "status": "SUS",
+          "weeks": [
+            12
+          ],
+          "descriptions": [
+            "R40"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Puka Nacua",
+      "pos": "WR",
+      "team2025": "LA",
+      "espnId": 4426515,
+      "espnName": "Puka Nacua",
+      "games": 16,
+      "espnPoints": 310.5,
+      "yahooPoints": 310.5,
+      "espnPace": 329.9,
+      "yahooPace": 329.9,
+      "yahooAdp": 15.5,
+      "reason": "inactive list: W7 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            7
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Christian McCaffrey",
+      "pos": "RB",
+      "team2025": "SF",
+      "espnId": 3117251,
+      "espnName": "Christian McCaffrey",
+      "games": 17,
+      "espnPoints": 365.6,
+      "yahooPoints": 365.6,
+      "espnPace": 365.6,
+      "yahooPace": 365.6,
+      "yahooAdp": 8.6,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jaxon Smith-Njigba",
+      "pos": "WR",
+      "team2025": "SEA",
+      "espnId": 4430878,
+      "espnName": "Jaxon Smith-Njigba",
+      "games": 17,
+      "espnPoints": 300.4,
+      "yahooPoints": 300.4,
+      "espnPace": 300.4,
+      "yahooPace": 300.4,
+      "yahooAdp": 34.2,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Amon-Ra St. Brown",
+      "pos": "WR",
+      "team2025": "DET",
+      "espnId": 4374302,
+      "espnName": "Amon-Ra St. Brown",
+      "games": 17,
+      "espnPoints": 265.5,
+      "yahooPoints": 265.5,
+      "espnPace": 265.5,
+      "yahooPace": 265.5,
+      "yahooAdp": 10,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "James Cook",
+      "pos": "RB",
+      "team2025": "BUF",
+      "espnId": 4379399,
+      "espnName": "James Cook III",
+      "games": 17,
+      "espnPoints": 285.7,
+      "yahooPoints": 285.7,
+      "espnPace": 285.7,
+      "yahooPace": 285.7,
+      "yahooAdp": 33.3,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jonathan Taylor",
+      "pos": "RB",
+      "team2025": "IND",
+      "espnId": 4242335,
+      "espnName": "Jonathan Taylor",
+      "games": 17,
+      "espnPoints": 339.3,
+      "yahooPoints": 339.3,
+      "espnPace": 339.3,
+      "yahooPace": 339.3,
+      "yahooAdp": 18.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Saquon Barkley",
+      "pos": "RB",
+      "team2025": "PHI",
+      "espnId": 3929630,
+      "espnName": "Saquon Barkley",
+      "games": 16,
+      "espnPoints": 213.8,
+      "yahooPoints": 213.8,
+      "espnPace": 227.2,
+      "yahooPace": 227.2,
+      "yahooAdp": 2.9,
+      "reason": "Held out in Week 18 as Philadelphia rested most starters for the playoffs",
+      "reasonKind": "verified",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Chase Brown",
+      "pos": "RB",
+      "team2025": "CIN",
+      "espnId": 4362238,
+      "espnName": "Chase Brown",
+      "games": 17,
+      "espnPoints": 248.1,
+      "yahooPoints": 248.1,
+      "espnPace": 248.1,
+      "yahooPace": 248.1,
+      "yahooAdp": 22.9,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Kenneth Walker",
+      "pos": "RB",
+      "team2025": "SEA",
+      "espnId": 4567048,
+      "espnName": "Kenneth Walker III",
+      "games": 17,
+      "espnPoints": 176.4,
+      "yahooPoints": 176.4,
+      "espnPace": 176.4,
+      "yahooPace": 176.4,
+      "yahooAdp": 40.2,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Ashton Jeanty",
+      "pos": "RB",
+      "team2025": "LV",
+      "espnId": 4890973,
+      "espnName": "Ashton Jeanty",
+      "games": 17,
+      "espnPoints": 217.6,
+      "yahooPoints": 217.6,
+      "espnPace": 217.6,
+      "yahooPace": 217.6,
+      "yahooAdp": 12.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "CeeDee Lamb",
+      "pos": "WR",
+      "team2025": "DAL",
+      "espnId": 4241389,
+      "espnName": "CeeDee Lamb",
+      "games": 14,
+      "espnPoints": 163.4,
+      "yahooPoints": 163.4,
+      "espnPace": 198.4,
+      "yahooPace": 198.4,
+      "yahooAdp": 6.3,
+      "reason": "inactive list: W4, W5, W6 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            4,
+            5,
+            6
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Omarion Hampton",
+      "pos": "RB",
+      "team2025": "LAC",
+      "espnId": 4685382,
+      "espnName": "Omarion Hampton",
+      "games": 9,
+      "espnPoints": 119.7,
+      "yahooPoints": 119.7,
+      "espnPace": 226.1,
+      "yahooPace": 226.1,
+      "yahooAdp": 35.1,
+      "reason": "Reserve/Injured: W6, W7, W8, W9, W10, W11; inactive list: W18 (injury vs. coach decision not identified); reserve list: W13",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        },
+        {
+          "status": "RES",
+          "weeks": [
+            13
+          ],
+          "descriptions": [
+            "R48"
+          ]
+        }
+      ],
+      "activeSnapshots": 9
+    },
+    {
+      "name": "Derrick Henry",
+      "pos": "RB",
+      "team2025": "BAL",
+      "espnId": 3043078,
+      "espnName": "Derrick Henry",
+      "games": 17,
+      "espnPoints": 272,
+      "yahooPoints": 272,
+      "espnPace": 272,
+      "yahooPace": 272,
+      "yahooAdp": 9.2,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "De'Von Achane",
+      "pos": "RB",
+      "team2025": "MIA",
+      "espnId": 4429160,
+      "espnName": "De'Von Achane",
+      "games": 16,
+      "espnPoints": 289.3,
+      "yahooPoints": 289.3,
+      "espnPace": 307.4,
+      "yahooPace": 307.4,
+      "yahooAdp": 19,
+      "reason": "inactive list: W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Justin Jefferson",
+      "pos": "WR",
+      "team2025": "MIN",
+      "espnId": 4262921,
+      "espnName": "Justin Jefferson",
+      "games": 17,
+      "espnPoints": 159.5,
+      "yahooPoints": 159.5,
+      "espnPace": 159.5,
+      "yahooPace": 159.5,
+      "yahooAdp": 6,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Drake London",
+      "pos": "WR",
+      "team2025": "ATL",
+      "espnId": 4426502,
+      "espnName": "Drake London",
+      "games": 12,
+      "espnPoints": 167.9,
+      "yahooPoints": 167.9,
+      "espnPace": 237.9,
+      "yahooPace": 237.9,
+      "yahooAdp": 16.2,
+      "reason": "inactive list: W8, W12, W13, W14, W15 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            8,
+            12,
+            13,
+            14,
+            15
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 12
+    },
+    {
+      "name": "Brock Bowers",
+      "pos": "TE",
+      "team2025": "LV",
+      "espnId": 4432665,
+      "espnName": "Brock Bowers",
+      "games": 12,
+      "espnPoints": 144.2,
+      "yahooPoints": 144.2,
+      "espnPace": 204.3,
+      "yahooPace": 204.3,
+      "yahooAdp": 22.8,
+      "reason": "inactive list: W5, W6, W7 (injury vs. coach decision not identified); Reserve/Injured: W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            5,
+            6,
+            7
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        },
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 12
+    },
+    {
+      "name": "AJ Brown",
+      "pos": "WR",
+      "team2025": "PHI",
+      "espnId": 4047646,
+      "espnName": "A.J. Brown",
+      "games": 15,
+      "espnPoints": 181.3,
+      "yahooPoints": 181.3,
+      "espnPace": 205.5,
+      "yahooPace": 205.5,
+      "yahooAdp": 21.2,
+      "reason": "inactive list: W8 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            8
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Nico Collins",
+      "pos": "WR",
+      "team2025": "HOU",
+      "espnId": 4258173,
+      "espnName": "Nico Collins",
+      "games": 15,
+      "espnPoints": 190.7,
+      "yahooPoints": 190.7,
+      "espnPace": 216.1,
+      "yahooPace": 216.1,
+      "yahooAdp": 9.3,
+      "reason": "inactive list: W8, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            8,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Chris Olave",
+      "pos": "WR",
+      "team2025": "NO",
+      "espnId": 4361370,
+      "espnName": "Chris Olave",
+      "games": 16,
+      "espnPoints": 218,
+      "yahooPoints": 219,
+      "espnPace": 231.6,
+      "yahooPace": 232.7,
+      "yahooAdp": 81.3,
+      "reason": "inactive list: W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Malik Nabers",
+      "pos": "WR",
+      "team2025": "NYG",
+      "espnId": 4595348,
+      "espnName": "Malik Nabers",
+      "games": 4,
+      "espnPoints": 48.1,
+      "yahooPoints": 48.1,
+      "espnPace": 204.4,
+      "yahooPace": 204.4,
+      "yahooAdp": 12.1,
+      "reason": "Reserve/Injured: W5, W6, W7, W8, W9, W10, W11, W12, W13, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 4
+    },
+    {
+      "name": "George Pickens",
+      "pos": "WR",
+      "team2025": "DAL",
+      "espnId": 4426354,
+      "espnName": "George Pickens",
+      "games": 17,
+      "espnPoints": 245.4,
+      "yahooPoints": 245.4,
+      "espnPace": 245.4,
+      "yahooPace": 245.4,
+      "yahooAdp": 55.9,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "DeVonta Smith",
+      "pos": "WR",
+      "team2025": "PHI",
+      "espnId": 4241478,
+      "espnName": "DeVonta Smith",
+      "games": 17,
+      "espnPoints": 163.3,
+      "yahooPoints": 163.3,
+      "espnPace": 163.3,
+      "yahooPace": 163.3,
+      "yahooAdp": 53.1,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Zay Flowers",
+      "pos": "WR",
+      "team2025": "BAL",
+      "espnId": 4429615,
+      "espnName": "Zay Flowers",
+      "games": 17,
+      "espnPoints": 200.3,
+      "yahooPoints": 200.3,
+      "espnPace": 200.3,
+      "yahooPace": 200.3,
+      "yahooAdp": 63,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Rashee Rice",
+      "pos": "WR",
+      "team2025": "KC",
+      "espnId": 4428331,
+      "espnName": "Rashee Rice",
+      "games": 8,
+      "espnPoints": 123.6,
+      "yahooPoints": 123.6,
+      "espnPace": 262.6,
+      "yahooPace": 262.6,
+      "yahooAdp": 80.3,
+      "reason": "NFL suspension (Week 1, Week 2, Week 3, Week 4, Week 5, Week 6); Reserve/Injured: W17, W18; inactive list: W16 (injury vs. coach decision not identified)",
+      "reasonKind": "suspension",
+      "rosterFlags": [
+        {
+          "status": "SUS",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "descriptions": [
+            "R40"
+          ]
+        },
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            16
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 8
+    },
+    {
+      "name": "Breece Hall",
+      "pos": "RB",
+      "team2025": "NYJ",
+      "espnId": 4427366,
+      "espnName": "Breece Hall",
+      "games": 16,
+      "espnPoints": 189.7,
+      "yahooPoints": 189.7,
+      "espnPace": 201.5,
+      "yahooPace": 201.5,
+      "yahooAdp": 46.1,
+      "reason": "inactive list: W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Trey McBride",
+      "pos": "TE",
+      "team2025": "ARI",
+      "espnId": 4361307,
+      "espnName": "Trey McBride",
+      "games": 17,
+      "espnPoints": 252.9,
+      "yahooPoints": 252.9,
+      "espnPace": 252.9,
+      "yahooPace": 252.9,
+      "yahooAdp": 27.1,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Javonte Williams",
+      "pos": "RB",
+      "team2025": "DAL",
+      "espnId": 4361579,
+      "espnName": "Javonte Williams",
+      "games": 16,
+      "espnPoints": 225.3,
+      "yahooPoints": 225.3,
+      "espnPace": 239.4,
+      "yahooPace": 239.4,
+      "yahooAdp": 123.5,
+      "reason": "Reserve/Injured: W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Josh Allen",
+      "pos": "QB",
+      "team2025": "BUF",
+      "espnId": 3918298,
+      "espnName": "Josh Allen",
+      "games": 17,
+      "espnPoints": 364.6,
+      "yahooPoints": 374.6,
+      "espnPace": 364.6,
+      "yahooPace": 374.6,
+      "yahooAdp": 22.7,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Kyren Williams",
+      "pos": "RB",
+      "team2025": "LA",
+      "espnId": 4430737,
+      "espnName": "Kyren Williams",
+      "games": 17,
+      "espnPoints": 245.3,
+      "yahooPoints": 245.3,
+      "espnPace": 245.3,
+      "yahooPace": 245.3,
+      "yahooAdp": 26.9,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jeremiyah Love",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jaylen Waddle",
+      "pos": "WR",
+      "team2025": "MIA",
+      "espnId": 4372016,
+      "espnName": "Jaylen Waddle",
+      "games": 16,
+      "espnPoints": 162.1,
+      "yahooPoints": 162.1,
+      "espnPace": 172.3,
+      "yahooPace": 172.3,
+      "yahooAdp": 62.4,
+      "reason": "inactive list: W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Tetairoa McMillan",
+      "pos": "WR",
+      "team2025": "CAR",
+      "espnId": 4685472,
+      "espnName": "Tetairoa McMillan",
+      "games": 17,
+      "espnPoints": 176.4,
+      "yahooPoints": 176.4,
+      "espnPace": 176.4,
+      "yahooPace": 176.4,
+      "yahooAdp": 68.9,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Ladd McConkey",
+      "pos": "WR",
+      "team2025": "LAC",
+      "espnId": 4612826,
+      "espnName": "Ladd McConkey",
+      "games": 16,
+      "espnPoints": 147.9,
+      "yahooPoints": 147.9,
+      "espnPace": 157.1,
+      "yahooPace": 157.1,
+      "yahooAdp": 24.4,
+      "reason": "No Week 18 statistical appearance while the playoff-bound Chargers used backups",
+      "reasonKind": "verified",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Emeka Egbuka",
+      "pos": "WR",
+      "team2025": "TB",
+      "espnId": 4567750,
+      "espnName": "Emeka Egbuka",
+      "games": 17,
+      "espnPoints": 164.2,
+      "yahooPoints": 164.2,
+      "espnPace": 164.2,
+      "yahooPace": 164.2,
+      "yahooAdp": 87.9,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Tee Higgins",
+      "pos": "WR",
+      "team2025": "CIN",
+      "espnId": 4239993,
+      "espnName": "Tee Higgins",
+      "games": 15,
+      "espnPoints": 182.1,
+      "yahooPoints": 182.1,
+      "espnPace": 206.4,
+      "yahooPace": 206.4,
+      "yahooAdp": 30.1,
+      "reason": "inactive list: W13, W15 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            13,
+            15
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Garrett Wilson",
+      "pos": "WR",
+      "team2025": "NYJ",
+      "espnId": 4569618,
+      "espnName": "Garrett Wilson",
+      "games": 8,
+      "espnPoints": 81.5,
+      "yahooPoints": 81.5,
+      "espnPace": 173.2,
+      "yahooPace": 173.2,
+      "yahooAdp": 40.8,
+      "reason": "Reserve/Injured: W12, W13, W14, W15, W16, W17, W18; inactive list: W7, W8 (injury vs. coach decision not identified); reserve list: W11",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            7,
+            8
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        },
+        {
+          "status": "RES",
+          "weeks": [
+            11
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 7
+    },
+    {
+      "name": "Luther Burden",
+      "pos": "WR",
+      "team2025": "CHI",
+      "espnId": 4685278,
+      "espnName": "Luther Burden III",
+      "games": 15,
+      "espnPoints": 104.4,
+      "yahooPoints": 104.4,
+      "espnPace": 118.3,
+      "yahooPace": 118.3,
+      "yahooAdp": 128.1,
+      "reason": "inactive list: W9, W16 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            9,
+            16
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Colston Loveland",
+      "pos": "TE",
+      "team2025": "CHI",
+      "espnId": 4723086,
+      "espnName": "Colston Loveland",
+      "games": 16,
+      "espnPoints": 136.1,
+      "yahooPoints": 136.1,
+      "espnPace": 144.6,
+      "yahooPace": 144.6,
+      "yahooAdp": 117.9,
+      "reason": "inactive list: W4 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            4
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "D'Andre Swift",
+      "pos": "RB",
+      "team2025": "CHI",
+      "espnId": 4259545,
+      "espnName": "D'Andre Swift",
+      "games": 16,
+      "espnPoints": 211.6,
+      "yahooPoints": 211.6,
+      "espnPace": 224.8,
+      "yahooPace": 224.8,
+      "yahooAdp": 68.4,
+      "reason": "inactive list: W9 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            9
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Travis Etienne",
+      "pos": "RB",
+      "team2025": "JAX",
+      "espnId": 4239996,
+      "espnName": "Travis Etienne Jr.",
+      "games": 17,
+      "espnPoints": 235.9,
+      "yahooPoints": 235.9,
+      "espnPace": 235.9,
+      "yahooPace": 235.9,
+      "yahooAdp": 104.5,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Terry McLaurin",
+      "pos": "WR",
+      "team2025": "WAS",
+      "espnId": 3121422,
+      "espnName": "Terry McLaurin",
+      "games": 10,
+      "espnPoints": 95.2,
+      "yahooPoints": 95.2,
+      "espnPace": 161.8,
+      "yahooPace": 161.8,
+      "yahooAdp": 40.1,
+      "reason": "inactive list: W4, W5, W6, W7, W9, W10, W11 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 10
+    },
+    {
+      "name": "Cam Skattebo",
+      "pos": "RB",
+      "team2025": "NYG",
+      "espnId": 4696981,
+      "espnName": "Cam Skattebo",
+      "games": 8,
+      "espnPoints": 115.7,
+      "yahooPoints": 115.7,
+      "espnPace": 245.9,
+      "yahooPace": 245.9,
+      "yahooAdp": 119,
+      "reason": "Reserve/Injured: W9, W10, W11, W12, W13, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 8
+    },
+    {
+      "name": "David Montgomery",
+      "pos": "RB",
+      "team2025": "DET",
+      "espnId": 4035538,
+      "espnName": "David Montgomery",
+      "games": 17,
+      "espnPoints": 154.9,
+      "yahooPoints": 154.9,
+      "espnPace": 154.9,
+      "yahooPace": 154.9,
+      "yahooAdp": 57.5,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Bhayshul Tuten",
+      "pos": "RB",
+      "team2025": "JAX",
+      "espnId": 4882093,
+      "espnName": "Bhayshul Tuten",
+      "games": 15,
+      "espnPoints": 83.6,
+      "yahooPoints": 83.6,
+      "espnPace": 94.7,
+      "yahooPace": 94.7,
+      "yahooAdp": 125.5,
+      "reason": "inactive list: W16, W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            16,
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Quinshon Judkins",
+      "pos": "RB",
+      "team2025": "CLE",
+      "espnId": 4685702,
+      "espnName": "Quinshon Judkins",
+      "games": 14,
+      "espnPoints": 156.8,
+      "yahooPoints": 156.8,
+      "espnPace": 190.4,
+      "yahooPace": 190.4,
+      "yahooAdp": 113.8,
+      "reason": "Reserve/Injured: W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Parker Washington",
+      "pos": "WR",
+      "team2025": "JAX",
+      "espnId": 4432620,
+      "espnName": "Parker Washington",
+      "games": 16,
+      "espnPoints": 155.7,
+      "yahooPoints": 155.7,
+      "espnPace": 165.4,
+      "yahooPace": 165.4,
+      "yahooAdp": null,
+      "reason": "inactive list: W14 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            14
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Christian Watson",
+      "pos": "WR",
+      "team2025": "GB",
+      "espnId": 4248528,
+      "espnName": "Christian Watson",
+      "games": 10,
+      "espnPoints": 114.9,
+      "yahooPoints": 114.9,
+      "espnPace": 195.3,
+      "yahooPace": 195.3,
+      "yahooAdp": null,
+      "reason": "reserve list: W1, W2, W3, W4, W6, W7",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "descriptions": [
+            "R04"
+          ]
+        }
+      ],
+      "activeSnapshots": 11
+    },
+    {
+      "name": "Bucky Irving",
+      "pos": "RB",
+      "team2025": "TB",
+      "espnId": 4596448,
+      "espnName": "Bucky Irving",
+      "games": 10,
+      "espnPoints": 123.5,
+      "yahooPoints": 123.5,
+      "espnPace": 209.9,
+      "yahooPace": 209.9,
+      "yahooAdp": 19.4,
+      "reason": "inactive list: W5, W6, W7, W8, W10, W11, W12 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 10
+    },
+    {
+      "name": "DJ Moore",
+      "pos": "WR",
+      "team2025": "CHI",
+      "espnId": 3915416,
+      "espnName": "DJ Moore",
+      "games": 17,
+      "espnPoints": 145.2,
+      "yahooPoints": 145.2,
+      "espnPace": 145.2,
+      "yahooPace": 145.2,
+      "yahooAdp": 65.6,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jameson Williams",
+      "pos": "WR",
+      "team2025": "DET",
+      "espnId": 4426388,
+      "espnName": "Jameson Williams",
+      "games": 17,
+      "espnPoints": 187.4,
+      "yahooPoints": 187.4,
+      "espnPace": 187.4,
+      "yahooPace": 187.4,
+      "yahooAdp": 67.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Davante Adams",
+      "pos": "WR",
+      "team2025": "LA",
+      "espnId": 16800,
+      "espnName": "Davante Adams",
+      "games": 14,
+      "espnPoints": 192.9,
+      "yahooPoints": 192.9,
+      "espnPace": 234.2,
+      "yahooPace": 234.2,
+      "yahooAdp": 44.1,
+      "reason": "inactive list: W16, W17, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Mike Evans",
+      "pos": "WR",
+      "team2025": "TB",
+      "espnId": 16737,
+      "espnName": "Mike Evans",
+      "games": 8,
+      "espnPoints": 69.8,
+      "yahooPoints": 69.8,
+      "espnPace": 148.3,
+      "yahooPace": 148.3,
+      "yahooAdp": 34.9,
+      "reason": "Reserve/Injured: W8, W10, W11, W12, W13; inactive list: W4, W5, W6 (injury vs. coach decision not identified); reserve list: W14",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            8,
+            10,
+            11,
+            12,
+            13
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            4,
+            5,
+            6
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        },
+        {
+          "status": "RES",
+          "weeks": [
+            14
+          ],
+          "descriptions": [
+            "R48"
+          ]
+        }
+      ],
+      "activeSnapshots": 8
+    },
+    {
+      "name": "Rome Odunze",
+      "pos": "WR",
+      "team2025": "CHI",
+      "espnId": 4431299,
+      "espnName": "Rome Odunze",
+      "games": 12,
+      "espnPoints": 124.1,
+      "yahooPoints": 124.1,
+      "espnPace": 175.8,
+      "yahooPace": 175.8,
+      "yahooAdp": 81.1,
+      "reason": "inactive list: W14, W16, W17, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            14,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Lamar Jackson",
+      "pos": "QB",
+      "team2025": "BAL",
+      "espnId": 3916387,
+      "espnName": "Lamar Jackson",
+      "games": 13,
+      "espnPoints": 214.9,
+      "yahooPoints": 221.9,
+      "espnPace": 281,
+      "yahooPace": 290.1,
+      "yahooAdp": 22.9,
+      "reason": "inactive list: W5, W6, W8, W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            5,
+            6,
+            8,
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Rhamondre Stevenson",
+      "pos": "RB",
+      "team2025": "NE",
+      "espnId": 4569173,
+      "espnName": "Rhamondre Stevenson",
+      "games": 14,
+      "espnPoints": 162.8,
+      "yahooPoints": 162.8,
+      "espnPace": 197.7,
+      "yahooPace": 197.7,
+      "yahooAdp": 118.8,
+      "reason": "inactive list: W9, W10, W11 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            9,
+            10,
+            11
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Jadarian Price",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "MarShawn Lloyd",
+      "pos": "RB",
+      "team2025": "GB",
+      "espnId": 4429023,
+      "espnName": "MarShawn Lloyd",
+      "games": 0,
+      "espnPoints": 0,
+      "yahooPoints": 0,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "reserve list: W1, W2, W3, W4, W6, W7, W8, W9, W10, W11, W12, W13, W14, W15; Reserve/Injured: W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "descriptions": [
+            "R48"
+          ]
+        },
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "TreVeyon Henderson",
+      "pos": "RB",
+      "team2025": "NE",
+      "espnId": 4432710,
+      "espnName": "TreVeyon Henderson",
+      "games": 17,
+      "espnPoints": 188.7,
+      "yahooPoints": 188.7,
+      "espnPace": 188.7,
+      "yahooPace": 188.7,
+      "yahooAdp": 55.1,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Tyler Warren",
+      "pos": "TE",
+      "team2025": "IND",
+      "espnId": 4431459,
+      "espnName": "Tyler Warren",
+      "games": 17,
+      "espnPoints": 150.5,
+      "yahooPoints": 150.5,
+      "espnPace": 150.5,
+      "yahooPace": 150.5,
+      "yahooAdp": 103.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Drake Maye",
+      "pos": "QB",
+      "team2025": "NE",
+      "espnId": 4431452,
+      "espnName": "Drake Maye",
+      "games": 17,
+      "espnPoints": 351.5,
+      "yahooPoints": 359.5,
+      "espnPace": 351.5,
+      "yahooPace": 359.5,
+      "yahooAdp": 105.9,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jayden Daniels",
+      "pos": "QB",
+      "team2025": "WAS",
+      "espnId": 4426348,
+      "espnName": "Jayden Daniels",
+      "games": 7,
+      "espnPoints": 114.3,
+      "yahooPoints": 117.3,
+      "espnPace": 277.5,
+      "yahooPace": 284.8,
+      "yahooAdp": 29.1,
+      "reason": "inactive list: W3, W4, W8, W10, W11, W13, W15, W16, W17, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            3,
+            4,
+            8,
+            10,
+            11,
+            13,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 7
+    },
+    {
+      "name": "Jalen Hurts",
+      "pos": "QB",
+      "team2025": "PHI",
+      "espnId": 4040715,
+      "espnName": "Jalen Hurts",
+      "games": 16,
+      "espnPoints": 299.1,
+      "yahooPoints": 305.1,
+      "espnPace": 317.8,
+      "yahooPace": 324.1,
+      "yahooAdp": 33.4,
+      "reason": "Held out in Week 18 as Philadelphia rested most starters for the playoffs",
+      "reasonKind": "verified",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Carnell Tate",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jonathon Brooks",
+      "pos": "RB",
+      "team2025": "CAR",
+      "espnId": 4678008,
+      "espnName": "Jonathon Brooks",
+      "games": 0,
+      "espnPoints": 0,
+      "yahooPoints": 0,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "reserve list: W1, W2, W3, W4, W5, W6, W7, W8, W9, W10, W11, W12, W13, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R04"
+          ]
+        }
+      ],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jaylen Warren",
+      "pos": "RB",
+      "team2025": "PIT",
+      "espnId": 4569987,
+      "espnName": "Jaylen Warren",
+      "games": 16,
+      "espnPoints": 197.1,
+      "yahooPoints": 197.1,
+      "espnPace": 209.4,
+      "yahooPace": 209.4,
+      "yahooAdp": 88.8,
+      "reason": "inactive list: W4 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            4
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Chris Godwin",
+      "pos": "WR",
+      "team2025": "TB",
+      "espnId": 3116165,
+      "espnName": "Chris Godwin Jr.",
+      "games": 9,
+      "espnPoints": 66.5,
+      "yahooPoints": 66.5,
+      "espnPace": 125.6,
+      "yahooPace": 125.6,
+      "yahooAdp": 111.7,
+      "reason": "inactive list: W1, W2, W3, W6, W7, W8, W10, W11 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            8,
+            10,
+            11
+          ],
+          "descriptions": [
+            "I01",
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 9
+    },
+    {
+      "name": "Tucker Kraft",
+      "pos": "TE",
+      "team2025": "GB",
+      "espnId": 4572680,
+      "espnName": "Tucker Kraft",
+      "games": 8,
+      "espnPoints": 101.2,
+      "yahooPoints": 101.2,
+      "espnPace": 215.1,
+      "yahooPace": 215.1,
+      "yahooAdp": 81.6,
+      "reason": "Reserve/Injured: W10, W11, W12, W13, W14, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 8
+    },
+    {
+      "name": "Marvin Harrison",
+      "pos": "WR",
+      "team2025": "ARI",
+      "espnId": 4432708,
+      "espnName": "Marvin Harrison Jr.",
+      "games": 12,
+      "espnPoints": 107.3,
+      "yahooPoints": 107.3,
+      "espnPace": 152,
+      "yahooPace": 152,
+      "yahooAdp": 39.2,
+      "reason": "inactive list: W11, W12, W14, W15 (injury vs. coach decision not identified); Reserve/Injured: W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            11,
+            12,
+            14,
+            15
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        },
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 12
+    },
+    {
+      "name": "Stefon Diggs",
+      "pos": "WR",
+      "team2025": "NE",
+      "espnId": 2976212,
+      "espnName": "Stefon Diggs",
+      "games": 17,
+      "espnPoints": 167.8,
+      "yahooPoints": 167.8,
+      "espnPace": 167.8,
+      "yahooPace": 167.8,
+      "yahooAdp": 93.9,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Rico Dowdle",
+      "pos": "RB",
+      "team2025": "CAR",
+      "espnId": 4038815,
+      "espnName": "Rico Dowdle",
+      "games": 17,
+      "espnPoints": 196.8,
+      "yahooPoints": 196.8,
+      "espnPace": 196.8,
+      "yahooPace": 196.8,
+      "yahooAdp": 127.3,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Brian Thomas",
+      "pos": "WR",
+      "team2025": "JAX",
+      "espnId": 4432773,
+      "espnName": "Brian Thomas Jr.",
+      "games": 14,
+      "espnPoints": 114.8,
+      "yahooPoints": 114.8,
+      "espnPace": 139.4,
+      "yahooPace": 139.4,
+      "yahooAdp": 15.5,
+      "reason": "inactive list: W10, W11, W12 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            10,
+            11,
+            12
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Joe Burrow",
+      "pos": "QB",
+      "team2025": "CIN",
+      "espnId": 3915511,
+      "espnName": "Joe Burrow",
+      "games": 8,
+      "espnPoints": 134.5,
+      "yahooPoints": 139.5,
+      "espnPace": 285.7,
+      "yahooPace": 296.4,
+      "yahooAdp": 42.1,
+      "reason": "Reserve/Injured: W3, W4, W5, W6, W7, W8, W9; reserve list: W11, W12",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "RES",
+          "weeks": [
+            11,
+            12
+          ],
+          "descriptions": [
+            "R48"
+          ]
+        }
+      ],
+      "activeSnapshots": 8
+    },
+    {
+      "name": "Kenneth Gainwell",
+      "pos": "RB",
+      "team2025": "PIT",
+      "espnId": 4371733,
+      "espnName": "Kenneth Gainwell",
+      "games": 17,
+      "espnPoints": 184.8,
+      "yahooPoints": 184.8,
+      "espnPace": 184.8,
+      "yahooPace": 184.8,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "RJ Harvey",
+      "pos": "RB",
+      "team2025": "DEN",
+      "espnId": 4568490,
+      "espnName": "RJ Harvey",
+      "games": 17,
+      "espnPoints": 183.1,
+      "yahooPoints": 183.1,
+      "espnPace": 183.1,
+      "yahooPace": 183.1,
+      "yahooAdp": 58.6,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "DK Metcalf",
+      "pos": "WR",
+      "team2025": "PIT",
+      "espnId": 4047650,
+      "espnName": "DK Metcalf",
+      "games": 15,
+      "espnPoints": 157.7,
+      "yahooPoints": 157.7,
+      "espnPace": 178.7,
+      "yahooPace": 178.7,
+      "yahooAdp": 52.2,
+      "reason": "NFL suspension (Week 17, Week 18)",
+      "reasonKind": "suspension",
+      "rosterFlags": [
+        {
+          "status": "SUS",
+          "weeks": [
+            17,
+            18
+          ],
+          "descriptions": [
+            "R40"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Sam LaPorta",
+      "pos": "TE",
+      "team2025": "DET",
+      "espnId": 4430027,
+      "espnName": "Sam LaPorta",
+      "games": 9,
+      "espnPoints": 86.9,
+      "yahooPoints": 86.9,
+      "espnPace": 164.1,
+      "yahooPace": 164.1,
+      "yahooAdp": 50.5,
+      "reason": "Reserve/Injured: W11, W12, W13, W14, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 9
+    },
+    {
+      "name": "Alec Pierce",
+      "pos": "WR",
+      "team2025": "IND",
+      "espnId": 4360078,
+      "espnName": "Alec Pierce",
+      "games": 15,
+      "espnPoints": 159.8,
+      "yahooPoints": 159.8,
+      "espnPace": 181.1,
+      "yahooPace": 181.1,
+      "yahooAdp": null,
+      "reason": "inactive list: W4, W5 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            4,
+            5
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Jordan Mason",
+      "pos": "RB",
+      "team2025": "MIN",
+      "espnId": 4360569,
+      "espnName": "Jordan Mason",
+      "games": 16,
+      "espnPoints": 121.9,
+      "yahooPoints": 121.9,
+      "espnPace": 129.5,
+      "yahooPace": 129.5,
+      "yahooAdp": 88.9,
+      "reason": "inactive list: W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Justin Herbert",
+      "pos": "QB",
+      "team2025": "LAC",
+      "espnId": 4038941,
+      "espnName": "Justin Herbert",
+      "games": 16,
+      "espnPoints": 286.9,
+      "yahooPoints": 299.9,
+      "espnPace": 304.8,
+      "yahooPace": 318.6,
+      "yahooAdp": 105.7,
+      "reason": "inactive list: W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Caleb Williams",
+      "pos": "QB",
+      "team2025": "CHI",
+      "espnId": 4431611,
+      "espnName": "Caleb Williams",
+      "games": 17,
+      "espnPoints": 317.2,
+      "yahooPoints": 324.2,
+      "espnPace": 317.2,
+      "yahooPace": 324.2,
+      "yahooAdp": 108.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Josh Downs",
+      "pos": "WR",
+      "team2025": "IND",
+      "espnId": 4688813,
+      "espnName": "Josh Downs",
+      "games": 16,
+      "espnPoints": 107.4,
+      "yahooPoints": 107.4,
+      "espnPace": 114.1,
+      "yahooPace": 114.1,
+      "yahooAdp": 122.6,
+      "reason": "inactive list: W7 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            7
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Michael Pittman",
+      "pos": "WR",
+      "team2025": "IND",
+      "espnId": 4035687,
+      "espnName": "Michael Pittman Jr.",
+      "games": 17,
+      "espnPoints": 162.4,
+      "yahooPoints": 162.4,
+      "espnPace": 162.4,
+      "yahooPace": 162.4,
+      "yahooAdp": 124.6,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Wan'Dale Robinson",
+      "pos": "WR",
+      "team2025": "NYG",
+      "espnId": 4569587,
+      "espnName": "Wan'Dale Robinson",
+      "games": 16,
+      "espnPoints": 171.9,
+      "yahooPoints": 171.9,
+      "espnPace": 182.6,
+      "yahooPace": 182.6,
+      "yahooAdp": null,
+      "reason": "Reserve/Injured: W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Chuba Hubbard",
+      "pos": "RB",
+      "team2025": "CAR",
+      "espnId": 4241416,
+      "espnName": "Chuba Hubbard",
+      "games": 15,
+      "espnPoints": 110.4,
+      "yahooPoints": 110.4,
+      "espnPace": 125.1,
+      "yahooPace": 125.1,
+      "yahooAdp": 42.1,
+      "reason": "inactive list: W5, W6 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            5,
+            6
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Trevor Lawrence",
+      "pos": "QB",
+      "team2025": "JAX",
+      "espnId": 4360310,
+      "espnName": "Trevor Lawrence",
+      "games": 17,
+      "espnPoints": 338.2,
+      "yahooPoints": 350.2,
+      "espnPace": 338.2,
+      "yahooPace": 350.2,
+      "yahooAdp": 125.7,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Brock Purdy",
+      "pos": "QB",
+      "team2025": "SF",
+      "espnId": 4361741,
+      "espnName": "Brock Purdy",
+      "games": 9,
+      "espnPoints": 177.4,
+      "yahooPoints": 187.4,
+      "espnPace": 335.1,
+      "yahooPace": 353.9,
+      "yahooAdp": 70,
+      "reason": "inactive list: W2, W3, W5, W6, W7, W8, W9, W10 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "descriptions": [
+            "A01",
+            "I01"
+          ]
+        }
+      ],
+      "activeSnapshots": 9
+    },
+    {
+      "name": "Jaxson Dart",
+      "pos": "QB",
+      "team2025": "NYG",
+      "espnId": 4689114,
+      "espnName": "Jaxson Dart",
+      "games": 14,
+      "espnPoints": 241.6,
+      "yahooPoints": 246.6,
+      "espnPace": 293.3,
+      "yahooPace": 299.4,
+      "yahooAdp": null,
+      "reason": "inactive list: W11, W12 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            11,
+            12
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Tony Pollard",
+      "pos": "RB",
+      "team2025": "TEN",
+      "espnId": 3916148,
+      "espnName": "Tony Pollard",
+      "games": 17,
+      "espnPoints": 169.3,
+      "yahooPoints": 169.3,
+      "espnPace": 169.3,
+      "yahooPace": 169.3,
+      "yahooAdp": 57,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Makai Lemon",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jayden Reed",
+      "pos": "WR",
+      "team2025": "GB",
+      "espnId": 4362249,
+      "espnName": "Jayden Reed",
+      "games": 7,
+      "espnPoints": 39,
+      "yahooPoints": 39,
+      "espnPace": 94.7,
+      "yahooPace": 94.7,
+      "yahooAdp": 116.7,
+      "reason": "Reserve/Injured: W3, W4, W6, W7, W8, W9, W10, W11; reserve list: W12, W13",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "RES",
+          "weeks": [
+            12,
+            13
+          ],
+          "descriptions": [
+            "R48"
+          ]
+        }
+      ],
+      "activeSnapshots": 7
+    },
+    {
+      "name": "George Kittle",
+      "pos": "TE",
+      "team2025": "SF",
+      "espnId": 3040151,
+      "espnName": "George Kittle",
+      "games": 11,
+      "espnPoints": 133,
+      "yahooPoints": 133,
+      "espnPace": 205.5,
+      "yahooPace": 205.5,
+      "yahooAdp": 29.2,
+      "reason": "Reserve/Injured: W2, W3, W4, W5, W6; inactive list: W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 11
+    },
+    {
+      "name": "Michael Wilson",
+      "pos": "WR",
+      "team2025": "ARI",
+      "espnId": 4360761,
+      "espnName": "Michael Wilson",
+      "games": 17,
+      "espnPoints": 181.6,
+      "yahooPoints": 181.6,
+      "espnPace": 181.6,
+      "yahooPace": 181.6,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Courtland Sutton",
+      "pos": "WR",
+      "team2025": "DEN",
+      "espnId": 3128429,
+      "espnName": "Courtland Sutton",
+      "games": 17,
+      "espnPoints": 182.7,
+      "yahooPoints": 182.7,
+      "espnPace": 182.7,
+      "yahooPace": 182.7,
+      "yahooAdp": 64.7,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Blake Corum",
+      "pos": "RB",
+      "team2025": "LA",
+      "espnId": 4429096,
+      "espnName": "Blake Corum",
+      "games": 17,
+      "espnPoints": 118.2,
+      "yahooPoints": 118.2,
+      "espnPace": 118.2,
+      "yahooPace": 118.2,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Dalton Kincaid",
+      "pos": "TE",
+      "team2025": "BUF",
+      "espnId": 4385690,
+      "espnName": "Dalton Kincaid",
+      "games": 12,
+      "espnPoints": 106.6,
+      "yahooPoints": 106.6,
+      "espnPace": 151,
+      "yahooPace": 151,
+      "yahooAdp": 113,
+      "reason": "inactive list: W6, W11, W12, W13, W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            6,
+            11,
+            12,
+            13,
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 12
+    },
+    {
+      "name": "KC Concepcion",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "De'Zhaun Stribling",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Harold Fannin",
+      "pos": "TE",
+      "team2025": "CLE",
+      "espnId": 5083076,
+      "espnName": "Harold Fannin Jr.",
+      "games": 16,
+      "espnPoints": 150.4,
+      "yahooPoints": 150.4,
+      "espnPace": 159.8,
+      "yahooPace": 159.8,
+      "yahooAdp": null,
+      "reason": "inactive list: W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Dak Prescott",
+      "pos": "QB",
+      "team2025": "DAL",
+      "espnId": 2577417,
+      "espnName": "Dak Prescott",
+      "games": 17,
+      "espnPoints": 313.8,
+      "yahooPoints": 323.8,
+      "espnPace": 313.8,
+      "yahooPace": 323.8,
+      "yahooAdp": 81.7,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Quentin Johnston",
+      "pos": "WR",
+      "team2025": "LAC",
+      "espnId": 4429025,
+      "espnName": "Quentin Johnston",
+      "games": 14,
+      "espnPoints": 145.7,
+      "yahooPoints": 145.7,
+      "espnPace": 176.9,
+      "yahooPace": 176.9,
+      "yahooAdp": null,
+      "reason": "inactive list: W6, W15 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            6,
+            15
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Matthew Golden",
+      "pos": "WR",
+      "team2025": "GB",
+      "espnId": 4701936,
+      "espnName": "Matthew Golden",
+      "games": 14,
+      "espnPoints": 55.5,
+      "yahooPoints": 55.5,
+      "espnPace": 67.4,
+      "yahooPace": 67.4,
+      "yahooAdp": 102.7,
+      "reason": "inactive list: W10, W12, W13 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            10,
+            12,
+            13
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Kyle Pitts",
+      "pos": "TE",
+      "team2025": "ATL",
+      "espnId": 4360248,
+      "espnName": "Kyle Pitts Sr.",
+      "games": 17,
+      "espnPoints": 166.8,
+      "yahooPoints": 166.8,
+      "espnPace": 166.8,
+      "yahooPace": 166.8,
+      "yahooAdp": 124.4,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "JK Dobbins",
+      "pos": "RB",
+      "team2025": "DEN",
+      "espnId": 4241985,
+      "espnName": "J.K. Dobbins",
+      "games": 10,
+      "espnPoints": 110.4,
+      "yahooPoints": 110.4,
+      "espnPace": 187.7,
+      "yahooPace": 187.7,
+      "yahooAdp": 100.2,
+      "reason": "Reserve/Injured: W11, W13, W14, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            11,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 10
+    },
+    {
+      "name": "Jacory Croskey-Merritt",
+      "pos": "RB",
+      "team2025": "WAS",
+      "espnId": 4575131,
+      "espnName": "Jacory Croskey-Merritt",
+      "games": 17,
+      "espnPoints": 135.8,
+      "yahooPoints": 135.8,
+      "espnPace": 135.8,
+      "yahooPace": 135.8,
+      "yahooAdp": 108,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jordan Addison",
+      "pos": "WR",
+      "team2025": "MIN",
+      "espnId": 4429205,
+      "espnName": "Jordan Addison",
+      "games": 14,
+      "espnPoints": 114.1,
+      "yahooPoints": 114.1,
+      "espnPace": 138.6,
+      "yahooPace": 138.6,
+      "yahooAdp": 98.6,
+      "reason": "NFL suspension (Week 1, Week 2, Week 3)",
+      "reasonKind": "suspension",
+      "rosterFlags": [
+        {
+          "status": "SUS",
+          "weeks": [
+            1,
+            2,
+            3
+          ],
+          "descriptions": [
+            "R40"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Kyle Monangai",
+      "pos": "RB",
+      "team2025": "CHI",
+      "espnId": 4608686,
+      "espnName": "Kyle Monangai",
+      "games": 17,
+      "espnPoints": 137.7,
+      "yahooPoints": 137.7,
+      "espnPace": 137.7,
+      "yahooPace": 137.7,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Bo Nix",
+      "pos": "QB",
+      "team2025": "DEN",
+      "espnId": 4426338,
+      "espnName": "Bo Nix",
+      "games": 17,
+      "espnPoints": 304.8,
+      "yahooPoints": 315.8,
+      "espnPace": 304.8,
+      "yahooPace": 315.8,
+      "yahooAdp": 65.4,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Rachaad White",
+      "pos": "RB",
+      "team2025": "TB",
+      "espnId": 4697815,
+      "espnName": "Rachaad White",
+      "games": 17,
+      "espnPoints": 123,
+      "yahooPoints": 123,
+      "espnPace": 123,
+      "yahooPace": 123,
+      "yahooAdp": 129.2,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Chris Rodriguez",
+      "pos": "RB",
+      "team2025": "WAS",
+      "espnId": 4362619,
+      "espnName": "Chris Rodriguez Jr.",
+      "games": 13,
+      "espnPoints": 90.5,
+      "yahooPoints": 90.5,
+      "espnPace": 118.3,
+      "yahooPace": 118.3,
+      "yahooAdp": null,
+      "reason": "inactive list: W2, W15, W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            2,
+            15,
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Tyler Shough",
+      "pos": "QB",
+      "team2025": "NO",
+      "espnId": 4360689,
+      "espnName": "Tyler Shough",
+      "games": 11,
+      "espnPoints": 158,
+      "yahooPoints": 164,
+      "espnPace": 244.1,
+      "yahooPace": 253.4,
+      "yahooAdp": null,
+      "reason": "Began 2025 as New Orleans' backup, then took over as the starter during the season",
+      "reasonKind": "verified",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Patrick Mahomes",
+      "pos": "QB",
+      "team2025": "KC",
+      "espnId": 3139477,
+      "espnName": "Patrick Mahomes",
+      "games": 14,
+      "espnPoints": 285.2,
+      "yahooPoints": 296.2,
+      "espnPace": 346.3,
+      "yahooPace": 359.6,
+      "yahooAdp": 51.6,
+      "reason": "Reserve/Injured: W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Kyler Murray",
+      "pos": "QB",
+      "team2025": "ARI",
+      "espnId": 3917315,
+      "espnName": "Kyler Murray",
+      "games": 5,
+      "espnPoints": 77.8,
+      "yahooPoints": 80.8,
+      "espnPace": 264.5,
+      "yahooPace": 274.7,
+      "yahooAdp": 93.6,
+      "reason": "Reserve/Injured: W10, W11, W12, W13, W14, W15, W16, W17, W18; inactive list: W6, W7, W9 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            6,
+            7,
+            9
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 5
+    },
+    {
+      "name": "Aaron Jones",
+      "pos": "RB",
+      "team2025": "MIN",
+      "espnId": 3042519,
+      "espnName": "Aaron Jones Sr.",
+      "games": 12,
+      "espnPoints": 104.7,
+      "yahooPoints": 104.7,
+      "espnPace": 148.3,
+      "yahooPace": 148.3,
+      "yahooAdp": 75.4,
+      "reason": "Reserve/Injured: W3, W4, W5, W7; inactive list: W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            3,
+            4,
+            5,
+            7
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 12
+    },
+    {
+      "name": "Matthew Stafford",
+      "pos": "QB",
+      "team2025": "LA",
+      "espnId": 12483,
+      "espnName": "Matthew Stafford",
+      "games": 17,
+      "espnPoints": 350.4,
+      "yahooPoints": 358.4,
+      "espnPace": 350.4,
+      "yahooPace": 358.4,
+      "yahooAdp": 123.3,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Malik Willis",
+      "pos": "QB",
+      "team2025": "GB",
+      "espnId": 4242512,
+      "espnName": "Malik Willis",
+      "games": 4,
+      "espnPoints": 51.2,
+      "yahooPoints": 51.2,
+      "espnPace": 217.5,
+      "yahooPace": 217.5,
+      "yahooAdp": null,
+      "reason": "inactive list: W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Jared Goff",
+      "pos": "QB",
+      "team2025": "DET",
+      "espnId": 3046779,
+      "espnName": "Jared Goff",
+      "games": 17,
+      "espnPoints": 297.1,
+      "yahooPoints": 305.1,
+      "espnPace": 297.1,
+      "yahooPace": 305.1,
+      "yahooAdp": 106.3,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Isaiah Likely",
+      "pos": "TE",
+      "team2025": "BAL",
+      "espnId": 4361050,
+      "espnName": "Isaiah Likely",
+      "games": 14,
+      "espnPoints": 48.2,
+      "yahooPoints": 48.2,
+      "espnPace": 58.5,
+      "yahooPace": 58.5,
+      "yahooAdp": 128.2,
+      "reason": "inactive list: W1, W2, W3 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            1,
+            2,
+            3
+          ],
+          "descriptions": [
+            "I01",
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Dallas Goedert",
+      "pos": "TE",
+      "team2025": "PHI",
+      "espnId": 3121023,
+      "espnName": "Dallas Goedert",
+      "games": 15,
+      "espnPoints": 155.1,
+      "yahooPoints": 155.1,
+      "espnPace": 175.8,
+      "yahooPace": 175.8,
+      "yahooAdp": 113,
+      "reason": "inactive list: W2, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            2,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Jakobi Meyers",
+      "pos": "WR",
+      "team2025": "JAX",
+      "espnId": 3916433,
+      "espnName": "Jakobi Meyers",
+      "games": 16,
+      "espnPoints": 138.3,
+      "yahooPoints": 138.3,
+      "espnPace": 146.9,
+      "yahooPace": 146.9,
+      "yahooAdp": 96.9,
+      "reason": "inactive list: W7 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            7
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Travis Kelce",
+      "pos": "TE",
+      "team2025": "KC",
+      "espnId": 15847,
+      "espnName": "Travis Kelce",
+      "games": 17,
+      "espnPoints": 155.2,
+      "yahooPoints": 155.2,
+      "espnPace": 155.2,
+      "yahooPace": 155.2,
+      "yahooAdp": 61.3,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jordan Love",
+      "pos": "QB",
+      "team2025": "GB",
+      "espnId": 4036378,
+      "espnName": "Jordan Love",
+      "games": 15,
+      "espnPoints": 235.1,
+      "yahooPoints": 241.1,
+      "espnPace": 266.5,
+      "yahooPace": 273.3,
+      "yahooAdp": 111.8,
+      "reason": "inactive list: W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Jalen Coker",
+      "pos": "WR",
+      "team2025": "CAR",
+      "espnId": 4695883,
+      "espnName": "Jalen Coker",
+      "games": 11,
+      "espnPoints": 73.9,
+      "yahooPoints": 73.9,
+      "espnPace": 114.2,
+      "yahooPace": 114.2,
+      "yahooAdp": null,
+      "reason": "Reserve/Injured: W1, W2, W3, W4, W5; reserve list: W6",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "RES",
+          "weeks": [
+            6
+          ],
+          "descriptions": [
+            "R48"
+          ]
+        }
+      ],
+      "activeSnapshots": 11
+    },
+    {
+      "name": "Deebo Samuel",
+      "pos": "WR",
+      "team2025": "WAS",
+      "espnId": 3126486,
+      "espnName": "Deebo Samuel",
+      "games": 16,
+      "espnPoints": 152.2,
+      "yahooPoints": 152.2,
+      "espnPace": 161.7,
+      "yahooPace": 161.7,
+      "yahooAdp": 98.4,
+      "reason": "inactive list: W7 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            7
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Josh Jacobs",
+      "pos": "RB",
+      "team2025": "GB",
+      "espnId": 4047365,
+      "espnName": "Josh Jacobs",
+      "games": 15,
+      "espnPoints": 219.1,
+      "yahooPoints": 219.1,
+      "espnPace": 248.3,
+      "yahooPace": 248.3,
+      "yahooAdp": 16,
+      "reason": "inactive list: W12, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            12,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Woody Marks",
+      "pos": "RB",
+      "team2025": "HOU",
+      "espnId": 4429059,
+      "espnName": "Woody Marks",
+      "games": 16,
+      "espnPoints": 139.1,
+      "yahooPoints": 139.1,
+      "espnPace": 147.8,
+      "yahooPace": 147.8,
+      "yahooAdp": null,
+      "reason": "inactive list: W16 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            16
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Tyjae Spears",
+      "pos": "RB",
+      "team2025": "TEN",
+      "espnId": 4428557,
+      "espnName": "Tyjae Spears",
+      "games": 13,
+      "espnPoints": 89.2,
+      "yahooPoints": 89.2,
+      "espnPace": 116.6,
+      "yahooPace": 116.6,
+      "yahooAdp": 130,
+      "reason": "reserve list: W1, W2, W3, W4",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES",
+          "weeks": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "descriptions": [
+            "R48"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Romeo Doubs",
+      "pos": "WR",
+      "team2025": "GB",
+      "espnId": 4361432,
+      "espnName": "Romeo Doubs",
+      "games": 16,
+      "espnPoints": 137.9,
+      "yahooPoints": 137.9,
+      "espnPace": 146.5,
+      "yahooPace": 146.5,
+      "yahooAdp": null,
+      "reason": "No Week 18 statistical appearance while Green Bay rested regulars for the playoffs",
+      "reasonKind": "verified",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Keaton Mitchell",
+      "pos": "RB",
+      "team2025": "BAL",
+      "espnId": 4596334,
+      "espnName": "Keaton Mitchell",
+      "games": 13,
+      "espnPoints": 50.9,
+      "yahooPoints": 50.9,
+      "espnPace": 66.6,
+      "yahooPace": 66.6,
+      "yahooAdp": null,
+      "reason": "inactive list: W1, W2, W3, W4 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "descriptions": [
+            "A01",
+            "I01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Baker Mayfield",
+      "pos": "QB",
+      "team2025": "TB",
+      "espnId": 3052587,
+      "espnName": "Baker Mayfield",
+      "games": 17,
+      "espnPoints": 271.9,
+      "yahooPoints": 282.9,
+      "espnPace": 271.9,
+      "yahooPace": 282.9,
+      "yahooAdp": 73.1,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Xavier Worthy",
+      "pos": "WR",
+      "team2025": "KC",
+      "espnId": 4683062,
+      "espnName": "Xavier Worthy",
+      "games": 14,
+      "espnPoints": 88.9,
+      "yahooPoints": 88.9,
+      "espnPace": 108,
+      "yahooPace": 108,
+      "yahooAdp": 59.9,
+      "reason": "inactive list: W2, W3, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            2,
+            3,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Juwan Johnson",
+      "pos": "TE",
+      "team2025": "NO",
+      "espnId": 3929645,
+      "espnName": "Juwan Johnson",
+      "games": 17,
+      "espnPoints": 141.4,
+      "yahooPoints": 141.4,
+      "espnPace": 141.4,
+      "yahooPace": 141.4,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jordyn Tyson",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Mark Andrews",
+      "pos": "TE",
+      "team2025": "BAL",
+      "espnId": 3116365,
+      "espnName": "Mark Andrews",
+      "games": 17,
+      "espnPoints": 107,
+      "yahooPoints": 107,
+      "espnPace": 107,
+      "yahooPace": 107,
+      "yahooAdp": 62.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Rashid Shaheed",
+      "pos": "WR",
+      "team2025": "NO",
+      "espnId": 4032473,
+      "espnName": "Rashid Shaheed",
+      "games": 18,
+      "espnPoints": 127.1,
+      "yahooPoints": 127.1,
+      "espnPace": 120,
+      "yahooPace": 120,
+      "yahooAdp": 126.5,
+      "reason": "Played 18 regular-season games after a midseason trade from New Orleans to Seattle created an extra player-game",
+      "reasonKind": "verified",
+      "rosterFlags": [],
+      "activeSnapshots": 18
+    },
+    {
+      "name": "Tyler Allgeier",
+      "pos": "RB",
+      "team2025": "ATL",
+      "espnId": 4373626,
+      "espnName": "Tyler Allgeier",
+      "games": 17,
+      "espnPoints": 116,
+      "yahooPoints": 116,
+      "espnPace": 116,
+      "yahooPace": 116,
+      "yahooAdp": 130.3,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Zach Charbonnet",
+      "pos": "RB",
+      "team2025": "SEA",
+      "espnId": 4426385,
+      "espnName": "Zach Charbonnet",
+      "games": 16,
+      "espnPoints": 171.4,
+      "yahooPoints": 171.4,
+      "espnPace": 182.1,
+      "yahooPace": 182.1,
+      "yahooAdp": 102,
+      "reason": "inactive list: W3 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            3
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Khalil Shakir",
+      "pos": "WR",
+      "team2025": "BUF",
+      "espnId": 4373678,
+      "espnName": "Khalil Shakir",
+      "games": 16,
+      "espnPoints": 130.4,
+      "yahooPoints": 130.4,
+      "espnPace": 138.6,
+      "yahooPace": 138.6,
+      "yahooAdp": 118.3,
+      "reason": "Held out of Week 18 while Buffalo rested most starters",
+      "reasonKind": "verified",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Denzel Boston",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Mike Washington",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Terrance Ferguson",
+      "pos": "TE",
+      "team2025": "LA",
+      "espnId": 4570037,
+      "espnName": "Terrance Ferguson",
+      "games": 14,
+      "espnPoints": 46.6,
+      "yahooPoints": 46.6,
+      "espnPace": 56.6,
+      "yahooPace": 56.6,
+      "yahooAdp": null,
+      "reason": "inactive list: W3, W4, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            3,
+            4,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Jake Ferguson",
+      "pos": "TE",
+      "team2025": "DAL",
+      "espnId": 4242355,
+      "espnName": "Jake Ferguson",
+      "games": 17,
+      "espnPoints": 147.1,
+      "yahooPoints": 147.1,
+      "espnPace": 147.1,
+      "yahooPace": 147.1,
+      "yahooAdp": 110.1,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Kenyon Sadiq",
+      "pos": "TE",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jalen McMillan",
+      "pos": "WR",
+      "team2025": "TB",
+      "espnId": 4430834,
+      "espnName": "Jalen McMillan",
+      "games": 4,
+      "espnPoints": 23.9,
+      "yahooPoints": 23.9,
+      "espnPace": 101.6,
+      "yahooPace": 101.6,
+      "yahooAdp": null,
+      "reason": "reserve list: W1, W2, W3, W4, W5, W6, W7, W8, W10, W11, W12, W13, W14",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "descriptions": [
+            "R48"
+          ]
+        }
+      ],
+      "activeSnapshots": 4
+    },
+    {
+      "name": "Keenan Allen",
+      "pos": "WR",
+      "team2025": "LAC",
+      "espnId": 15818,
+      "espnName": "Keenan Allen",
+      "games": 17,
+      "espnPoints": 142.2,
+      "yahooPoints": 142.2,
+      "espnPace": 142.2,
+      "yahooPace": 142.2,
+      "yahooAdp": 128.6,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Chig Okonkwo",
+      "pos": "TE",
+      "team2025": "TEN",
+      "espnId": 4360635,
+      "espnName": "Chig Okonkwo",
+      "games": 17,
+      "espnPoints": 96,
+      "yahooPoints": 96,
+      "espnPace": 96,
+      "yahooPace": 96,
+      "yahooAdp": 122.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Dontayvion Wicks",
+      "pos": "WR",
+      "team2025": "GB",
+      "espnId": 4428850,
+      "espnName": "Dontayvion Wicks",
+      "games": 14,
+      "espnPoints": 60.8,
+      "yahooPoints": 60.8,
+      "espnPace": 73.8,
+      "yahooPace": 73.8,
+      "yahooAdp": null,
+      "reason": "inactive list: W8, W9, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            8,
+            9,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Pat Bryant",
+      "pos": "WR",
+      "team2025": "DEN",
+      "espnId": 4600981,
+      "espnName": "Pat Bryant",
+      "games": 15,
+      "espnPoints": 59.3,
+      "yahooPoints": 59.3,
+      "espnPace": 67.2,
+      "yahooPace": 67.2,
+      "yahooAdp": null,
+      "reason": "inactive list: W15, W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            15,
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Ja'Kobi Lane",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jonah Coleman",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Dalton Schultz",
+      "pos": "TE",
+      "team2025": "HOU",
+      "espnId": 3117256,
+      "espnName": "Dalton Schultz",
+      "games": 17,
+      "espnPoints": 136.7,
+      "yahooPoints": 136.7,
+      "espnPace": 136.7,
+      "yahooPace": 136.7,
+      "yahooAdp": 123.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Daniel Jones",
+      "pos": "QB",
+      "team2025": "IND",
+      "espnId": 3917792,
+      "espnName": "Daniel Jones",
+      "games": 13,
+      "espnPoints": 226.4,
+      "yahooPoints": 234.4,
+      "espnPace": 296.1,
+      "yahooPace": 306.6,
+      "yahooAdp": null,
+      "reason": "Reserve/Injured: W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Sam Darnold",
+      "pos": "QB",
+      "team2025": "SEA",
+      "espnId": 3912547,
+      "espnName": "Sam Darnold",
+      "games": 17,
+      "espnPoints": 235.4,
+      "yahooPoints": 249.4,
+      "espnPace": 235.4,
+      "yahooPace": 249.4,
+      "yahooAdp": 122.2,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Brenton Strange",
+      "pos": "TE",
+      "team2025": "JAX",
+      "espnId": 4430539,
+      "espnName": "Brenton Strange",
+      "games": 12,
+      "espnPoints": 95,
+      "yahooPoints": 95,
+      "espnPace": 134.6,
+      "yahooPace": 134.6,
+      "yahooAdp": 131.2,
+      "reason": "Reserve/Injured: W6, W7, W9, W10; reserve list: W11",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            6,
+            7,
+            9,
+            10
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "RES",
+          "weeks": [
+            11
+          ],
+          "descriptions": [
+            "R48"
+          ]
+        }
+      ],
+      "activeSnapshots": 12
+    },
+    {
+      "name": "Tank Bigsby",
+      "pos": "RB",
+      "team2025": "PHI",
+      "espnId": 4429013,
+      "espnName": "Tank Bigsby",
+      "games": 17,
+      "espnPoints": 52.3,
+      "yahooPoints": 52.3,
+      "espnPace": 52.3,
+      "yahooPace": 52.3,
+      "yahooAdp": 110.6,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Dylan Sampson",
+      "pos": "RB",
+      "team2025": "CLE",
+      "espnId": 5081397,
+      "espnName": "Dylan Sampson",
+      "games": 15,
+      "espnPoints": 71.1,
+      "yahooPoints": 71.1,
+      "espnPace": 80.6,
+      "yahooPace": 80.6,
+      "yahooAdp": 129.5,
+      "reason": "inactive list: W15, W16 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            15,
+            16
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Hunter Henry",
+      "pos": "TE",
+      "team2025": "NE",
+      "espnId": 3046439,
+      "espnName": "Hunter Henry",
+      "games": 17,
+      "espnPoints": 148.8,
+      "yahooPoints": 148.8,
+      "espnPace": 148.8,
+      "yahooPace": 148.8,
+      "yahooAdp": 121.9,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Tre Harris",
+      "pos": "WR",
+      "team2025": "LAC",
+      "espnId": 4686612,
+      "espnName": "Tre' Harris",
+      "games": 17,
+      "espnPoints": 54.4,
+      "yahooPoints": 54.4,
+      "espnPace": 54.4,
+      "yahooPace": 54.4,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Cam Ward",
+      "pos": "QB",
+      "team2025": "TEN",
+      "espnId": 4688380,
+      "espnName": "Cam Ward",
+      "games": 17,
+      "espnPoints": 186.7,
+      "yahooPoints": 193.7,
+      "espnPace": 186.7,
+      "yahooPace": 193.7,
+      "yahooAdp": 123.3,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "CJ Stroud",
+      "pos": "QB",
+      "team2025": "HOU",
+      "espnId": 4432577,
+      "espnName": "C.J. Stroud",
+      "games": 14,
+      "espnPoints": 208.5,
+      "yahooPoints": 216.5,
+      "espnPace": 253.2,
+      "yahooPace": 262.9,
+      "yahooAdp": 118.4,
+      "reason": "inactive list: W10, W11, W12 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            10,
+            11,
+            12
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Kayshon Boutte",
+      "pos": "WR",
+      "team2025": "NE",
+      "espnId": 4429022,
+      "espnName": "Kayshon Boutte",
+      "games": 14,
+      "espnPoints": 107.6,
+      "yahooPoints": 107.6,
+      "espnPace": 130.7,
+      "yahooPace": 130.7,
+      "yahooAdp": null,
+      "reason": "inactive list: W10, W11, W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            10,
+            11,
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Adonai Mitchell",
+      "pos": "WR",
+      "team2025": "IND",
+      "espnId": 4597500,
+      "espnName": "Adonai Mitchell",
+      "games": 16,
+      "espnPoints": 71.4,
+      "yahooPoints": 71.4,
+      "espnPace": 75.9,
+      "yahooPace": 75.9,
+      "yahooAdp": null,
+      "reason": "inactive list: W6, W10 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            6,
+            10
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Emmett Johnson",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jaylin Noel",
+      "pos": "WR",
+      "team2025": "HOU",
+      "espnId": 4586312,
+      "espnName": "Jaylin Noel",
+      "games": 17,
+      "espnPoints": 55.4,
+      "yahooPoints": 55.4,
+      "espnPace": 55.4,
+      "yahooPace": 55.4,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Devaughn Vele",
+      "pos": "WR",
+      "team2025": "NO",
+      "espnId": 4569559,
+      "espnName": "Devaughn Vele",
+      "games": 13,
+      "espnPoints": 53.8,
+      "yahooPoints": 53.8,
+      "espnPace": 70.4,
+      "yahooPace": 70.4,
+      "yahooAdp": null,
+      "reason": "Reserve/Injured: W16, W17, W18; inactive list: W3 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            3
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Brian Robinson",
+      "pos": "RB",
+      "team2025": "SF",
+      "espnId": 4241474,
+      "espnName": "Brian Robinson Jr.",
+      "games": 17,
+      "espnPoints": 58.5,
+      "yahooPoints": 58.5,
+      "espnPace": 58.5,
+      "yahooPace": 58.5,
+      "yahooAdp": 97.7,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Tre Tucker",
+      "pos": "WR",
+      "team2025": "LV",
+      "espnId": 4428718,
+      "espnName": "Tre Tucker",
+      "games": 17,
+      "espnPoints": 133.2,
+      "yahooPoints": 133.2,
+      "espnPace": 133.2,
+      "yahooPace": 133.2,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Geno Smith",
+      "pos": "QB",
+      "team2025": "LV",
+      "espnId": 15864,
+      "espnName": "Geno Smith",
+      "games": 15,
+      "espnPoints": 173.9,
+      "yahooPoints": 190.9,
+      "espnPace": 197.1,
+      "yahooPace": 216.4,
+      "yahooAdp": 123.9,
+      "reason": "inactive list: W15, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            15,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Greg Dulcich",
+      "pos": "TE",
+      "team2025": "MIA",
+      "espnId": 4367209,
+      "espnName": "Greg Dulcich",
+      "games": 10,
+      "espnPoints": 49.8,
+      "yahooPoints": 49.8,
+      "espnPace": 84.7,
+      "yahooPace": 84.7,
+      "yahooAdp": null,
+      "reason": "practice squad: W1, W2, W3, W4, W5, W6, W7",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "DEV",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "descriptions": [
+            "P07"
+          ]
+        }
+      ],
+      "activeSnapshots": 10
+    },
+    {
+      "name": "Caleb Douglas",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Omar Cooper",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jacoby Brissett",
+      "pos": "QB",
+      "team2025": "ARI",
+      "espnId": 2578570,
+      "espnName": "Jacoby Brissett",
+      "games": 14,
+      "espnPoints": 227.4,
+      "yahooPoints": 235.4,
+      "espnPace": 276.2,
+      "yahooPace": 285.9,
+      "yahooAdp": null,
+      "reason": "Began 2025 as Arizona's backup, then made 12 starts after Kyler Murray was injured",
+      "reasonKind": "verified",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "TJ Hockenson",
+      "pos": "TE",
+      "team2025": "MIN",
+      "espnId": 4036133,
+      "espnName": "T.J. Hockenson",
+      "games": 15,
+      "espnPoints": 87.3,
+      "yahooPoints": 87.3,
+      "espnPace": 98.9,
+      "yahooPace": 98.9,
+      "yahooAdp": 58.6,
+      "reason": "inactive list: W17, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            17,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Braelon Allen",
+      "pos": "RB",
+      "team2025": "NYJ",
+      "espnId": 4685247,
+      "espnName": "Braelon Allen",
+      "games": 4,
+      "espnPoints": 14.3,
+      "yahooPoints": 14.3,
+      "espnPace": 60.8,
+      "yahooPace": 60.8,
+      "yahooAdp": 100.3,
+      "reason": "Reserve/Injured: W5, W6, W7, W8, W10, W11, W12, W13, W14, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 4
+    },
+    {
+      "name": "Ray Davis",
+      "pos": "RB",
+      "team2025": "BUF",
+      "espnId": 4429501,
+      "espnName": "Ray Davis",
+      "games": 17,
+      "espnPoints": 59.1,
+      "yahooPoints": 59.1,
+      "espnPace": 59.1,
+      "yahooPace": 59.1,
+      "yahooAdp": 128.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Kimani Vidal",
+      "pos": "RB",
+      "team2025": "LAC",
+      "espnId": 4430968,
+      "espnName": "Kimani Vidal",
+      "games": 13,
+      "espnPoints": 109.9,
+      "yahooPoints": 109.9,
+      "espnPace": 143.7,
+      "yahooPace": 143.7,
+      "yahooAdp": null,
+      "reason": "practice squad: W1, W2, W3; inactive list: W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "DEV",
+          "weeks": [
+            1,
+            2,
+            3
+          ],
+          "descriptions": [
+            "P06"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Kaelon Black",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Cyrus Allen",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Najee Harris",
+      "pos": "RB",
+      "team2025": "LAC",
+      "espnId": 4241457,
+      "espnName": "Najee Harris",
+      "games": 3,
+      "espnPoints": 10.1,
+      "yahooPoints": 10.1,
+      "espnPace": 57.2,
+      "yahooPace": 57.2,
+      "yahooAdp": 121.2,
+      "reason": "Reserve/Injured: W4, W5, W6, W7, W8, W9, W10, W11, W13, W14, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 3
+    },
+    {
+      "name": "Tyrone Tracy",
+      "pos": "RB",
+      "team2025": "NYG",
+      "espnId": 4360516,
+      "espnName": "Tyrone Tracy Jr.",
+      "games": 15,
+      "espnPoints": 142.8,
+      "yahooPoints": 142.8,
+      "espnPace": 161.8,
+      "yahooPace": 161.8,
+      "yahooAdp": 81.9,
+      "reason": "inactive list: W4, W5 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            4,
+            5
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Alvin Kamara",
+      "pos": "RB",
+      "team2025": "NO",
+      "espnId": 3054850,
+      "espnName": "Alvin Kamara",
+      "games": 11,
+      "espnPoints": 84.2,
+      "yahooPoints": 84.2,
+      "espnPace": 130.1,
+      "yahooPace": 130.1,
+      "yahooAdp": 42.2,
+      "reason": "inactive list: W13, W14, W15, W16, W17, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 11
+    },
+    {
+      "name": "Malik Davis",
+      "pos": "RB",
+      "team2025": "DAL",
+      "espnId": 4240603,
+      "espnName": "Malik Davis",
+      "games": 10,
+      "espnPoints": 39.6,
+      "yahooPoints": 39.6,
+      "espnPace": 67.3,
+      "yahooPace": 67.3,
+      "yahooAdp": null,
+      "reason": "practice squad: W1, W2, W3, W4, W5, W6; Reserve/Injured: W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "DEV",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "descriptions": [
+            "P06"
+          ]
+        },
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 10
+    },
+    {
+      "name": "Aaron Rodgers",
+      "pos": "QB",
+      "team2025": "PIT",
+      "espnId": 8439,
+      "espnName": "Aaron Rodgers",
+      "games": 16,
+      "espnPoints": 226.6,
+      "yahooPoints": 233.6,
+      "espnPace": 240.7,
+      "yahooPace": 248.2,
+      "yahooAdp": 117.6,
+      "reason": "inactive list: W12 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            12
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Nick Singleton",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Ryan Flournoy",
+      "pos": "WR",
+      "team2025": "DAL",
+      "espnId": 5083754,
+      "espnName": "Ryan Flournoy",
+      "games": 16,
+      "espnPoints": 94,
+      "yahooPoints": 94,
+      "espnPace": 99.9,
+      "yahooPace": 99.9,
+      "yahooAdp": null,
+      "reason": "inactive list: W17 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            17
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Pat Freiermuth",
+      "pos": "TE",
+      "team2025": "PIT",
+      "espnId": 4361411,
+      "espnName": "Pat Freiermuth",
+      "games": 17,
+      "espnPoints": 93.1,
+      "yahooPoints": 93.1,
+      "espnPace": 93.1,
+      "yahooPace": 93.1,
+      "yahooAdp": 124.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Bryce Young",
+      "pos": "QB",
+      "team2025": "CAR",
+      "espnId": 4685720,
+      "espnName": "Bryce Young",
+      "games": 16,
+      "espnPoints": 218,
+      "yahooPoints": 229,
+      "espnPace": 231.7,
+      "yahooPace": 243.4,
+      "yahooAdp": 126.8,
+      "reason": "inactive list: W8 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            8
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Rashod Bateman",
+      "pos": "WR",
+      "team2025": "BAL",
+      "espnId": 4360939,
+      "espnName": "Rashod Bateman",
+      "games": 13,
+      "espnPoints": 45.9,
+      "yahooPoints": 45.9,
+      "espnPace": 60,
+      "yahooPace": 60,
+      "yahooAdp": 130.6,
+      "reason": "inactive list: W11, W12, W15, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            11,
+            12,
+            15,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "AJ Barner",
+      "pos": "TE",
+      "team2025": "SEA",
+      "espnId": 4576297,
+      "espnName": "AJ Barner",
+      "games": 17,
+      "espnPoints": 121.3,
+      "yahooPoints": 121.3,
+      "espnPace": 121.3,
+      "yahooPace": 121.3,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Zachariah Branch",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Malik Washington",
+      "pos": "WR",
+      "team2025": "MIA",
+      "espnId": 4569603,
+      "espnName": "Malik Washington",
+      "games": 17,
+      "espnPoints": 93.7,
+      "yahooPoints": 93.7,
+      "espnPace": 93.7,
+      "yahooPace": 93.7,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Chris Bell",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jalen Nailor",
+      "pos": "WR",
+      "team2025": "MIN",
+      "espnId": 4382466,
+      "espnName": "Jalen Nailor",
+      "games": 17,
+      "espnPoints": 86.2,
+      "yahooPoints": 86.2,
+      "espnPace": 86.2,
+      "yahooPace": 86.2,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Isaac TeSlaa",
+      "pos": "WR",
+      "team2025": "DET",
+      "espnId": 5123663,
+      "espnName": "Isaac TeSlaa",
+      "games": 17,
+      "espnPoints": 67.9,
+      "yahooPoints": 67.9,
+      "espnPace": 67.9,
+      "yahooPace": 67.9,
+      "yahooAdp": 123.7,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Kaytron Allen",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Germie Bernard",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "George Holani",
+      "pos": "RB",
+      "team2025": "SEA",
+      "espnId": 4429835,
+      "espnName": "George Holani",
+      "games": 11,
+      "espnPoints": 13.8,
+      "yahooPoints": 19.8,
+      "espnPace": 21.3,
+      "yahooPace": 30.6,
+      "yahooAdp": null,
+      "reason": "Reserve/Injured: W13, W14, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 11
+    },
+    {
+      "name": "Seth McGowan",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Chris Brooks",
+      "pos": "RB",
+      "team2025": "GB",
+      "espnId": 3149687,
+      "espnName": "Chris Brooks",
+      "games": 17,
+      "espnPoints": 26.2,
+      "yahooPoints": 26.2,
+      "espnPace": 26.2,
+      "yahooPace": 26.2,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jauan Jennings",
+      "pos": "WR",
+      "team2025": "SF",
+      "espnId": 3886598,
+      "espnName": "Jauan Jennings",
+      "games": 15,
+      "espnPoints": 145.8,
+      "yahooPoints": 145.8,
+      "espnPace": 165.2,
+      "yahooPace": 165.2,
+      "yahooAdp": 106.2,
+      "reason": "inactive list: W3, W5 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            3,
+            5
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Calvin Ridley",
+      "pos": "WR",
+      "team2025": "TEN",
+      "espnId": 3925357,
+      "espnName": "Calvin Ridley",
+      "games": 7,
+      "espnPoints": 38.8,
+      "yahooPoints": 38.8,
+      "espnPace": 94.2,
+      "yahooPace": 94.2,
+      "yahooAdp": 73.9,
+      "reason": "Reserve/Injured: W12, W13, W14, W15, W16, W17, W18; inactive list: W7, W8, W9 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            7,
+            8,
+            9
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 7
+    },
+    {
+      "name": "Cade Otton",
+      "pos": "TE",
+      "team2025": "TB",
+      "espnId": 4243331,
+      "espnName": "Cade Otton",
+      "games": 16,
+      "espnPoints": 92.7,
+      "yahooPoints": 92.7,
+      "espnPace": 98.5,
+      "yahooPace": 98.5,
+      "yahooAdp": 126.1,
+      "reason": "inactive list: W15 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            15
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Evan Engram",
+      "pos": "TE",
+      "team2025": "DEN",
+      "espnId": 3051876,
+      "espnName": "Evan Engram",
+      "games": 16,
+      "espnPoints": 77.8,
+      "yahooPoints": 77.8,
+      "espnPace": 82.7,
+      "yahooPace": 82.7,
+      "yahooAdp": 82.3,
+      "reason": "inactive list: W3 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            3
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Gunnar Helm",
+      "pos": "TE",
+      "team2025": "TEN",
+      "espnId": 4686728,
+      "espnName": "Gunnar Helm",
+      "games": 16,
+      "espnPoints": 69.7,
+      "yahooPoints": 69.7,
+      "espnPace": 74.1,
+      "yahooPace": 74.1,
+      "yahooAdp": null,
+      "reason": "inactive list: W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "David Njoku",
+      "pos": "TE",
+      "team2025": "CLE",
+      "espnId": 3123076,
+      "espnName": "David Njoku",
+      "games": 12,
+      "espnPoints": 69.8,
+      "yahooPoints": 69.8,
+      "espnPace": 98.9,
+      "yahooPace": 98.9,
+      "yahooAdp": 84,
+      "reason": "inactive list: W7, W15, W16, W17, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            7,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 12
+    },
+    {
+      "name": "Jordan James",
+      "pos": "RB",
+      "team2025": "SF",
+      "espnId": 4685397,
+      "espnName": "Jordan James",
+      "games": 3,
+      "espnPoints": 0,
+      "yahooPoints": 0,
+      "espnPace": 0,
+      "yahooPace": 0,
+      "yahooAdp": null,
+      "reason": "inactive list: W1, W2, W3, W4, W5, W6, W7, W8, W9, W10, W11, W12, W13, W15 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15
+          ],
+          "descriptions": [
+            "A01",
+            "I01"
+          ]
+        }
+      ],
+      "activeSnapshots": 3
+    },
+    {
+      "name": "Michael Mayer",
+      "pos": "TE",
+      "team2025": "LV",
+      "espnId": 4429086,
+      "espnName": "Michael Mayer",
+      "games": 13,
+      "espnPoints": 56.3,
+      "yahooPoints": 56.3,
+      "espnPace": 73.6,
+      "yahooPace": 73.6,
+      "yahooAdp": null,
+      "reason": "inactive list: W4, W5, W13, W14 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            4,
+            5,
+            13,
+            14
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Oronde Gadsden",
+      "pos": "TE",
+      "team2025": "LAC",
+      "espnId": 4595342,
+      "espnName": "Oronde Gadsden",
+      "games": 15,
+      "espnPoints": 106.9,
+      "yahooPoints": 106.9,
+      "espnPace": 121.2,
+      "yahooPace": 121.2,
+      "yahooAdp": null,
+      "reason": "inactive list: W1, W2 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            1,
+            2
+          ],
+          "descriptions": [
+            "A01",
+            "I01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Ted Hurst",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Jerry Jeudy",
+      "pos": "WR",
+      "team2025": "CLE",
+      "espnId": 4241463,
+      "espnName": "Jerry Jeudy",
+      "games": 17,
+      "espnPoints": 95.7,
+      "yahooPoints": 95.7,
+      "espnPace": 95.7,
+      "yahooPace": 95.7,
+      "yahooAdp": 92.1,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Malachi Fields",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Travis Hunter",
+      "pos": "WR",
+      "team2025": "JAX",
+      "espnId": 4685415,
+      "espnName": "Travis Hunter",
+      "games": 7,
+      "espnPoints": 49.8,
+      "yahooPoints": 49.8,
+      "espnPace": 120.9,
+      "yahooPace": 120.9,
+      "yahooAdp": 74.4,
+      "reason": "Reserve/Injured: W9, W10, W11, W12, W13, W14, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 7
+    },
+    {
+      "name": "Colby Parkinson",
+      "pos": "TE",
+      "team2025": "LA",
+      "espnId": 4242557,
+      "espnName": "Colby Parkinson",
+      "games": 15,
+      "espnPoints": 108.3,
+      "yahooPoints": 108.3,
+      "espnPace": 122.7,
+      "yahooPace": 122.7,
+      "yahooAdp": null,
+      "reason": "inactive list: W2, W6 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            2,
+            6
+          ],
+          "descriptions": [
+            "A01",
+            "I01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Charlie Kolar",
+      "pos": "TE",
+      "team2025": "BAL",
+      "espnId": 4241263,
+      "espnName": "Charlie Kolar",
+      "games": 17,
+      "espnPoints": 31.2,
+      "yahooPoints": 31.2,
+      "espnPace": 31.2,
+      "yahooPace": 31.2,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Michael Penix",
+      "pos": "QB",
+      "team2025": "ATL",
+      "espnId": 4360423,
+      "espnName": "Michael Penix Jr.",
+      "games": 9,
+      "espnPoints": 120.3,
+      "yahooPoints": 123.3,
+      "espnPace": 227.2,
+      "yahooPace": 232.9,
+      "yahooAdp": 124.8,
+      "reason": "Reserve/Injured: W12, W13, W14, W15, W16, W17, W18; inactive list: W8 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            8
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 9
+    },
+    {
+      "name": "Antonio Williams",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Troy Franklin",
+      "pos": "WR",
+      "team2025": "DEN",
+      "espnId": 4431280,
+      "espnName": "Troy Franklin",
+      "games": 17,
+      "espnPoints": 144.6,
+      "yahooPoints": 144.6,
+      "espnPace": 144.6,
+      "yahooPace": 144.6,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jalen Tolbert",
+      "pos": "WR",
+      "team2025": "DAL",
+      "espnId": 4249417,
+      "espnName": "Jalen Tolbert",
+      "games": 13,
+      "espnPoints": 37.3,
+      "yahooPoints": 37.3,
+      "espnPace": 48.8,
+      "yahooPace": 48.8,
+      "yahooAdp": null,
+      "reason": "inactive list: W12, W14, W15, W16 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            12,
+            14,
+            15,
+            16
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Bryce Lance",
+      "pos": "WR",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Kyle Williams",
+      "pos": "WR",
+      "team2025": "NE",
+      "espnId": 4613202,
+      "espnName": "Kyle Williams",
+      "games": 17,
+      "espnPoints": 44.2,
+      "yahooPoints": 44.2,
+      "espnPace": 44.2,
+      "yahooPace": 44.2,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Kaleb Johnson",
+      "pos": "RB",
+      "team2025": "PIT",
+      "espnId": 4819231,
+      "espnName": "Kaleb Johnson",
+      "games": 10,
+      "espnPoints": 8.3,
+      "yahooPoints": 8.3,
+      "espnPace": 14.1,
+      "yahooPace": 14.1,
+      "yahooAdp": 81.1,
+      "reason": "inactive list: W16, W17, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Isaiah Davis",
+      "pos": "RB",
+      "team2025": "NYJ",
+      "espnId": 4695404,
+      "espnName": "Isaiah Davis",
+      "games": 16,
+      "espnPoints": 60.7,
+      "yahooPoints": 60.7,
+      "espnPace": 64.5,
+      "yahooPace": 64.5,
+      "yahooAdp": null,
+      "reason": "Reserve/Injured: W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Fernando Mendoza",
+      "pos": "QB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Justice Hill",
+      "pos": "RB",
+      "team2025": "BAL",
+      "espnId": 4038441,
+      "espnName": "Justice Hill",
+      "games": 10,
+      "espnPoints": 54.7,
+      "yahooPoints": 54.7,
+      "espnPace": 93,
+      "yahooPace": 93,
+      "yahooAdp": null,
+      "reason": "Reserve/Injured: W14, W15, W16, W17, W18; reserve list: W13; inactive list: W11 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "RES",
+          "weeks": [
+            13
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            11
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 10
+    },
+    {
+      "name": "James Conner",
+      "pos": "RB",
+      "team2025": "ARI",
+      "espnId": 3045147,
+      "espnName": "James Conner",
+      "games": 3,
+      "espnPoints": 29.3,
+      "yahooPoints": 29.3,
+      "espnPace": 166,
+      "yahooPace": 166,
+      "yahooAdp": 45.8,
+      "reason": "Reserve/Injured: W4, W5, W6, W7, W9, W10, W11, W12, W13, W14, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 3
+    },
+    {
+      "name": "Tory Horton",
+      "pos": "WR",
+      "team2025": "SEA",
+      "espnId": 4597703,
+      "espnName": "Tory Horton",
+      "games": 8,
+      "espnPoints": 58.6,
+      "yahooPoints": 58.6,
+      "espnPace": 124.5,
+      "yahooPace": 124.5,
+      "yahooAdp": null,
+      "reason": "Reserve/Injured: W12, W13, W14, W15, W16, W17, W18; inactive list: W10, W11 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            10,
+            11
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 8
+    },
+    {
+      "name": "Demario Douglas",
+      "pos": "WR",
+      "team2025": "NE",
+      "espnId": 4427095,
+      "espnName": "DeMario Douglas",
+      "games": 17,
+      "espnPoints": 80.3,
+      "yahooPoints": 80.3,
+      "espnPace": 80.3,
+      "yahooPace": 80.3,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Demond Claiborne",
+      "pos": "RB",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Xavier Hutchinson",
+      "pos": "WR",
+      "team2025": "HOU",
+      "espnId": 4686422,
+      "espnName": "Xavier Hutchinson",
+      "games": 17,
+      "espnPoints": 80.5,
+      "yahooPoints": 80.5,
+      "espnPace": 80.5,
+      "yahooPace": 80.5,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Sean Tucker",
+      "pos": "RB",
+      "team2025": "TB",
+      "espnId": 4430871,
+      "espnName": "Sean Tucker",
+      "games": 17,
+      "espnPoints": 87.4,
+      "yahooPoints": 87.4,
+      "espnPace": 87.4,
+      "yahooPace": 87.4,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Isiah Pacheco",
+      "pos": "RB",
+      "team2025": "KC",
+      "espnId": 4361529,
+      "espnName": "Isiah Pacheco",
+      "games": 13,
+      "espnPoints": 77.8,
+      "yahooPoints": 77.8,
+      "espnPace": 101.7,
+      "yahooPace": 101.7,
+      "yahooAdp": 65.3,
+      "reason": "inactive list: W9, W11, W12, W18 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            9,
+            11,
+            12,
+            18
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Darnell Mooney",
+      "pos": "WR",
+      "team2025": "ATL",
+      "espnId": 4040655,
+      "espnName": "Darnell Mooney",
+      "games": 15,
+      "espnPoints": 66.3,
+      "yahooPoints": 66.3,
+      "espnPace": 75.1,
+      "yahooPace": 75.1,
+      "yahooAdp": 131.7,
+      "reason": "inactive list: W1, W6 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            1,
+            6
+          ],
+          "descriptions": [
+            "A01",
+            "I01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "LeQuint Allen",
+      "pos": "RB",
+      "team2025": "JAX",
+      "espnId": 4911851,
+      "espnName": "LeQuint Allen Jr.",
+      "games": 17,
+      "espnPoints": 19.8,
+      "yahooPoints": 19.8,
+      "espnPace": 19.8,
+      "yahooPace": 19.8,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Mike Gesicki",
+      "pos": "TE",
+      "team2025": "CIN",
+      "espnId": 3116164,
+      "espnName": "Mike Gesicki",
+      "games": 13,
+      "espnPoints": 56.7,
+      "yahooPoints": 56.7,
+      "espnPace": 74.1,
+      "yahooPace": 74.1,
+      "yahooAdp": 126.1,
+      "reason": "Reserve/Injured: W7, W8, W9, W11",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            7,
+            8,
+            9,
+            11
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Emanuel Wilson",
+      "pos": "RB",
+      "team2025": "GB",
+      "espnId": 4887558,
+      "espnName": "Emanuel Wilson",
+      "games": 17,
+      "espnPoints": 87,
+      "yahooPoints": 87,
+      "espnPace": 87,
+      "yahooPace": 87,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Cooper Kupp",
+      "pos": "WR",
+      "team2025": "SEA",
+      "espnId": 2977187,
+      "espnName": "Cooper Kupp",
+      "games": 16,
+      "espnPoints": 92.8,
+      "yahooPoints": 93.8,
+      "espnPace": 98.6,
+      "yahooPace": 99.7,
+      "yahooAdp": 116.7,
+      "reason": "inactive list: W9 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            9
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Eli Raridon",
+      "pos": "TE",
+      "team2025": null,
+      "espnId": null,
+      "espnName": null,
+      "games": 0,
+      "espnPoints": null,
+      "yahooPoints": null,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "No 2025 NFL regular-season record; this player entered the NFL in 2026",
+      "reasonKind": "rookie",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Tank Dell",
+      "pos": "WR",
+      "team2025": "HOU",
+      "espnId": 4366031,
+      "espnName": "Tank Dell",
+      "games": 0,
+      "espnPoints": 0,
+      "yahooPoints": 0,
+      "espnPace": null,
+      "yahooPace": null,
+      "yahooAdp": null,
+      "reason": "reserve list: W1, W2, W3, W4, W5, W7, W8, W9, W10, W11, W12, W13, W14, W15, W16, W17, W18",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES",
+          "weeks": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "descriptions": [
+            "R04"
+          ]
+        }
+      ],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Tyquan Thornton",
+      "pos": "WR",
+      "team2025": "KC",
+      "espnId": 4362921,
+      "espnName": "Tyquan Thornton",
+      "games": 14,
+      "espnPoints": 71.3,
+      "yahooPoints": 71.3,
+      "espnPace": 86.6,
+      "yahooPace": 86.6,
+      "yahooAdp": null,
+      "reason": "Reserve/Injured: W17, W18; inactive list: W16 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "RES_INJURED",
+          "weeks": [
+            17,
+            18
+          ],
+          "descriptions": [
+            "R01"
+          ]
+        },
+        {
+          "status": "INA",
+          "weeks": [
+            16
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Elic Ayomanor",
+      "pos": "WR",
+      "team2025": "TEN",
+      "espnId": 4883647,
+      "espnName": "Elic Ayomanor",
+      "games": 16,
+      "espnPoints": 96,
+      "yahooPoints": 96,
+      "espnPace": 102,
+      "yahooPace": 102,
+      "yahooAdp": null,
+      "reason": "inactive list: W12 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            12
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Tez Johnson",
+      "pos": "WR",
+      "team2025": "TB",
+      "espnId": 4608810,
+      "espnName": "Tez Johnson",
+      "games": 16,
+      "espnPoints": 78.4,
+      "yahooPoints": 78.6,
+      "espnPace": 83.3,
+      "yahooPace": 83.5,
+      "yahooAdp": null,
+      "reason": "inactive list: W2 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            2
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 16
+    },
+    {
+      "name": "Samaje Perine",
+      "pos": "RB",
+      "team2025": "CIN",
+      "espnId": 3116389,
+      "espnName": "Samaje Perine",
+      "games": 15,
+      "espnPoints": 69.4,
+      "yahooPoints": 69.4,
+      "espnPace": 78.7,
+      "yahooPace": 78.7,
+      "yahooAdp": null,
+      "reason": "inactive list: W11, W12 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            11,
+            12
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Darius Slayton",
+      "pos": "WR",
+      "team2025": "NYG",
+      "espnId": 3916945,
+      "espnName": "Darius Slayton",
+      "games": 14,
+      "espnPoints": 80.3,
+      "yahooPoints": 80.3,
+      "espnPace": 97.5,
+      "yahooPace": 97.5,
+      "yahooAdp": null,
+      "reason": "inactive list: W6, W7, W11 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            6,
+            7,
+            11
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Devin Singletary",
+      "pos": "RB",
+      "team2025": "NYG",
+      "espnId": 4040761,
+      "espnName": "Devin Singletary",
+      "games": 17,
+      "espnPoints": 99.8,
+      "yahooPoints": 99.8,
+      "espnPace": 99.8,
+      "yahooPace": 99.8,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Demarcus Robinson",
+      "pos": "WR",
+      "team2025": "SF",
+      "espnId": 3043116,
+      "espnName": "Demarcus Robinson",
+      "games": 14,
+      "espnPoints": 47.2,
+      "yahooPoints": 47.2,
+      "espnPace": 57.3,
+      "yahooPace": 57.3,
+      "yahooAdp": null,
+      "reason": "NFL suspension (Week 1, Week 2, Week 3)",
+      "reasonKind": "suspension",
+      "rosterFlags": [
+        {
+          "status": "SUS",
+          "weeks": [
+            1,
+            2,
+            3
+          ],
+          "descriptions": [
+            "R40"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Jake Tonges",
+      "pos": "TE",
+      "team2025": "SF",
+      "espnId": 4259147,
+      "espnName": "Jake Tonges",
+      "games": 17,
+      "espnPoints": 76.3,
+      "yahooPoints": 76.3,
+      "espnPace": 76.3,
+      "yahooPace": 76.3,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Emari Demercado",
+      "pos": "RB",
+      "team2025": "ARI",
+      "espnId": 4362478,
+      "espnName": "Emari Demercado",
+      "games": 13,
+      "espnPoints": 51.8,
+      "yahooPoints": 51.8,
+      "espnPace": 67.7,
+      "yahooPace": 67.7,
+      "yahooAdp": null,
+      "reason": "inactive list: W7, W12, W13, W14 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            7,
+            12,
+            13,
+            14
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 13
+    },
+    {
+      "name": "Texans D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16034,
+      "espnName": "Texans D/ST",
+      "games": 17,
+      "espnPoints": 173,
+      "yahooPoints": 173,
+      "espnPace": 173,
+      "yahooPace": 173,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Broncos D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16007,
+      "espnName": "Broncos D/ST",
+      "games": 17,
+      "espnPoints": 144,
+      "yahooPoints": 144,
+      "espnPace": 144,
+      "yahooPace": 144,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Steelers D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16023,
+      "espnName": "Steelers D/ST",
+      "games": 17,
+      "espnPoints": 113,
+      "yahooPoints": 113,
+      "espnPace": 113,
+      "yahooPace": 113,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Seahawks D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16026,
+      "espnName": "Seahawks D/ST",
+      "games": 17,
+      "espnPoints": 185,
+      "yahooPoints": 185,
+      "espnPace": 185,
+      "yahooPace": 185,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Rams D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16014,
+      "espnName": "Rams D/ST",
+      "games": 17,
+      "espnPoints": 125,
+      "yahooPoints": 125,
+      "espnPace": 125,
+      "yahooPace": 125,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Ravens D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16033,
+      "espnName": "Ravens D/ST",
+      "games": 17,
+      "espnPoints": 77,
+      "yahooPoints": 77,
+      "espnPace": 77,
+      "yahooPace": 77,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Eagles D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16021,
+      "espnName": "Eagles D/ST",
+      "games": 17,
+      "espnPoints": 126,
+      "yahooPoints": 126,
+      "espnPace": 126,
+      "yahooPace": 126,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Browns D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16005,
+      "espnName": "Browns D/ST",
+      "games": 17,
+      "espnPoints": 143,
+      "yahooPoints": 143,
+      "espnPace": 143,
+      "yahooPace": 143,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Patriots D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16017,
+      "espnName": "Patriots D/ST",
+      "games": 17,
+      "espnPoints": 133,
+      "yahooPoints": 133,
+      "espnPace": 133,
+      "yahooPace": 133,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Lions D/ST",
+      "pos": "DST",
+      "team2025": null,
+      "espnId": -16008,
+      "espnName": "Lions D/ST",
+      "games": 17,
+      "espnPoints": 91,
+      "yahooPoints": 91,
+      "espnPace": 91,
+      "yahooPace": 91,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 0
+    },
+    {
+      "name": "Brandon Aubrey",
+      "pos": "K",
+      "team2025": "DAL",
+      "espnId": 3953687,
+      "espnName": "Brandon Aubrey",
+      "games": 17,
+      "espnPoints": 184.6,
+      "yahooPoints": 187.6,
+      "espnPace": 184.6,
+      "yahooPace": 187.6,
+      "yahooAdp": 99.7,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Cameron Dicker",
+      "pos": "K",
+      "team2025": "LAC",
+      "espnId": 4362081,
+      "espnName": "Cameron Dicker",
+      "games": 17,
+      "espnPoints": 167,
+      "yahooPoints": 170,
+      "espnPace": 167,
+      "yahooPace": 170,
+      "yahooAdp": 117.7,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jason Myers",
+      "pos": "K",
+      "team2025": "SEA",
+      "espnId": 2473037,
+      "espnName": "Jason Myers",
+      "games": 17,
+      "espnPoints": 195,
+      "yahooPoints": 202,
+      "espnPace": 195,
+      "yahooPace": 202,
+      "yahooAdp": null,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Harrison Mevis",
+      "pos": "K",
+      "team2025": "LA",
+      "espnId": 4574716,
+      "espnName": "Harrison Mevis",
+      "games": 9,
+      "espnPoints": 81,
+      "yahooPoints": 82,
+      "espnPace": 153,
+      "yahooPace": 154.9,
+      "yahooAdp": null,
+      "reason": "practice squad: W1, W2; released: W3",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "DEV",
+          "weeks": [
+            1,
+            2
+          ],
+          "descriptions": [
+            "P01"
+          ]
+        },
+        {
+          "status": "CUT",
+          "weeks": [
+            3
+          ],
+          "descriptions": [
+            "P01"
+          ]
+        }
+      ],
+      "activeSnapshots": 9
+    },
+    {
+      "name": "Ka'imi Fairbairn",
+      "pos": "K",
+      "team2025": "HOU",
+      "espnId": 2971573,
+      "espnName": "Ka'imi Fairbairn",
+      "games": 15,
+      "espnPoints": 190,
+      "yahooPoints": 194,
+      "espnPace": 215.3,
+      "yahooPace": 219.9,
+      "yahooAdp": 133.3,
+      "reason": "inactive list: W10, W11 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            10,
+            11
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 15
+    },
+    {
+      "name": "Eddy Pineiro",
+      "pos": "K",
+      "team2025": "SF",
+      "espnId": 4034949,
+      "espnName": "Eddy Pineiro",
+      "games": 14,
+      "espnPoints": 139,
+      "yahooPoints": 140,
+      "espnPace": 168.8,
+      "yahooPace": 170,
+      "yahooAdp": null,
+      "reason": "inactive list: W12, W13 (injury vs. coach decision not identified)",
+      "reasonKind": "availability",
+      "rosterFlags": [
+        {
+          "status": "INA",
+          "weeks": [
+            12,
+            13
+          ],
+          "descriptions": [
+            "A01"
+          ]
+        }
+      ],
+      "activeSnapshots": 14
+    },
+    {
+      "name": "Harrison Butker",
+      "pos": "K",
+      "team2025": "KC",
+      "espnId": 3055899,
+      "espnName": "Harrison Butker",
+      "games": 17,
+      "espnPoints": 144,
+      "yahooPoints": 149,
+      "espnPace": 144,
+      "yahooPace": 149,
+      "yahooAdp": 133.3,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Cam Little",
+      "pos": "K",
+      "team2025": "JAX",
+      "espnId": 4686361,
+      "espnName": "Cam Little",
+      "games": 17,
+      "espnPoints": 162,
+      "yahooPoints": 164,
+      "espnPace": 162,
+      "yahooPace": 164,
+      "yahooAdp": 128.8,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Jake Bates",
+      "pos": "K",
+      "team2025": "DET",
+      "espnId": 4689936,
+      "espnName": "Jake Bates",
+      "games": 17,
+      "espnPoints": 145,
+      "yahooPoints": 152,
+      "espnPace": 145,
+      "yahooPace": 152,
+      "yahooAdp": 123,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    },
+    {
+      "name": "Tyler Loop",
+      "pos": "K",
+      "team2025": "BAL",
+      "espnId": 4697745,
+      "espnName": "Tyler Loop",
+      "games": 17,
+      "espnPoints": 140,
+      "yahooPoints": 144,
+      "espnPace": 140,
+      "yahooPace": 144,
+      "yahooAdp": 133.4,
+      "reason": "Played all 17 regular-season games",
+      "reasonKind": "full",
+      "rosterFlags": [],
+      "activeSnapshots": 17
+    }
+  ]
+}

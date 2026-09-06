@@ -40,8 +40,34 @@ test("table starts with star and round, then player, then Late-Round", () => {
   assert.match(labels[14], /V rank/);
 });
 
-test("Late-Round is the default sort in both views", () => {
-  assert.match(appScript, /sort: \{ live:\{key:'lr',dir:'asc'\}, rankings:\{key:'lr',dir:'asc'\} \}/);
+test("Late-Round stays the default draft sort and 2025 results start by pace", () => {
+  assert.match(appScript, /sort: \{ live:\{key:'lr',dir:'asc'\}, rankings:\{key:'lr',dir:'asc'\}, past:\{key:'paceRank',dir:'asc'\} \}/);
+});
+
+test("2025 half-PPR results cover the entire draft-tool player pool", () => {
+  assert.match(app, /data-view-button="past"[^>]*>2025 results<\/button>/);
+  assert.match(app, /<table aria-label="2025 half-PPR performance">/);
+  const dataLiteral = appScript.match(/const history2025Rows = (\[[^\n]+\]);/)?.[1];
+  assert.ok(dataLiteral, "2025 history data should be extractable");
+  const rows = Function(`return ${dataLiteral}`)();
+  assert.equal(rows.length, 270);
+  assert.equal(rows.filter((row) => row[4] != null).length, 240);
+  assert.equal(rows.filter((row) => row[10] === "rookie").length, 30);
+  assert.equal(rows.filter((row) => row[4] != null && row[3] < 17).length, 141);
+});
+
+test("2025 scoring, pace, ADP, and missed-time evidence remain distinct", () => {
+  const dataLiteral = appScript.match(/const history2025Rows = (\[[^\n]+\]);/)?.[1];
+  const rows = Function(`return ${dataLiteral}`)();
+  const byName = new Map(rows.map((row) => [row[0], row]));
+  assert.deepEqual(byName.get("Christian McCaffrey").slice(1, 9), ["RB", "SF", 17, 365.6, 365.6, 365.6, 365.6, 8.6]);
+  assert.deepEqual(byName.get("Josh Allen").slice(1, 9), ["QB", "BUF", 17, 364.6, 374.6, 364.6, 374.6, 22.7]);
+  assert.deepEqual(byName.get("Ja'Marr Chase").slice(1, 11), ["WR", "CIN", 16, 251.1, 251.1, 266.8, 266.8, 1.4, "NFL suspension (Week 12)", "suspension"]);
+  assert.equal(byName.get("MarShawn Lloyd")[6], null, "zero-game players should not receive a made-up pace");
+  assert.match(appScript, /const hasAsterisk=row\.actual!=null&&row\.games<17/);
+  assert.match(appScript, /data-dft-tip=/);
+  assert.match(appScript, /Straight-line pace; not a durability forecast/);
+  assert.match(appScript, /row\.yahooAdp-row\.paceRank/);
 });
 
 test("Late-Round board uses the September 4 page 294 release", () => {
