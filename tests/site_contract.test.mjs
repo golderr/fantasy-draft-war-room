@@ -70,24 +70,46 @@ test("2025 scoring, pace, ADP, and missed-time evidence remain distinct", () => 
   assert.match(appScript, /row\.activeComparisonRank-pastComparisonRank/);
 });
 
-test("2025 results add position finishes, FLEX, and all three 2026 cost signals", () => {
+test("2025 results add a view key, historical Late-Round rank, position finishes, FLEX, and 2026 cost signals", () => {
   assert.match(app, /<option value="FLEX">FLEX · RB\/WR\/TE<\/option>/);
   const pastHead = app.match(/<table aria-label="2025 half-PPR performance and 2026 draft cost">[\s\S]*?<thead><tr>([\s\S]*?)<\/tr><\/thead>/)?.[1] ?? "";
   const labels = [...pastHead.matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((match) => match[1].replace(/<[^>]+>/g, "").trim());
-  assert.equal(labels.length, 16);
-  assert.deepEqual(labels.slice(0, 3), ["2025 rank", "Player", "Pos finish"]);
-  assert.match(labels[3], /FLEX finish/);
-  assert.match(labels[8], /2025 usage/);
-  assert.match(labels[10], /2026 LR/);
-  assert.match(labels[11], /2026 Y ADP/);
-  assert.match(labels[12], /2026 E ADP/);
-  assert.match(labels[13], /2026 OL/);
-  assert.match(labels[14], /Value vs 2025/);
-  assert.match(labels[15], /Situation/);
+  assert.equal(labels.length, 18);
+  assert.deepEqual(labels.slice(0, 4), ["Key", "2025 rank", "Player", "Pos finish"]);
+  assert.match(labels[4], /FLEX finish/);
+  assert.match(labels[9], /2025 usage/);
+  assert.match(labels[11], /2025 LR/);
+  assert.match(labels[12], /2026 LR/);
+  assert.match(labels[13], /2026 Y ADP/);
+  assert.match(labels[14], /2026 E ADP/);
+  assert.match(labels[15], /2026 OL/);
+  assert.match(labels[16], /Value vs 2025/);
+  assert.match(labels[17], /Situation/);
+  assert.doesNotMatch(pastHead.match(/<th[^>]*>Key<\/th>/)?.[0] ?? "", /data-sort-key/);
+  assert.match(appScript, /rows\.map\(\(row,index\)=>/);
+  assert.match(appScript, /class="dft-rowkey">\$\{index\+1\}/);
+  assert.match(appScript, /colspan="18"/);
   assert.match(appScript, /pos==='FLEX'&&\['RB','WR','TE'\]\.includes\(row\.pos\)/);
   assert.match(appScript, /event\.target\.value==='FLEX'.*flexRank/s);
   assert.match(app, /data-past-signal/);
   assert.match(appScript, /historySignalMatch\(row,signal\)/);
+});
+
+test("2025 Late-Round overall ranks use the August 28 guide page 252", () => {
+  const dataLiteral = appScript.match(/const lateRound2025Rows = (\[[^\n]+\]);/)?.[1];
+  assert.ok(dataLiteral, "2025 Late-Round data should be extractable");
+  const rows = Function(`return ${dataLiteral}`)();
+  assert.equal(rows.length, 250);
+  assert.deepEqual(rows.map((row) => row[0]), Array.from({ length: 250 }, (_, index) => index + 1));
+  const byName = new Map(rows.map((row) => [row[1], row[0]]));
+  assert.equal(byName.get("Ja'Marr Chase"), 1);
+  assert.equal(byName.get("Josh Allen"), 25);
+  assert.equal(byName.get("Patrick Mahomes"), 84);
+  assert.equal(byName.get("Tua Tagovailoa"), 169);
+  assert.equal(byName.get("Tez Johnson"), 250);
+  assert.match(appScript, /lr2025:lateRound2025Map\.get\(normalize\(row\.name\)\)\?\?null/);
+  assert.match(appScript, /lr2025:row\.lr2025/);
+  assert.match(app, /PDF page 252/);
 });
 
 test("position finishes rank the selected 2025 pace within position", () => {
