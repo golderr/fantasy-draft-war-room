@@ -22,6 +22,22 @@ test("embedded draft tool JavaScript parses", () => {
   assert.doesNotThrow(() => new Function(appScript));
 });
 
+test("2025 Late-Round lookup executes after player-name normalization initializes", () => {
+  const fragments = [
+    appScript.match(/const lateRound2025Rows = \[[^\n]+\];/)?.[0],
+    appScript.match(/const normalize = [^\n]+;/)?.[0],
+    appScript.match(/const lateRound2025Map = [^\n]+;/)?.[0],
+  ];
+  assert.ok(fragments.every(Boolean), "startup lookup fragments should be present");
+  const sourceOrdered = fragments
+    .map((code) => ({ code, index: appScript.indexOf(code) }))
+    .sort((a, b) => a.index - b.index)
+    .map(({ code }) => code)
+    .join("\n");
+  const initializeLookup = new Function(`${sourceOrdered}\nreturn lateRound2025Map.get(normalize("Josh Allen"));`);
+  assert.equal(initializeLookup(), 25);
+});
+
 test("tooltips use one app-owned trigger system", () => {
   assert.match(app, /data-dft-tooltip-layer/);
   assert.match(app, /data-dft-tip=/);
