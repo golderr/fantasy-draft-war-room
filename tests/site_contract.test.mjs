@@ -124,8 +124,32 @@ test("position tray makes tiers explicit and stays out of CAG mode", () => {
   assert.match(app, /#draft-room-tool\.dft-cag \.dft-position-drawer \{ display: none; \}/);
 });
 
-test("Late-Round stays the default draft sort and 2025 results start by pace", () => {
-  assert.match(appScript, /sort: \{ live:\{key:'lr',dir:'asc'\}, rankings:\{key:'lr',dir:'asc'\}, past:\{key:'paceRank',dir:'asc'\} \}/);
+test("Late-Round stays the default draft sort, 2025 results start by pace, and overperformers start by lift", () => {
+  assert.match(appScript, /sort: \{ live:\{key:'lr',dir:'asc'\}, rankings:\{key:'lr',dir:'asc'\}, past:\{key:'paceRank',dir:'asc'\}, over:\{key:'score',dir:'desc'\} \}/);
+});
+
+test("2025 overperformers compare actual points with matched preseason cohorts", () => {
+  assert.match(app, /data-view-button="overperformers"[^>]*>2025 overperformers<\/button>/);
+  assert.match(wrapper, /class=&quot;dft-view dft-normal-only&quot; data-view=&quot;overperformers&quot; hidden/);
+  assert.match(app, /<table aria-label="2025 preseason ranking and ADP overperformers">/);
+  assert.match(app, /<option value="BOTH">Beat both baselines<\/option>/);
+  assert.match(app, /actual 2025 points versus preseason Late-Round rank and Yahoo ADP—not 17-game pace/);
+  assert.match(app, /It is a retrospective “where consensus missed” score, not a 2026 projection/);
+  const head = app.match(/<table aria-label="2025 preseason ranking and ADP overperformers">[\s\S]*?<thead><tr>([\s\S]*?)<\/tr><\/thead>/)?.[1] ?? "";
+  const labels = [...head.matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((match) => match[1].replace(/<[^>]+>/g, "").trim());
+  assert.equal(labels.length, 11);
+  assert.deepEqual(labels.slice(0, 5), ["Key", "Player", "Delivered finish", "2025 pts", "GP"]);
+  assert.match(labels[7], /Beat LR/);
+  assert.match(labels[8], /Beat ADP/);
+  assert.match(labels[9], /Overall lift/);
+  assert.match(appScript, /function overSignalGroups\(rows,sourceKey\)/);
+  assert.match(appScript, /covered=rows\.filter\(row=>Number\.isFinite\(row\.actual\)&&Number\.isFinite\(row\[sourceKey\]\)\)/);
+  assert.match(appScript, /actual:overRankGroups\(covered,row=>row\.actual,true\)/);
+  assert.match(appScript, /source:overRankGroups\(covered,row=>row\[sourceKey\],false\)/);
+  assert.match(appScript, /const lifts=\[lrLift,adpLift\]\.filter\(Number\.isFinite\)/);
+  assert.match(appScript, /state\.cag&&view==='overperformers'\?'live':view/);
+  assert.match(appScript, /renderOverperformers\(\); \}/);
+  assert.match(appScript, /data-over-search.*addEventListener\('input',renderOverperformers\)/);
 });
 
 test("2025 half-PPR results cover the entire draft-tool player pool", () => {
