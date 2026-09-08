@@ -1,6 +1,6 @@
 # Fantasy Draft War Room
 
-A fast, phone-friendly 2026 snake-draft board for Yahoo Public half-PPR and ESPN half-PPR leagues. It combines official room-specific default rankings, public ADP, an analyst-led decision rank, projections, roster construction, pick-survival logic, and a separately labeled Vegas evidence layer.
+A fast, phone-friendly 2026 snake-draft board for Yahoo Public half-PPR and ESPN half-PPR leagues, with adjustable 8-, 10-, 12-, or 14-team snake formats. It combines official room-specific default rankings, public ADP, an analyst-led decision rank, projections, roster construction, pick-survival logic, and a separately labeled Vegas evidence layer.
 
 The September 4 room snapshot covers 249 of the Late-Round Top 250 from the official Yahoo and ESPN public feeds. `LR edge` is always the selected platform’s default room rank minus Late-Round rank. Positive means Late-Round is earlier—and therefore potentially cheaper than the room makes the player look. Actual public ADP remains a separate timing signal; Yahoo has meaningful ADP for 183 of these players, and the app never substitutes Late-Round for a missing platform value.
 

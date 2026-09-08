@@ -85,6 +85,17 @@ test("live draft position filter includes a combined FLEX view", () => {
   assert.match(appScript, /pos==='FLEX'&&\['RB','WR','TE'\]\.includes\(p\.pos\)/);
 });
 
+test("Yahoo and ESPN both support a persisted 12-team snake draft", () => {
+  const teamSelect = app.match(/<select id="dft-teams"[\s\S]*?<\/select>/)?.[0] ?? "";
+  assert.match(teamSelect, /<option value="12">12<\/option>/);
+  assert.match(appScript, /\[8,10,12,14\]\.includes\(saved\.teams\)/);
+  assert.match(appScript, /teamEl\.disabled=false/);
+  assert.doesNotMatch(appScript, /state\.platform==='yahoo' && state\.teams!==10/);
+  assert.doesNotMatch(app, /10 teams · half-PPR · Yahoo defaults/);
+  assert.match(appScript, /\(round-1\)\*state\.teams \+ \(round%2 \? state\.slot : state\.teams-state\.slot\+1\)/);
+  assert.match(appScript, /\$\{state\.teams\} teams · half-PPR · \$\{state\.platform==='yahoo'\?'Yahoo Public rankings\/scoring':'ESPN standard settings'\}/);
+});
+
 test("Vegas median and rank sit immediately after projected points", () => {
   for (const label of ["Available player board", "Player rankings"]) {
     const table = app.match(new RegExp(`<table class="dft-core-table" aria-label="${label}">[\\s\\S]*?<\\/table>`))?.[0] ?? "";

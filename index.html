@@ -1644,7 +1644,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;button type=&quot;button&quot; data-platform=&quot;yahoo&quot; aria-pressed=&quot;true&quot;&gt;Yahoo Public&lt;/button&gt;
           &lt;button type=&quot;button&quot; data-platform=&quot;espn&quot; aria-pressed=&quot;false&quot;&gt;ESPN TCG&lt;/button&gt;
         &lt;/div&gt;
-        &lt;span class=&quot;dft-sourceflag&quot; data-format-note&gt;10 teams · half-PPR · Yahoo defaults&lt;/span&gt;
+        &lt;span class=&quot;dft-sourceflag&quot; data-format-note&gt;10 teams · half-PPR · Yahoo Public rankings/scoring&lt;/span&gt;
       &lt;/div&gt;
       &lt;div class=&quot;dft-settinggroup&quot;&gt;
         &lt;label class=&quot;dft-label&quot; for=&quot;dft-teams&quot;&gt;Teams&lt;/label&gt;
@@ -2321,9 +2321,8 @@ Public ADP ${adp.toFixed(1)} · ${detail}&quot;&gt;${rankCell(rank)}&lt;/span&gt
         root.querySelectorAll(&#x27;[data-platform]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,String(b.dataset.platform===state.platform)));
         const teamEl=root.querySelector(&#x27;#dft-teams&#x27;);
         teamEl.value=String(state.teams);
-        teamEl.disabled=state.platform===&#x27;yahoo&#x27;;
-        if(state.platform===&#x27;yahoo&#x27; &amp;&amp; state.teams!==10){ state.teams=10; teamEl.value=&#x27;10&#x27;; fillSlotSelect(); }
-        root.querySelector(&#x27;[data-format-note]&#x27;).textContent=state.platform===&#x27;yahoo&#x27;?&#x27;10 teams · half-PPR · Yahoo defaults&#x27;:`${state.teams} teams · half-PPR · ESPN standard otherwise`;
+        teamEl.disabled=false;
+        root.querySelector(&#x27;[data-format-note]&#x27;).textContent=`${state.teams} teams · half-PPR · ${state.platform===&#x27;yahoo&#x27;?&#x27;Yahoo Public rankings/scoring&#x27;:&#x27;ESPN standard settings&#x27;}`;
         root.querySelector(&#x27;[data-active-head]&#x27;).dataset.label=state.platform===&#x27;yahoo&#x27;?&#x27;Yahoo&#x27;:&#x27;ESPN&#x27;;
         root.querySelector(&#x27;[data-other-head]&#x27;).dataset.label=state.platform===&#x27;yahoo&#x27;?&#x27;ESPN&#x27;:&#x27;Yahoo&#x27;;
         const liveCoverage=root.querySelector(&#x27;[data-live-vegas-coverage]&#x27;), liveStatus=root.querySelector(&#x27;[data-live-source-status]&#x27;), liveDetail=root.querySelector(&#x27;[data-live-source-detail]&#x27;);
